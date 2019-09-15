@@ -95,4 +95,8 @@
     <string name="arcana_device_title">Device</string>
     <string name="arcana_release_type_title">Release type</string>
     <string name="arcana_maintainer_title">Magus</string>
+    
+    <!-- Themes customization -->
+    <string name="theme_customization_systemui_title">Theme color</string>
+
 </resources>
