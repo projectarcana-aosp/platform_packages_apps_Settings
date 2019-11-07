@@ -140,4 +140,8 @@
     
     <string name="navbar_gesture_custom">Navigation Gestures Customizations</string>
     <string name="usercard_summary">Current active user, tap for more information</string>
+    
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Swipe to screenshot</string>
+    <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
 </resources>
