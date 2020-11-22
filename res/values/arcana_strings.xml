@@ -24,4 +24,6 @@
 
     <string name="usercard_summary">Current active user, tap for more info.</string>
 
+    <string name="refresh_rate_title">Screen refresh rate</string>
+
 </resources>
