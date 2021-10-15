@@ -25,6 +25,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toolbar;
 
 import androidx.fragment.app.Fragment;
@@ -33,12 +34,13 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.android.settings.R;
-import com.android.settings.accounts.AvatarViewMixin;
 import com.android.settings.core.CategoryMixin;
 import com.android.settings.core.FeatureFlags;
 import com.android.settings.homepage.contextualcards.ContextualCardsFragment;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
+
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 /** Settings homepage activity */
 public class SettingsHomepageActivity extends FragmentActivity implements
@@ -49,26 +51,12 @@ public class SettingsHomepageActivity extends FragmentActivity implements
     private static final long HOMEPAGE_LOADING_TIMEOUT_MS = 300;
 
     private View mHomepageView;
-    private View mSuggestionView;
     private CategoryMixin mCategoryMixin;
+    CollapsingToolbarLayout collapsing_toolbar;
 
     @Override
     public CategoryMixin getCategoryMixin() {
         return mCategoryMixin;
-    }
-
-    /**
-     * Shows the homepage and shows/hides the suggestion together. Only allows to be executed once
-     * to avoid the flicker caused by the suggestion suddenly appearing/disappearing.
-     */
-    public void showHomepageWithSuggestion(boolean showSuggestion) {
-        if (mHomepageView == null) {
-            return;
-        }
-        Log.i(TAG, "showHomepageWithSuggestion: " + showSuggestion);
-        mSuggestionView.setVisibility(showSuggestion ? View.VISIBLE : View.GONE);
-        mHomepageView.setVisibility(View.VISIBLE);
-        mHomepageView = null;
     }
 
     @Override
@@ -76,56 +64,20 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_homepage_container);
 
-        final View appBar = findViewById(R.id.app_bar_container);
-        appBar.setMinimumHeight(getSearchBoxHeight());
-        initHomepageContainer();
 
-        final Toolbar toolbar = findViewById(R.id.search_action_bar);
-        FeatureFactory.getFactory(this).getSearchFeatureProvider()
-                .initSearchToolbar(this /* activity */, toolbar, SettingsEnums.SETTINGS_HOMEPAGE);
+        final View root = findViewById(R.id.settings_homepage_container);
+	LinearLayout commonCon = root.findViewById(R.id.common_con);
+        final Toolbar toolbar = root.findViewById(R.id.search_action_bar);
+	collapsing_toolbar =  root.findViewById(R.id.collapsing_toolbar);
 
         getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
+	collapsing_toolbar.setTitle("Settings");
         mCategoryMixin = new CategoryMixin(this);
         getLifecycle().addObserver(mCategoryMixin);
 
-        if (!getSystemService(ActivityManager.class).isLowRamDevice()) {
-            // Only allow features on high ram devices.
-            final ImageView avatarView = findViewById(R.id.account_avatar);
-            if (AvatarViewMixin.isAvatarSupported(this)) {
-                avatarView.setVisibility(View.VISIBLE);
-                getLifecycle().addObserver(new AvatarViewMixin(this, avatarView));
-            }
-
-            showSuggestionFragment();
-
-            if (FeatureFlagUtils.isEnabled(this, FeatureFlags.CONTEXTUAL_HOME)) {
-                showFragment(new ContextualCardsFragment(), R.id.contextual_cards_content);
-            }
-        }
         showFragment(new TopLevelSettings(), R.id.main_content);
         ((FrameLayout) findViewById(R.id.main_content))
                 .getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
-    }
-
-    private void showSuggestionFragment() {
-        final Class<? extends Fragment> fragment = FeatureFactory.getFactory(this)
-                .getSuggestionFeatureProvider(this).getContextualSuggestionFragment();
-        if (fragment == null) {
-            return;
-        }
-
-        mSuggestionView = findViewById(R.id.suggestion_content);
-        mHomepageView = findViewById(R.id.settings_homepage_container);
-        // Hide the homepage for preparing the suggestion.
-        mHomepageView.setVisibility(View.GONE);
-        // Schedule a timer to show the homepage and hide the suggestion on timeout.
-        mHomepageView.postDelayed(() -> showHomepageWithSuggestion(false),
-                HOMEPAGE_LOADING_TIMEOUT_MS);
-        try {
-            showFragment(fragment.getConstructor().newInstance(), R.id.suggestion_content);
-        } catch (Exception e) {
-            Log.w(TAG, "Cannot show fragment", e);
-        }
     }
 
     private void showFragment(Fragment fragment, int id) {

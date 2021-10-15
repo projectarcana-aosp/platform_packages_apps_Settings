@@ -800,8 +800,6 @@
     <style name="HomepageTitleText" parent="CollapsingToolbarTitle.Expanded">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginBottom">@dimen/homepage_title_margin_bottom</item>
-        <item name="android:layout_marginHorizontal">@dimen/homepage_title_margin_horizontal</item>
     </style>
 
     <style name="RequestManageCredentialsButtonPanel">
@@ -913,5 +911,13 @@
     <style name="TextAppearance.AdminDialogMessage"
            parent="@*android:style/TextAppearance.DeviceDefault">
         <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="TextAppearance.HomepagePreferenceTitle" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ExpandedAppBar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">48sp</item>
     </style>
 </resources>
