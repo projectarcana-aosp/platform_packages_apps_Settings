@@ -1,31 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/entity_header"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingRight="14dp"
-    android:paddingLeft="14dp"
-    android:elevation="0dp">
+    android:background="@drawable/octavi_card"
+    android:layout_marginVertical="8dp"
+    android:padding="4dp"
+    android:elevation="8dp">
 
     <LinearLayout
+	android:id="@+id/entity_header_content"
         android:orientation="horizontal"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <ImageView
+            android:contentDescription="@null"
+            android:layout_gravity="center"
+            android:id="@+id/entity_header_icon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"/>
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginStart="16dp"
             android:layout_weight="2"
             android:orientation="vertical">
 
 	    <TextView 
 		android:textAppearance="@style/TextAppearance.HomepagePreferenceTitle" 
-		android:ellipsize="marquee" 
-		android:id="@android:id/title" 
+                android:id="@+id/entity_header_title"
 		android:layout_width="wrap_content" 
 		android:layout_height="wrap_content" 
-		android:textColor="?android:attr/colorControlNormal"
+                android:textSize="22sp"
+		android:textColor="?android:attr/textColorPrimary"
 		android:singleLine="true"/>
 
             <TextView
@@ -33,16 +44,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:textSize="12sp"/>
-
+                android:text="@string/usercard_summary"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="13sp"/>
         </LinearLayout>
-
-        <ImageView
-            android:contentDescription="@null"
-            android:layout_gravity="center"
-            android:id="@android:id/icon"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_network_cell" />
     </LinearLayout>
 </FrameLayout>

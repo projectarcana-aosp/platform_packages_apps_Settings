@@ -19,10 +19,18 @@ package com.android.settings.homepage;
 import static com.android.settings.search.actionbar.SearchMenuController.NEED_SEARCH_ICON_IN_ACTION_BAR;
 import static com.android.settingslib.search.SearchIndexable.MOBILE;
 
+import android.app.Activity;
 import android.app.settings.SettingsEnums;
 import android.content.Context;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.pm.UserInfo;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.UserManager;
+import android.provider.Settings;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
@@ -37,12 +45,15 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.support.SupportPreferenceController;
 import com.android.settingslib.core.instrumentation.Instrumentable;
 import com.android.settingslib.search.SearchIndexable;
+import com.android.settingslib.widget.LayoutPreference;
+import com.android.settings.widget.EntityHeaderController;
 
 @SearchIndexable(forTarget = MOBILE)
 public class TopLevelSettings extends DashboardFragment implements
         PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {
 
     private static final String TAG = "TopLevelSettings";
+    private static final String KEY_USER_CARD = "top_level_usercard";
 
     public TopLevelSettings() {
         final Bundle args = new Bundle();
@@ -59,6 +70,12 @@ public class TopLevelSettings extends DashboardFragment implements
     @Override
     protected String getLogTag() {
         return TAG;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        onUserCard();
     }
 
     @Override
@@ -123,6 +140,43 @@ public class TopLevelSettings extends DashboardFragment implements
 		preference.setLayoutResource(R.layout.card_view_pref);
 	    }
         }
+    }
+
+
+    private void onUserCard() {
+        final LayoutPreference headerPreference =
+                (LayoutPreference) getPreferenceScreen().findPreference(KEY_USER_CARD);
+        final View userCard = headerPreference.findViewById(R.id.entity_header);
+        final TextView textview = headerPreference.findViewById(R.id.summary);
+        final Activity context = getActivity();
+        final Bundle bundle = getArguments();
+        final EntityHeaderController controller = EntityHeaderController
+                .newInstance(context, this, userCard)
+                .setRecyclerView(getListView(), getSettingsLifecycle())
+                .setButtonActions(EntityHeaderController.ActionType.ACTION_NONE,
+                        EntityHeaderController.ActionType.ACTION_NONE);
+
+        userCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.setComponent(new ComponentName("com.android.settings","com.android.settings.Settings$UserSettingsActivity"));
+                startActivity(intent);
+            }
+        });
+
+        final int iconId = bundle.getInt("icon_id", 0);
+        if (iconId == 0) {
+            final UserManager userManager = (UserManager) getActivity().getSystemService(
+                    Context.USER_SERVICE);
+            final UserInfo info = Utils.getExistingUser(userManager,
+                    android.os.Process.myUserHandle());
+            controller.setLabel(info.name);
+            controller.setIcon(
+                    com.android.settingslib.Utils.getUserIcon(getActivity(), userManager, info));
+        }
+
+        controller.done(context, true /* rebindActions */);
     }
 
     @Override

@@ -20,6 +20,12 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="top_level_settings">
 
+    <com.android.settingslib.widget.LayoutPreference
+        android:layout="@layout/usercard"
+        android:fragment="com.android.settings.users.UserSettings"
+        android:key="top_level_usercard"
+        android:order="-170" />
+
     <Preference
         android:key="category"
         android:icon="@drawable/ic_deviceinfo"

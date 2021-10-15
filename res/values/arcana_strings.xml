@@ -19,4 +19,6 @@
     <string name="connectivity_category_title">Connectivity Settings</string>
     <string name="system_category_title">System Settings</string>
     <string name="privacy_category_title">Privacy Settings</string>
+
+    <string name="usercard_summary">Tap for more info</string>
 </resources>
