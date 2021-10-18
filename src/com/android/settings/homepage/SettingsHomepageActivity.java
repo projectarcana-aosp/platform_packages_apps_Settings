@@ -99,6 +99,9 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         TextView greeter = root.findViewById(R.id.greeter);
 	greeter.setText(text.get(randomNum(0, text.size()-1)));
 
+        FeatureFactory.getFactory(this).getSearchFeatureProvider()
+                .initSearchToolbar(this /* activity */, toolbar, SettingsEnums.SETTINGS_HOMEPAGE);
+
 	AppBarLayout appBarLayout = root.findViewById(R.id.appbar);
         appBarLayout.addOnOffsetChangedListener((appBarLayout1, i) -> {
 
