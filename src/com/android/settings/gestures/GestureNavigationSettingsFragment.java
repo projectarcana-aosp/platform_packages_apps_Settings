@@ -214,9 +214,6 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
         findPreference(FULLSCREEN_GESTURE_PREF_KEY)
             .setOnPreferenceChangeListener((pref, newValue) -> {
                 final boolean isChecked = (boolean) newValue;
-                Settings.System.putIntForUser(getContext().getContentResolver(),
-                    Settings.System.FULLSCREEN_GESTURES, isChecked ? 1 : 0,
-                    UserHandle.USER_CURRENT);
                 try {
                     mOverlayManager.setEnabledExclusiveInCategory(
                         isChecked ? FULLSCREEN_GESTURE_OVERLAY_PKG : NAV_BAR_MODE_GESTURAL_OVERLAY,
