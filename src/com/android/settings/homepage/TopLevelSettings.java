@@ -155,7 +155,7 @@ public class TopLevelSettings extends DashboardFragment implements
             if (key.equals("top_level_accounts")){
                 preference.setLayoutResource(R.layout.card_view_pref_bottom);
             }
-            if (key.equals("top_level_octavi_lab")){
+            if (key.equals("top_level_extensions")){
                 preference.setLayoutResource(R.layout.card_view_pref_top);
             }
             if (key.equals("top_level_wallpaper")){

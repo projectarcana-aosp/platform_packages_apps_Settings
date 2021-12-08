@@ -60,25 +60,39 @@ public class SettingsHomepageActivity extends FragmentActivity implements
 
     static ArrayList<String> text=new ArrayList<>();
     static {
-        text.add("Thanks, for choosing Octavi!");
-	text.add("I wonder how many rejections you had");
-	text.add("Always remember that you're unique");
-        text.add("Constipated people don’t give a crap");
-        text.add("Unicorns ARE real, we call them rhinos");
-        text.add("If there is a *WILL*, there are 500 relatives");
-        text.add("Those who throw dirt only lose ground");
-        text.add("I’d like to help you out");
-        text.add("Age is a question of mind over matter");
-        text.add("I’m an excellent housekeeper");
-        text.add("Change is good, but dollars are better");
-        text.add("If you cannot convince them, confuse them");
-        text.add("This sentence is a lie");
-        text.add("Make everyday a little less ordinary");
-        text.add("Stupidity is not a crime so you are free to go.");
-        text.add("I'm not insulting you. I'm describing you");
-        text.add("You're so fake, Barbie is jealous");
-        text.add("Believe you can, and you are halfway there");
-	text.add("Whatever you are, be a good one");
+        text.add("Arise, Young One.");
+	text.add("Welcome Stranger!");
+	text.add("One's soul shreds uniqueness");
+        text.add("Calm down young one, catch your breath.");
+        text.add("Roquelaire, would you like a cracker?");
+        text.add("Ah my little friend, always busy-busy.");
+        text.add("Ho ho! You found me!");
+        text.add("Greetings, my friend.");
+        text.add("Welcome to the Secret Shop!");
+        text.add("Ah, some tea while you wait?");
+        text.add("Those go together nicely.");
+        text.add("Your foes will fear you now.");
+        text.add("My favorite customer!");
+        text.add("Business is brisk.");
+        text.add("Ahh, hows your journey little one?");
+        text.add("Mistakes are always part of one's life, youngster.");
+        text.add("Have a lucky day sire!");
+        text.add("You can do it Stranger!");
+	text.add("It was never wrong to try, young one.");
+	text.add("The learned one strikes.");
+	text.add("Theyll never know what hit them.");
+	text.add("Turn the tables!");
+	text.add("The enemy will be destroyed, no matter the cost!");
+	text.add("A good strategist always keeps something in reserve.");
+	text.add("Never Settle?");
+	text.add("Gratitude unlocks the fullness of life, Milord.");
+	text.add("A joker is a little fool who is different from everyone else.");
+	text.add("Failure is not Fatal, Customer.");
+	text.add("Taking a rest is not a sin young man.");
+	text.add("What is truth, but a survivor's story?");
+	text.add("Its a sad truth that those who shine brightest often burn fastest.");
+	text.add("When you're going to change the world, don't ask for permission.");
+	text.add("In a world without love, death means nothing.");
     }
 
     @Override
