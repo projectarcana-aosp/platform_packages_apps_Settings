@@ -97,4 +97,7 @@
     <string name="devices_list_empty">List is empty, tap the icon to reload</string>
     <string name="reload_list">Reload</string>
 
+    <!-- Fullscreen gestures -->
+    <string name="fullscreen_gestures_title">Fullscreen gestures</string>
+    <string name="fullscreen_gestures_summary">Hide navbar pill and keyboard space</string>
 </resources>
