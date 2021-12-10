@@ -19,6 +19,9 @@
     <string name="arcana_version">Arcana manifestation</string>
     <string name="arcana_version_default">Unknown</string>
     <string name="keywords_arcana_version">arcana version, project version</string>
+    
+    <!-- Arcana maintainer -->
+    <string name="maintainer">Maintainer</string>
 
     <!-- About phone screen, build date -->
     <string name="build_date">Build date</string>
