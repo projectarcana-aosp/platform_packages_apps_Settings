@@ -78,4 +78,7 @@
     <string name="gaming_mode_use_menu_overlay_title">Show menu overlay</string>
     <string name="gaming_mode_use_menu_overlay_summary">Show menu overlay when game is running. If this option is disabled, some game mode features will be disabled, such as Danmaku notifications</string>
 
+    <string name="gesture_navbar_length_title">Gesture navbar length</string>
+    <string name="short_label">Short</string>
+    <string name="long_label">Long</string>
 </resources>

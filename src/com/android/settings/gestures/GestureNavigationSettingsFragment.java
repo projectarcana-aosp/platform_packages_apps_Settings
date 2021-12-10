@@ -57,6 +57,8 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
     private static final String FULLSCREEN_GESTURE_PREF_KEY = "fullscreen_gestures";
     private static final String FULLSCREEN_GESTURE_OVERLAY_PKG = "com.krypton.overlay.systemui.navbar.gestural";
 
+    private static final String GESTURE_NAVBAR_LENGTH_KEY = "gesture_navbar_length_preference";
+
     private WindowManager mWindowManager;
     private BackGestureIndicatorView mIndicatorView;
 
@@ -104,6 +106,7 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
         initSeekBarPreference(LEFT_HEIGHT_SEEKBAR_KEY);
         initSeekBarPreference(RIGHT_HEIGHT_SEEKBAR_KEY);
         initFullscreenGesturePreference();
+        initGestureBarLengthPreference();
     }
 
     @Override
@@ -220,6 +223,17 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
                 }
                 return true;
             });
+    }
+
+    private void initGestureBarLengthPreference() {
+        final LabeledSeekBarPreference pref = getPreferenceScreen().
+            findPreference(GESTURE_NAVBAR_LENGTH_KEY);
+        pref.setContinuousUpdates(true);
+        pref.setProgress(Settings.System.getInt(getContext().getContentResolver(),
+            Settings.System.GESTURE_NAVBAR_LENGTH, 0));
+        pref.setOnPreferenceChangeListener((p, v) ->
+            Settings.System.putInt(getContext().getContentResolver(),
+                Settings.System.GESTURE_NAVBAR_LENGTH, (Integer) v));
     }
 
     private static float[] getFloatArray(TypedArray array) {
