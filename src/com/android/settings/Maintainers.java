@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016-2017 crDroid Android Project
- * Copyright (C) 2016 AospExtended ROM Project
+ * Copyright (C) 2016 ProjectArcana ROM Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

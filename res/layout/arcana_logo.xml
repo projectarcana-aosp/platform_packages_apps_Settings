@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2019 AospExtended Rom
+<!-- Copyright (C) 2021 Project Arcana
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -11,14 +11,20 @@
      limitations under the License.
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:gravity="center"
-	android:layout_width="match_parent"
-	android:layout_height="wrap_content">
-
-<ImageView
-	android:layout_width="match_parent"
- 	android:layout_height="match_parent"
-	android:src="@drawable/ic_ext_logo"
-	android:adjustViewBounds="true"
-	android:scaleType="centerInside" />
+    android:background="?android:attr/colorPrimary"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:selectable="false">
+    
+ <ImageView
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:src="@drawable/arcana_logo"
+        android:layout_marginTop="10dp"
+	android:layout_marginBottom="10dp"
+        android:tint="?android:attr/colorAccent" />
 </LinearLayout>

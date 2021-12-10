@@ -3867,7 +3867,7 @@
 
         <!-- This is the longest AndroidManifest.xml ever. -->
 
-        <!-- AospExtended additions -->
+        <!-- ProjectArcana additions -->
         <activity android:name=".Settings$ExtensionsSettingsActivity"
                   android:label="@string/extensions_title"
                   android:icon="@drawable/ic_homepage_extensions"

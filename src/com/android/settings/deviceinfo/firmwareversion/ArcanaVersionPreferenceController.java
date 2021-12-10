@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The AospExtended Project
+ * Copyright (C) 2021 ProjectArcana 
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,23 +26,23 @@ import com.android.settings.R;
 import com.android.settings.Utils;
 import com.android.settings.core.BasePreferenceController;
 
-public class ExtendedVersionPreferenceController extends BasePreferenceController {
+public class ArcanaVersionPreferenceController extends BasePreferenceController {
 
     @VisibleForTesting
-    static final String EXTENDED_VERSION_PROPERTY = "ro.extended.display.version";
+    static final String ARCANA_VERSION_PROPERTY = "ro.arcana.display.version";
 
-    public ExtendedVersionPreferenceController(Context context, String preferenceKey) {
+    public ArcanaVersionPreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
     }
 
     @Override
     public int getAvailabilityStatus() {
-        return !TextUtils.isEmpty(SystemProperties.get(EXTENDED_VERSION_PROPERTY)) ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+        return !TextUtils.isEmpty(SystemProperties.get(ARCANA_VERSION_PROPERTY)) ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
     }
 
     @Override
     public CharSequence getSummary() {
-        return SystemProperties.get(EXTENDED_VERSION_PROPERTY,
+        return SystemProperties.get(ARCANA_VERSION_PROPERTY,
                 mContext.getString(R.string.device_info_default));
     }
 }

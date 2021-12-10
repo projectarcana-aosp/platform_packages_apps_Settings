@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2018 AospExtended ROM Project
+<!-- Copyright (C) 2018 ProjectArcana ROM Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,9 +16,9 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- About phone screen, Extended version -->
-    <string name="extended_version">Extended version</string>
-    <string name="extended_version_default">Unknown</string>
-    <string name="keywords_extended_version">aex version, extended version</string>
+    <string name="arcana_version">Arcana manifestation</string>
+    <string name="arcana_version_default">Unknown</string>
+    <string name="keywords_arcana_version">arcana version, project version</string>
 
     <!-- About phone screen, build date -->
     <string name="build_date">Build date</string>
@@ -61,55 +61,49 @@
     <!-- Volume link notification -->
     <string name="volume_link_notification_title">Link ring &amp; notification volumes</string>
 
-    <!-- About AospExtended -->
-    <string name="aex_about_info">About us</string>
-    <string name="aex_about_summary">Our introduction and our team</string>
-    <string name="aex_about_info_summary">AospExtended is an AOSP based rom which provides stock UI/UX with various customisations features along with the Substratum theme engine. The project has been made by cherry-picking various commits from various other projects. Being based on AOSP it provides a smooth and lag-free experience out of the box. We will constantly try to add more features and make it even better in future updates.&#35;BeExtended</string>
-    <string name="dev_info">About AospExtended</string>
+    <!-- About ProjectArcana -->
+    <string name="arcana_about_info">What is Project Arcana?</string>
+    <string name="arcana_about_summary">A powerful combination.</string>
+    <string name="arcana_about_info_summary">Project Arcana is a simple rom fueled by AOSPExtended, that aims to be simple yet cunning. Project Arcana aims to provides necessary customizations that is needed for every day life, from your traffic indicator down to your favorite icon styles. While also promising to be simple, Project Arcana tries to be aesthetic without making its users go through a lot 
+  of configurations. We are fans of simplicity. We strive to keep the ROM bloatfree and fast. &#35;NeverForget</string>
+    <string name="dev_info">About Project Arcana</string>
     <string name="github">Github</string>
     <string name="github_description">View our source code</string>
     <string name="gplus">Google+</string>
     <string name="gplus_description">Join our G+ community</string>
     <string name="telegram">Telegram</string>
     <string name="telegram_description">Subscribe to our Telegram channel</string>
-    <string name="web">Download Center</string>
+    <string name="web">Download Page</string>
     <string name="web_description">Visit our download portal</string>
     <string name="help_translate">Translations</string>
     <string name="help_translate_description">Translate to your language, visit our Crowdin</string>
     <string name="walls">Wallpapers</string>
     <string name="walls_description">Get wallpapers contributed by various users</string>
-    <string name="leads">Team Leads</string>
-    <string name="team_1">Shubham Singh &#40;ishubhamsingh&#41;</string>
-    <string name="team1_description">Owner/Lead Developer</string>
-    <string name="team_2">Aman Kumar &#40;FireLord&#41;</string>
-    <string name="team2_description">Developer</string>
-    <string name="team_3">Amol Amrit</string>
+    <string name="leads">Core Team</string>
+    <string name="team_1">dlwlrma123 &#40;dlwlrma123&#41;</string>
+    <string name="team1_description">Founder</string>
+    <string name="team_2">mafiasupremacy &#40;Joaquin-000&#41;</string>
+    <string name="team2_description">Developer and Moderator</string>
+    <string name="team_3">hazama25 &#40;hazama25&#41;</string>
     <string name="team3_description">Developer and Moderator</string>
-    <string name="team_4">Henrique Silva &#40;jhenrique09&#41;</string>
-    <string name="team4_description">Developer</string>
-    <string name="team_5">Gaurav Singh &#40;allstargaurav&#41;</string>
-    <string name="team5_description">Developer, Designer and Moderator</string>
-    <string name="team_6">Arghya Chanda &#40;arghyac35&#41;</string>
-    <string name="team6_description">Developer and Moderator</string>
-    <string name="team_7">Shubham Bhise &#40;sb6596&#41;</string>
-    <string name="team7_description">Developer and Moderator</string>
-    <string name="team_8">Aayush Gupta &#40;theimpulson&#41;</string>
-    <string name="team8_description">Developer and Moderator</string>
-    <string name="team_9">Sagar Makhar &#40;SagarMakhar&#41;</string>
-    <string name="team9_description">Developer and Moderator</string>
-    <string name="designers">Designers</string>
-    <string name="designer_1">Yasan &#40;AlienCreature7&#41;</string>
-    <string name="designer1_description">Thread Banners, Logos, Wallpapers</string>
-    <string name="designer_2">Savio &#40;Wizper99&#41;</string>
-    <string name="designer2_description">QS/Fling logos</string>
-    <string name="designer_3">Jesus R &#40;KrapK&#41;</string>
-    <string name="designer3_description">Wallpapers, Bootanimations</string>
-    <string name="designer_4">Harsh V23</string>
-    <string name="designer4_description">Extensions UI, Icons</string>
-    <string name="designer_5">Gaurav (allstargaurav)</string>
-    <string name="designer5_description">Extensions UI, Icons and Clock styles</string>
-    <string name="designer_6">AndroBuddy007</string>
-    <string name="designer6_description">Bootanimation, Thread Banners</string>
+    <string name="maintainer_1">dlwlrma123 &#40;dlwlrma123&#41;</string>
+    <string name="maintainer1_description">Xiaomi Redmi 7a</string>
+    <string name="maintainer_2">mafiasupremacy &#40;Joaquin-000&#41;</string>
+    <string name="maintainer2_description">Poco M3/Redmi 9t</string>
+    <string name="maintainer_3">hazama25 &#40;hazama25&#41;</string>
+    <string name="maintainer3_description">Poco X3 NFC</string>
+    <string name="maintainer_4">Daisuke Kambe &#40;JojiOnThatBeat&#41;</string>
+    <string name="maintainer4_description">Xiaomi Redmi Note 7/7s</string>
+    <string name="maintainer_5">Don Romantico &#40;nobara10&#41;</string>
+    <string name="maintainer5_description">Xiaomi Redmi Note 10</string>
+    <string name="maintainer_6">Don Eun &#40;eun0115&#41;</string>
+    <string name="maintainer6_description">Realme 5 Pro</string>
+    <string name="maintainer_7">Sharma G &#40;Sharma_G04&#41;</string>
+    <string name="maintainer7_description">Poco X2</string>
+    <string name="maintainer_8">Blur &#40;blur2003&#41;</string>
+    <string name="maintainer8_description">Xiaomi Redmi Note 10</string>
+    <string name="maintainer_9">SilentKiller &#40;Alone0316&#41;</string>
+    <string name="maintainer9_description">Xiaomi Redmi Note 4x</string>
     <string name="maintainers">Maintainers</string>
     <string name="maintainers_title">Official maintainers</string>
     <string name="maintainers_summary">Officially supported devices and their respective maintainers.</string>
