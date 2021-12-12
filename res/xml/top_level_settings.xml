@@ -27,6 +27,13 @@
             android:order="-170" />
 
     <Preference
+        android:title="@string/connectivity_category_title"
+        android:icon="@drawable/ic_network"
+        android:key="category"
+        android:selectable="false"
+        android:order="-165"/>
+        
+    <Preference
             android:fragment="com.android.settings.network.NetworkDashboardFragment"
             android:icon="@drawable/ic_settings_wireless"
             android:key="top_level_network"
@@ -53,6 +60,13 @@
             android:summary="@string/summary_placeholder"
             settings:controller="com.android.settings.accounts.TopLevelAccountEntryPreferenceController"/>
 
+    <Preference
+        android:title="@string/device_personalizations_title"
+	android:icon="@drawable/ic_device_personalizations"
+        android:key="category"
+        android:selectable="false"
+        android:order="-135"/>
+        
         <Preference
         android:key="top_level_extensions"
         android:title="@string/extensions_title"
@@ -70,6 +84,13 @@
             android:summary="@string/wallpaper_dashboard_summary"
             settings:controller="com.android.settings.display.TopLevelWallpaperPreferenceController"/>
 
+    <Preference
+        android:title="@string/system_category_title"
+        android:icon="@drawable/ic_system"
+        android:key="category"
+        android:selectable="false"
+        android:order="-115"/>
+        
     <Preference
             android:fragment="com.android.settings.fuelgauge.PowerUsageSummary"
             android:icon="@drawable/ic_settings_battery_white"
@@ -104,6 +125,13 @@
             android:title="@string/apps_dashboard_title"
             android:summary="@string/app_and_notification_dashboard_summary"/>
 
+    <Preference
+        android:title="@string/device_accessibility_title"
+        android:icon="@drawable/ic_accessibility_settings"
+        android:key="category"
+        android:selectable="false"
+        android:order="-75"/>
+        
     <Preference
             android:fragment="com.android.settings.deviceinfo.StorageDashboardFragment"
             android:icon="@drawable/ic_storage_white"
@@ -140,6 +168,13 @@
             settings:controller="com.android.settings.accessibility.TopLevelAccessibilityPreferenceController"/>
 
     <Preference
+        android:title="@string/privacy_category_title"
+        android:icon="@drawable/ic_privacy"
+        android:key="category"
+        android:selectable="false"
+        android:order="-25"/>
+        
+    <Preference
             android:fragment="com.android.settings.security.SecuritySettings"
             android:icon="@drawable/ic_settings_security_white"
             android:key="top_level_security"
@@ -164,6 +199,13 @@
             android:order="-10"
             android:fragment="com.android.settings.emergency.EmergencyDashboardFragment"/>
 
+    <Preference
+        android:title="@string/device_category_title"
+        android:icon="@drawable/ic_deviceinfo"
+        android:key="category"
+        android:selectable="false"
+        android:order="5"/>
+        
     <Preference
             android:fragment="com.android.settings.system.SystemDashboardFragment"
             android:icon="@drawable/ic_settings_system_dashboard_white"

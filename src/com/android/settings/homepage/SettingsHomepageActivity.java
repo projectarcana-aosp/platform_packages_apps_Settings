@@ -62,7 +62,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
     static {
         text.add("Arise, Young One.");
 	text.add("Welcome Stranger!");
-	text.add("One's soul shreds uniqueness");
+	text.add("One's soul shreds uniqueness.");
         text.add("Calm down young one, catch your breath.");
         text.add("Roquelaire, would you like a cracker?");
         text.add("Ah my little friend, always busy-busy.");
@@ -90,9 +90,13 @@ public class SettingsHomepageActivity extends FragmentActivity implements
 	text.add("Failure is not Fatal, Customer.");
 	text.add("Taking a rest is not a sin young man.");
 	text.add("What is truth, but a survivor's story?");
-	text.add("Its a sad truth that those who shine brightest often burn fastest.");
-	text.add("When you're going to change the world, don't ask for permission.");
 	text.add("In a world without love, death means nothing.");
+	text.add("Always appreciate your own endeavors, Milord.");
+	text.add("Fear is the first of many foes.");
+	text.add("The climb may be long, but the view is worth it.");
+	text.add("The waves will drag you down, unless you fight to shore.");
+	text.add("The darker the night, the brighter the stars.");
+	text.add("Fight and be remembered, or die and be forgotten.");
     }
 
     @Override
