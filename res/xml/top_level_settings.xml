@@ -172,7 +172,7 @@
         android:icon="@drawable/ic_privacy"
         android:key="category"
         android:selectable="false"
-        android:order="-25"/>
+        android:order="-35"/>
         
     <Preference
             android:fragment="com.android.settings.security.SecuritySettings"

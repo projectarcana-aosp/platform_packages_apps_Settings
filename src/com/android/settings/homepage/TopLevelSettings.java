@@ -149,6 +149,9 @@ public class TopLevelSettings extends DashboardFragment implements
 	    if (key.equals("top_level_usercard")){
 	        preference.setLayoutResource(R.layout.usercard);
 	    }
+	    if (key.equals("category")){
+                preference.setLayoutResource(R.layout.homepage_category);
+            }
 	}
     }
     
