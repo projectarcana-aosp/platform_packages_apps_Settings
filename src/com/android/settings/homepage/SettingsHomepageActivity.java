@@ -80,7 +80,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         text.add("You can do it Stranger!");
 	text.add("It was never wrong to try, young one.");
 	text.add("The learned one strikes.");
-	text.add("Theyll never know what hit them.");
+	text.add("They will never know what hit them.");
 	text.add("Turn the tables!");
 	text.add("The enemy will be destroyed, no matter the cost!");
 	text.add("A good strategist always keeps something in reserve.");
@@ -97,6 +97,13 @@ public class SettingsHomepageActivity extends FragmentActivity implements
 	text.add("The waves will drag you down, unless you fight to shore.");
 	text.add("The darker the night, the brighter the stars.");
 	text.add("Fight and be remembered, or die and be forgotten.");
+	text.add("In case no one asked, are you doing fine youngster?");
+	text.add("Nothing bears fruit from hatred, but disaster my friend.");
+	text.add("Ahh Another they to become a legend.");
+	text.add("In case no one told you this, you are awesome!");
+	text.add("My dear friend always busy, want some cookies?");
+	text.add("Uhmm Never Forget?");
+	text.add("Show em what you got stranger!");
     }
 
     @Override
