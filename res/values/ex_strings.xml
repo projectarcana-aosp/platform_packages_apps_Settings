@@ -100,13 +100,15 @@
     <string name="maintainer_5">Don Romantico &#40;nobara10&#41;</string>
     <string name="maintainer5_description">Xiaomi Redmi Note 10</string>
     <string name="maintainer_6">Don Eun &#40;eun0115&#41;</string>
-    <string name="maintainer6_description">Realme 5 Pro</string>
+    <string name="maintainer6_description">Realme 5 Pro, Realme 5/5s/5i</string>
     <string name="maintainer_7">Sharma G &#40;Sharma_G04&#41;</string>
     <string name="maintainer7_description">Poco X2</string>
     <string name="maintainer_8">Blur &#40;blur2003&#41;</string>
-    <string name="maintainer8_description">Xiaomi Redmi Note 10</string>
+    <string name="maintainer8_description">Xiaomi Redmi Note 10, Realme 5/5s/5i</string>
     <string name="maintainer_9">SilentKiller &#40;Alone0316&#41;</string>
     <string name="maintainer9_description">Xiaomi Redmi Note 4x</string>
+    <string name="maintainer_10">Vastro Lorde &#40;Vastrolorde&#41;</string>
+    <string name="maintainer10_description">Xiaomi Redmi Note 4x</string>
     <string name="maintainers">Maintainers</string>
     <string name="maintainers_title">Official maintainers</string>
     <string name="maintainers_summary">Officially supported devices and their respective maintainers.</string>

@@ -183,6 +183,15 @@ xmlns:android="http://schemas.android.com/apk/res/android"
            android:data="https://github.com/Alone0316" />
      </Preference>
      
+     <Preference
+           android:title="@string/maintainer_10"
+           android:summary="@string/maintainer10_description"
+           android:icon="@drawable/ic_design">
+     <intent
+           android:action="android.intent.action.VIEW"
+           android:data="https://github.com/vastolorde007" />
+     </Preference>
+     
 </PreferenceCategory>
 
 </PreferenceScreen>
