@@ -17,19 +17,19 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/gaming_mode_notification_danmaku_title" >
 
-    <com.android.settings.preferences.SystemSettingSwitchPreference
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
         android:key="gaming_mode_show_danmaku"
         android:title="@string/gaming_mode_show_danmaku_title"
         android:defaultValue="true" />
 
-    <com.android.settings.preferences.SystemSettingSwitchPreference
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
         android:key="gaming_mode_danmaku_dynamic_notification_filter"
         android:title="@string/gaming_mode_danmaku_dynamic_notification_filter_title"
         android:summary="@string/gaming_mode_danmaku_dynamic_notification_filter_summary"
         android:defaultValue="true"
         android:dependency="gaming_mode_show_danmaku" />
 
-    <com.android.settings.preferences.SystemSettingSeekBarPreference
+    <org.aospextended.support.preference.SystemSettingSeekBarPreference
         android:key="gaming_mode_danmaku_size_horizontal"
         android:title="@string/gaming_mode_danmaku_size_horizontal_title"
         android:defaultValue="36"
@@ -38,7 +38,7 @@
         settings:units="px"
         android:dependency="gaming_mode_show_danmaku" />
 
-    <com.android.settings.preferences.SystemSettingSeekBarPreference
+    <org.aospextended.support.preference.SystemSettingSeekBarPreference
         android:key="gaming_mode_danmaku_size_vertical"
         android:title="@string/gaming_mode_danmaku_size_vertical_title"
         android:defaultValue="36"
@@ -47,7 +47,7 @@
         settings:units="px"
         android:dependency="gaming_mode_show_danmaku" />
 
-    <com.android.settings.preferences.SystemSettingSeekBarPreference
+    <org.aospextended.support.preference.SystemSettingSeekBarPreference
         android:key="gaming_mode_danmaku_speed_horizontal"
         android:title="@string/gaming_mode_danmaku_speed_horizontal_title"
         android:defaultValue="300"
@@ -56,7 +56,7 @@
         settings:units="px/s"
         android:dependency="gaming_mode_show_danmaku" />
 
-    <com.android.settings.preferences.SystemSettingSeekBarPreference
+    <org.aospextended.support.preference.SystemSettingSeekBarPreference
         android:key="gaming_mode_danmaku_speed_vertical"
         android:title="@string/gaming_mode_danmaku_speed_vertical_title"
         android:defaultValue="300"

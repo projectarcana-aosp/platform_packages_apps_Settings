@@ -17,19 +17,19 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/gaming_title" >
 
-    <com.android.settings.preferences.SystemSettingSwitchPreference
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
         android:key="gaming_mode_enabled"
         android:title="@string/gaming_mode_enabled_title"
         android:defaultValue="false" />
 
-    <com.android.settings.preferences.SystemSettingSwitchPreference
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
         android:key="gaming_mode_dynamic_add"
         android:title="@string/gaming_mode_dynamic_add_title"
         android:summary="@string/gaming_mode_dynamic_add_summary"
         android:defaultValue="true"
         android:dependency="gaming_mode_enabled" />
 
-    <com.android.settings.preferences.SystemSettingSwitchPreference
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
         android:key="gaming_mode_disable_auto_brightness"
         android:title="@string/gaming_mode_disable_auto_brightness_title"
         android:summary="@string/gaming_mode_disable_auto_brightness_summary"
@@ -54,21 +54,21 @@
         android:key="performance_category"
         android:title="@string/gaming_mode_performance">
 
-        <com.android.settings.preferences.SystemSettingSwitchPreference
+        <org.aospextended.support.preference.SystemSettingSwitchPreference
             android:key="gaming_mode_use_game_driver"
             android:title="@string/gaming_mode_use_game_driver_title"
             android:summary="@string/gaming_mode_use_game_driver_summary"
             android:defaultValue="true"
             android:dependency="gaming_mode_enabled" />
 
-        <com.android.settings.preferences.SystemSettingSwitchPreference
+        <org.aospextended.support.preference.SystemSettingSwitchPreference
             android:key="gaming_mode_change_performance_level"
             android:title="@string/gaming_mode_change_performance_title"
             android:summary="@string/gaming_mode_change_performance_summary"
             android:defaultValue="true"
             android:dependency="gaming_mode_enabled" />
 
-        <com.android.settings.preferences.SystemSettingSeekBarPreference
+        <org.aospextended.support.preference.SystemSettingSeekBarPreference
             android:key="gaming_mode_performance_level"
             android:title="@string/gaming_mode_performance_title"
             android:defaultValue="5"
@@ -81,7 +81,7 @@
     <PreferenceCategory
         android:title="@string/gaming_mode_dnd">
 
-        <com.android.settings.preferences.SystemSettingSwitchPreference
+        <org.aospextended.support.preference.SystemSettingSwitchPreference
             android:key="gaming_mode_disable_notification_alert"
             android:title="@string/gaming_mode_disable_notification_alert_title"
             android:summary="@string/gaming_mode_disable_notification_alert_summary"
@@ -95,14 +95,14 @@
             android:defaultValue="true"
             android:dependency="gaming_mode_enabled" />
 
-        <com.android.settings.preferences.SystemSettingSwitchPreference
+        <org.aospextended.support.preference.SystemSettingSwitchPreference
             android:key="gaming_mode_disable_ringtone"
             android:title="@string/gaming_mode_disable_ringtone_title"
             android:summary="@string/gaming_mode_disable_ringtone_summary"
             android:defaultValue="false"
             android:dependency="gaming_mode_enabled" />
 
-        <com.android.settings.preferences.SystemSettingSwitchPreference
+        <org.aospextended.support.preference.SystemSettingSwitchPreference
             android:key="gaming_mode_auto_answer_call"
             android:title="@string/gaming_mode_auto_answer_call_title"
             android:summary="@string/gaming_mode_auto_answer_call_summary"
@@ -113,7 +113,7 @@
     <PreferenceCategory
         android:title="@string/gaming_mode_prevent_accidental_touch">
 
-        <com.android.settings.preferences.SystemSettingSwitchPreference
+        <org.aospextended.support.preference.SystemSettingSwitchPreference
             android:key="gaming_mode_disable_gesture"
             android:title="@string/gaming_mode_disable_gesture_title"
             android:defaultValue="false"
