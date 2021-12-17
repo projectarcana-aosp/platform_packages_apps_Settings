@@ -109,6 +109,8 @@
     <string name="maintainer9_description">Xiaomi Redmi Note 4x</string>
     <string name="maintainer_10">Vastro Lorde &#40;Vastrolorde&#41;</string>
     <string name="maintainer10_description">Xiaomi Redmi Note 4x</string>
+    <string name="maintainer_11">Hari HK &#40;makhk&#41;</string>
+    <string name="maintainer11_description">Xiaomi Redmi Note 10 Pro</string>
     <string name="maintainers">Maintainers</string>
     <string name="maintainers_title">Official maintainers</string>
     <string name="maintainers_summary">Officially supported devices and their respective maintainers.</string>
