@@ -201,6 +201,15 @@ xmlns:android="http://schemas.android.com/apk/res/android"
            android:data="https://github.com/makhk" />
      </Preference>
      
+     <Preference
+           android:title="@string/maintainer_12"
+           android:summary="@string/maintainer12_description"
+           android:icon="@drawable/ic_design">
+     <intent
+           android:action="android.intent.action.VIEW"
+           android:data="https://github.com/niteshagrawal" />
+     </Preference>
+     
 </PreferenceCategory>
 
 </PreferenceScreen>
