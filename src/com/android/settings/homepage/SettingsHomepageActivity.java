@@ -99,7 +99,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
 	text.add("Fight and be remembered, or die and be forgotten.");
 	text.add("In case no one asked, are you doing fine youngster?");
 	text.add("Nothing bears fruit from hatred, but disaster my friend.");
-	text.add("Ahh Another they to become a legend.");
+	text.add("Ahh Another day to become a legend.");
 	text.add("In case no one told you this, you are awesome!");
 	text.add("My dear friend always busy, want some cookies?");
 	text.add("Uhmm Never Forget?");
