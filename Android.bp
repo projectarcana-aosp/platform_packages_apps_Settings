@@ -46,6 +46,8 @@ android_library {
 
     srcs: [
         "src/**/*.java",
+        "src/**/*.kt",
+        "Extensions/src/**/*.kt",
         "Extensions/src/**/*.java",
     ],
 
