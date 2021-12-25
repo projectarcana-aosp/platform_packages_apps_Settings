@@ -71,6 +71,12 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         text.add("Welcome to the Secret Shop!");
         text.add("Ah, some tea while you wait?");
         text.add("Those go together nicely.");
+        text.add("Plucked from the Arcanery.");
+        text.add("Your ignorance ensured your demise.");
+        text.add("Give it not a second thought.");
+        text.add("Whosoever stands against me, stands briefly.");
+        text.add("Remember me, for I will remember you!");
+        text.add("Be mindful of your purpose.");
         text.add("Your foes will fear you now.");
         text.add("My favorite customer!");
         text.add("Business is brisk.");
