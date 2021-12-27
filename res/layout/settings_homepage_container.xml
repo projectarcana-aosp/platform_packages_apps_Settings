@@ -92,14 +92,15 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
     	        android:layout_marginBottom="10dp"
+    	        android:padding="4dp"
         	android:gravity="center"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal">
             <Toolbar
                     android:id="@+id/search_action_bar"
-                    android:layout_width="42dp"
+                    android:layout_width="54dp"
                     android:navigationIcon="@drawable/ic_homepage_search"
-                    android:layout_height="42dp"
+                    android:layout_height="34dp"
                     android:background="@android:color/transparent"/>
         </LinearLayout>
     </com.google.android.material.appbar.CollapsingToolbarLayout>
