@@ -15,6 +15,10 @@
 xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/arcana_about_info">
 
+<PreferenceScreen
+    android:layout="@layout/arcana_logo"
+    android:key="arcana_logo" />
+    
 <PreferenceCategory
               android:key="about"
               android:title="@string/dev_info" >
@@ -64,6 +68,10 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 
      </PreferenceCategory>
 
+<PreferenceScreen
+    android:layout="@layout/core_members"
+    android:key="core_members" />
+    
 <PreferenceCategory
               android:key="leads"
               android:title="@string/leads" >
@@ -71,7 +79,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <Preference
             android:title="@string/team_1"
     android:summary="@string/team1_description"
-    android:icon="@drawable/ic_devs" >
+    android:icon="@drawable/ic_core_member" >
     <intent
                android:action="android.intent.action.VIEW"
                android:data="https://github.com/dlwlrma123" />
@@ -80,7 +88,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
        <Preference
             android:title="@string/team_2"
     android:summary="@string/team2_description"
-    android:icon="@drawable/ic_devs" >
+    android:icon="@drawable/ic_core_member" >
     <intent
                android:action="android.intent.action.VIEW"
                android:data="https://github.com/Joaquin-000" />
@@ -89,7 +97,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
        <Preference
             android:title="@string/team_3"
     android:summary="@string/team3_description"
-    android:icon="@drawable/ic_devs" >
+    android:icon="@drawable/ic_core_member" >
     <intent
                android:action="android.intent.action.VIEW"
                android:data="https://github.com/Hazama25" />
@@ -98,6 +106,10 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 
 </PreferenceCategory>
 
+<PreferenceScreen
+    android:layout="@layout/maintainers_banner"
+    android:key="maintainers_banner" />
+    
 <PreferenceCategory
               android:key="maintainers"
               android:title="@string/maintainers" >
@@ -105,7 +117,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
      <Preference
            android:title="@string/maintainer_1"
            android:summary="@string/maintainer1_description"
-           android:icon="@drawable/ic_design">
+           android:icon="@drawable/ic_devs">
      <intent
            android:action="android.intent.action.VIEW"
            android:data="https://github.com/dlwlrma123" />
@@ -114,7 +126,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
      <Preference
            android:title="@string/maintainer_2"
            android:summary="@string/maintainer2_description"
-           android:icon="@drawable/ic_design">
+           android:icon="@drawable/ic_devs">
      <intent
            android:action="android.intent.action.VIEW"
            android:data="https://github.com/Joaquin-000" />
@@ -123,7 +135,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
      <Preference
            android:title="@string/maintainer_3"
            android:summary="@string/maintainer3_description"
-           android:icon="@drawable/ic_design">
+           android:icon="@drawable/ic_devs">
      <intent
            android:action="android.intent.action.VIEW"
            android:data="https://github.com/Hazama25" />
@@ -132,7 +144,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
      <Preference
            android:title="@string/maintainer_4"
            android:summary="@string/maintainer4_description"
-           android:icon="@drawable/ic_design">
+           android:icon="@drawable/ic_devs">
      <intent
            android:action="android.intent.action.VIEW"
            android:data="https://github.com/JojiOnThatBeat" />
@@ -141,7 +153,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
      <Preference
            android:title="@string/maintainer_5"
            android:summary="@string/maintainer5_description"
-           android:icon="@drawable/ic_design">
+           android:icon="@drawable/ic_devs">
      <intent
            android:action="android.intent.action.VIEW"
            android:data="https://github.com/TyraLizQ10" />
@@ -150,7 +162,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
      <Preference
            android:title="@string/maintainer_6"
            android:summary="@string/maintainer6_description"
-           android:icon="@drawable/ic_design">
+           android:icon="@drawable/ic_devs">
      <intent
            android:action="android.intent.action.VIEW"
            android:data="https://github.com/eun0115" />
@@ -159,7 +171,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
      <Preference
            android:title="@string/maintainer_7"
            android:summary="@string/maintainer7_description"
-           android:icon="@drawable/ic_design">
+           android:icon="@drawable/ic_devs">
      <intent
            android:action="android.intent.action.VIEW"
            android:data="https://github.com/SharmagRit" />
@@ -168,7 +180,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
      <Preference
            android:title="@string/maintainer_8"
            android:summary="@string/maintainer8_description"
-           android:icon="@drawable/ic_design">
+           android:icon="@drawable/ic_devs">
      <intent
            android:action="android.intent.action.VIEW"
            android:data="https://github.com/blurzyy" />
@@ -177,7 +189,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
      <Preference
            android:title="@string/maintainer_9"
            android:summary="@string/maintainer9_description"
-           android:icon="@drawable/ic_design">
+           android:icon="@drawable/ic_devs">
      <intent
            android:action="android.intent.action.VIEW"
            android:data="https://github.com/Alone0316" />
@@ -186,7 +198,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
      <Preference
            android:title="@string/maintainer_10"
            android:summary="@string/maintainer10_description"
-           android:icon="@drawable/ic_design">
+           android:icon="@drawable/ic_devs">
      <intent
            android:action="android.intent.action.VIEW"
            android:data="https://github.com/vastolorde007" />
@@ -195,7 +207,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
      <Preference
            android:title="@string/maintainer_11"
            android:summary="@string/maintainer11_description"
-           android:icon="@drawable/ic_design">
+           android:icon="@drawable/ic_devs">
      <intent
            android:action="android.intent.action.VIEW"
            android:data="https://github.com/makhk" />
@@ -204,7 +216,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
      <Preference
            android:title="@string/maintainer_12"
            android:summary="@string/maintainer12_description"
-           android:icon="@drawable/ic_design">
+           android:icon="@drawable/ic_devs">
      <intent
            android:action="android.intent.action.VIEW"
            android:data="https://github.com/niteshagrawal" />
@@ -213,7 +225,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
      <Preference
            android:title="@string/maintainer_13"
            android:summary="@string/maintainer13_description"
-           android:icon="@drawable/ic_design">
+           android:icon="@drawable/ic_devs">
      <intent
            android:action="android.intent.action.VIEW"
            android:data="https://github.com/rasenss" />
@@ -222,7 +234,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
      <Preference
            android:title="@string/maintainer_14"
            android:summary="@string/maintainer14_description"
-           android:icon="@drawable/ic_design">
+           android:icon="@drawable/ic_devs">
      <intent
            android:action="android.intent.action.VIEW"
            android:data="https://github.com/princejb786" />
@@ -231,7 +243,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
      <Preference
            android:title="@string/maintainer_15"
            android:summary="@string/maintainer15_description"
-           android:icon="@drawable/ic_design">
+           android:icon="@drawable/ic_devs">
      <intent
            android:action="android.intent.action.VIEW"
            android:data="https://github.com/HaSSaN-L" />

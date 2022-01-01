@@ -66,9 +66,9 @@
 
     <!-- About ProjectArcana -->
     <string name="arcana_about_info">What is Project Arcana?</string>
-    <string name="arcana_about_summary">A powerful combination.</string>
-    <string name="arcana_about_info_summary">Project Arcana is a simple rom fueled by AOSPExtended, that aims to be simple yet cunning. Project Arcana aims to provides necessary customizations that is needed for every day life, from your traffic indicator down to your favorite icon styles. While also promising to be simple, Project Arcana tries to be aesthetic without making its users go through a lot 
-  of configurations. We are fans of simplicity. We strive to keep the ROM bloatfree and fast. &#35;NeverForget</string>
+    <string name="arcana_about_summary">Welcome to the Arcanery.</string>
+    <string name="arcana_about_info_summary">Project Arcana is a simple custom android OS fueled by AOSPExtended that aims to be simple yet cunning. Project Arcana aims to provides necessary customizations that are needed for users\' everyday life, from network traffic indicator down to everyone\'s favorite icon styles, Project Arcana promises to deliver these features out-of-the-box. While also promising to be simple, Project Arcana tries to be aesthetic without making its users go through a lot 
+  of UI/UX configurations. We are fans of simplicity. We strive to keep the ROM bloatfree and fast. &#35;NeverForget</string>
     <string name="dev_info">About Project Arcana</string>
     <string name="github">Github</string>
     <string name="github_description">View our source code</string>
@@ -82,7 +82,7 @@
     <string name="help_translate_description">Translate to your language, visit our Crowdin</string>
     <string name="walls">Wallpapers</string>
     <string name="walls_description">Get wallpapers contributed by various users</string>
-    <string name="leads">Core Team</string>
+    <string name="leads">The minds behind the Arcanery.</string>
     <string name="team_1">dlwlrma123 &#40;dlwlrma123&#41;</string>
     <string name="team1_description">Founder</string>
     <string name="team_2">mafiasupremacy &#40;Joaquin-000&#41;</string>
@@ -119,7 +119,7 @@
     <string name="maintainer14_description">Xiaomi Redmi Note 7 Pro</string>
     <string name="maintainer_15">HaSSaN &#40;HaSSaN_MoHl&#41;</string>
     <string name="maintainer15_description">Xiaomi Redmi Note 9s/9 Pro/9 Pro Max/10 Lite/Poco M2 Pro</string>
-    <string name="maintainers">Maintainers</string>
+    <string name="maintainers">The wizards of the Arcanery.</string>
     <string name="maintainers_title">Official maintainers</string>
     <string name="maintainers_summary">Officially supported devices and their respective maintainers.</string>
 
