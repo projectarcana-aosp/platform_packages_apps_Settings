@@ -58,6 +58,7 @@ public class OverlayCategoryPreferenceController extends DeveloperOptionsPrefere
     private static final String TAG = "OverlayCategoryPC";
     private static final String FONT_KEY = "android.theme.customization.font";
     private static final String ICON_PACK_KEY = "android.theme.customization.icon_pack";
+    private static final String CUSTOM_OVERLAY_KEY = "android.theme.customization.custom_overlays";
 
     @VisibleForTesting
     static final String PACKAGE_DEVICE_DEFAULT = "package_device_default";
@@ -67,6 +68,7 @@ public class OverlayCategoryPreferenceController extends DeveloperOptionsPrefere
     private final boolean mAvailable;
     private final boolean mIsFonts;
     private final boolean mIsIconPacks;
+    private final boolean mIsCustomOverlay;
     private final String mCategory;
     private final PackageManager mPackageManager;
     private final String mDeviceDefaultLabel;
@@ -84,6 +86,7 @@ public class OverlayCategoryPreferenceController extends DeveloperOptionsPrefere
         mDeviceDefaultLabel = mContext.getString(R.string.overlay_option_device_default);
         mIsFonts = FONT_KEY.equals(category);
         mIsIconPacks = ICON_PACK_KEY.equals(category);
+        mIsCustomOverlay = CUSTOM_OVERLAY_KEY.equals(category);
     }
 
     public OverlayCategoryPreferenceController(Context context, String category) {
@@ -140,7 +143,7 @@ public class OverlayCategoryPreferenceController extends DeveloperOptionsPrefere
         Log.w(TAG, "setOverlay packageNames=" + packageNames.toString());
         Log.w(TAG, "setOverlay label=" + label);
 
-        if (mIsFonts || mIsIconPacks) {
+        if (mIsFonts || mIsIconPacks || mIsCustomOverlay) {
             // For fonts we also need to set this setting
             String value = Settings.Secure.getStringForUser(mContext.getContentResolver(),
                     Settings.Secure.THEME_CUSTOMIZATION_OVERLAY_PACKAGES, UserHandle.USER_CURRENT);
