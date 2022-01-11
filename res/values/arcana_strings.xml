@@ -21,6 +21,7 @@
     <string name="system_category_title">System Settings</string>
     <string name="device_accessibility_title">Device Access Settings </string>
     <string name="privacy_category_title">Privacy and Welfare Settings</string>
+    <string name="user_category_title">User Information</string>
 
     <string name="usercard_summary">Current active user, tap for more info.</string>
 

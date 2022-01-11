@@ -20,6 +20,13 @@
         xmlns:settings="http://schemas.android.com/apk/res-auto"
         android:key="top_level_settings">
 
+    <Preference
+        android:title="@string/user_category_title"
+        android:icon="@drawable/ic_user_info"
+        android:key="category"
+        android:selectable="false"
+        android:order="-175"/>
+        
     <com.android.settingslib.widget.LayoutPreference
             android:layout="@layout/usercard_blank"
             android:fragment="com.android.settings.users.UserSettings"

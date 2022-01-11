@@ -4,7 +4,6 @@
     android:id="@+id/entity_header"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/octavi_card"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
     android:layout_marginVertical="8dp"
@@ -38,6 +37,7 @@
                 android:ellipsize="marquee" 
 		android:layout_width="wrap_content" 
 		android:layout_height="wrap_content" 
+		android:textStyle="bold"
                 android:textSize="22sp"
 		android:textColor="?android:attr/textColorPrimary"
 		android:singleLine="true"/>
