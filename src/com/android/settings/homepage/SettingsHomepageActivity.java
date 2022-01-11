@@ -112,6 +112,25 @@ public class SettingsHomepageActivity extends FragmentActivity implements
 	text.add("Show em what you got stranger!");
     }
 
+    static ArrayList<String> welcome=new ArrayList<>();
+    static {
+        welcome.add("Settings");
+        welcome.add("Bonjour.");
+        welcome.add("こんにちは.");
+        welcome.add("Hello.");
+        welcome.add("Kamusta?");
+        welcome.add("Howdy?");
+        welcome.add("Привет.");
+        welcome.add("Hola.");
+        welcome.add("Halo.");
+        welcome.add("नमस्ते.");
+        welcome.add("안녕하세요.");
+        welcome.add("Ciao.");
+        welcome.add("你好.");
+        welcome.add("مرحبا.");
+        welcome.add("Hallo.");
+    }
+    
     @Override
     public CategoryMixin getCategoryMixin() {
         return mCategoryMixin;
@@ -147,7 +166,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         });
 
         getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
-	collapsing_toolbar.setTitle("Settings");
+	collapsing_toolbar.setTitle(welcome.get(randomNum(0, welcome.size()-1)));
         mCategoryMixin = new CategoryMixin(this);
         getLifecycle().addObserver(mCategoryMixin);
 
