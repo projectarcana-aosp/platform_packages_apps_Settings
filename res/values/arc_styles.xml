@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2017 The LineageOS Project
+<!-- Copyright (C) 2021 Project Radiant
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,6 +13,16 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
-    <attr name="customPreferenceStyle" format="reference" />
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Cards -->
+    <style name="rdnt_cardview_text_primary">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
+    </style>
+
 </resources>
+

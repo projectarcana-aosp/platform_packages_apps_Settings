@@ -90,4 +90,6 @@
     <string name="arcane_idle_manager_title">Arcana Idle Manager</string>
     <string name="arcane_idle_manager_summary">Stop all non-essential background processes when the device is idle</string>
 
+     <!-- Others Page -->
+    <string name="other_setting">More</string>
 </resources>

@@ -48,20 +48,6 @@ public class TopLevelLocationPreferenceController extends BasePreferenceControll
         return AVAILABLE;
     }
 
-    @Override
-    public CharSequence getSummary() {
-        if (mLocationManager.isLocationEnabled()) {
-            if (mNumTotal == -1) {
-                return mContext.getString(R.string.location_settings_loading_app_permission_stats);
-            }
-            return mContext.getResources().getQuantityString(
-                    R.plurals.location_settings_summary_location_on,
-                    mNumTotal, mNumTotal);
-        } else {
-            return mContext.getString(R.string.location_settings_summary_location_off);
-        }
-    }
-
     @VisibleForTesting
     void setLocationAppCount(int numApps) {
         mNumTotal = numApps;

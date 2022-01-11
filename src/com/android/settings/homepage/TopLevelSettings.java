@@ -36,6 +36,7 @@ import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
+import android.util.Log;
 
 import com.android.settings.R;
 import com.android.settings.Utils;

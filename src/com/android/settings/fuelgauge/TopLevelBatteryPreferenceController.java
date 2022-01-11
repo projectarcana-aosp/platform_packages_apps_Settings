@@ -120,59 +120,12 @@ public class TopLevelBatteryPreferenceController extends BasePreferenceControlle
         mBatteryBroadcastReceiver.unRegister();
     }
 
-    @Override
-    public CharSequence getSummary() {
-        return getSummary(true /* batteryStatusUpdate */);
-    }
-
-    private CharSequence getSummary(boolean batteryStatusUpdate) {
-        // Display help message if battery is not present.
-        if (!mIsBatteryPresent) {
-            return mContext.getText(R.string.battery_missing_message);
-        }
-        return getDashboardLabel(mContext, mBatteryInfo, batteryStatusUpdate);
-    }
-
-    protected CharSequence getDashboardLabel(Context context, BatteryInfo info,
-            boolean batteryStatusUpdate) {
-        if (info == null || context == null) {
-            return null;
-        }
-
-        if (batteryStatusUpdate) {
-            if (!mBatteryStatusFeatureProvider.triggerBatteryStatusUpdate(this, info)) {
-                mBatteryStatusLabel = null; // will generateLabel()
-            }
-        }
-
-        return (mBatteryStatusLabel == null) ? generateLabel(info) : mBatteryStatusLabel;
-    }
-
-    private CharSequence generateLabel(BatteryInfo info) {
-        if (!info.discharging && info.chargeLabel != null) {
-            return info.chargeLabel;
-        } else if (info.remainingLabel == null) {
-            return info.batteryPercentString;
-        } else {
-            return mContext.getString(R.string.power_remaining_settings_home_page,
-                    info.batteryPercentString,
-                    info.remainingLabel);
-        }
-    }
 
     /**
      * Callback which receives text for the label.
      */
     public void updateBatteryStatus(String label, BatteryInfo info) {
-        mBatteryStatusLabel = label; // Null if adaptive charging is not active
-
-        if (mPreference != null) {
-            // Do not triggerBatteryStatusUpdate(), otherwise there will be an infinite loop
-            final CharSequence summary = getSummary(false /* batteryStatusUpdate */);
-            if (summary != null) {
-                mPreference.setSummary(summary);
-            }
-        }
+        /* Gaming ROM fr */
     }
 
     @VisibleForTesting
