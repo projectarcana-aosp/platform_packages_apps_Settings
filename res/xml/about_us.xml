@@ -285,6 +285,15 @@ xmlns:android="http://schemas.android.com/apk/res/android"
            android:data="http://github.com/NEXUS-003" />
      </Preference>
      
+     <Preference
+           android:title="@string/maintainer_20"
+           android:summary="@string/maintainer20_description"
+           android:icon="@drawable/ic_devs">
+     <intent
+           android:action="android.intent.action.VIEW"
+           android:data="http://github.com/rk134" />
+     </Preference>
+     
 </PreferenceCategory>
 
 </PreferenceScreen>
