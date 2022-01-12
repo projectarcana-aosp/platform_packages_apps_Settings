@@ -119,6 +119,14 @@
     <string name="maintainer14_description">Xiaomi Redmi Note 7 Pro</string>
     <string name="maintainer_15">HaSSaN &#40;HaSSaN_MoHl&#41;</string>
     <string name="maintainer15_description">Xiaomi Redmi Note 9s/9 Pro/9 Pro Max/10 Lite/Poco M2 Pro</string>
+    <string name="maintainer_16">Paul &#40;blazerpaul15&#41;</string>
+    <string name="maintainer16_description">Xiaomi Redmi Note 8 Pro</string>
+    <string name="maintainer_17">N4veenNK &#40;Naveen4264&#41;</string>
+    <string name="maintainer17_description"> Asus Zenfone Max Pro M1</string>
+    <string name="maintainer_18">Takumi &#40;Takumi021&#41;</string>
+    <string name="maintainer18_description">Realme 5/5i/5s</string>
+    <string name="maintainer_19">Nexus &#40;GODFATHER_AF&#41;</string>
+    <string name="maintainer19_description">Poco F1</string>
     <string name="maintainers">The wizards of the Arcanery.</string>
     <string name="maintainers_title">Official maintainers</string>
     <string name="maintainers_summary">Officially supported devices and their respective maintainers.</string>

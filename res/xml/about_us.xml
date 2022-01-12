@@ -249,6 +249,42 @@ xmlns:android="http://schemas.android.com/apk/res/android"
            android:data="https://github.com/HaSSaN-L" />
      </Preference>
      
+     <Preference
+           android:title="@string/maintainer_16"
+           android:summary="@string/maintainer16_description"
+           android:icon="@drawable/ic_devs">
+     <intent
+           android:action="android.intent.action.VIEW"
+           android:data="https://github.com/blazerpaul" />
+     </Preference>
+     
+     <Preference
+           android:title="@string/maintainer_17"
+           android:summary="@string/maintainer17_description"
+           android:icon="@drawable/ic_devs">
+     <intent
+           android:action="android.intent.action.VIEW"
+           android:data="https://github.com/N4veenNK" />
+     </Preference>
+     
+     <Preference
+           android:title="@string/maintainer_18"
+           android:summary="@string/maintainer18_description"
+           android:icon="@drawable/ic_devs">
+     <intent
+           android:action="android.intent.action.VIEW"
+           android:data="http://github.com/takumi021" />
+     </Preference>
+     
+     <Preference
+           android:title="@string/maintainer_19"
+           android:summary="@string/maintainer19_description"
+           android:icon="@drawable/ic_devs">
+     <intent
+           android:action="android.intent.action.VIEW"
+           android:data="http://github.com/NEXUS-003" />
+     </Preference>
+     
 </PreferenceCategory>
 
 </PreferenceScreen>
