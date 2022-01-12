@@ -92,4 +92,7 @@
 
      <!-- Others Page -->
     <string name="other_setting">More</string>
+    
+    <!-- Home -->
+     <string name="wellbeing">Digital Wellbeing</string>
 </resources>

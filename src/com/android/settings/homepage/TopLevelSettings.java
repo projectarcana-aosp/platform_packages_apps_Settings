@@ -56,6 +56,29 @@ public class TopLevelSettings extends DashboardFragment implements
     private static final String TAG = "TopLevelSettings";
     private static final String KEY_USER_CARD = "top_level_usercard";
 
+    public static final String[] CHANGE_LAYOUT_AND_ORDER_KEYS = {
+        "dashboard_tile_pref_com.oneplus.extras.DeviceSettings",
+        "dashboard_tile_pref_org.lineageos.settings.device",
+        "dashboard_tile_pref_org.lineageos.settings",
+        "dashboard_tile_pref_org.omnirom.devices",
+        "dashboard_tile_pref_org.omnirom.device",
+        "dashboard_tile_pref_com.poco.parts",
+        "dashboard_tile_pref_com.xiaomi.parts",
+        "dashboard_tile_pref_com.asus.zenparts"
+    };
+
+    public static final String[] CHANGE_LAYOUT_KEYS = {
+        "top_level_google",
+        "dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity",
+        "top_level_wellbeing",
+    };
+
+    public static final int[] LAYOUTS_N = {
+        R.layout.rdnt_card_google,
+        R.layout.rdnt_card_wellbeing,
+        R.layout.rdnt_card_wellbeing
+    };
+
     public TopLevelSettings() {
         final Bundle args = new Bundle();
         // Disable the search icon because this page uses a full search view in actionbar.
@@ -117,26 +140,23 @@ public class TopLevelSettings extends DashboardFragment implements
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         super.onCreatePreferences(savedInstanceState, rootKey);
-        final PreferenceScreen screen = getPreferenceScreen();
-        if (screen == null) {
-            return;
+        for (int i = 0; i < CHANGE_LAYOUT_KEYS.length; i++) {
+            Preference preference = findPreference(CHANGE_LAYOUT_KEYS[i]);
+            if (preference != null){
+                preference.setLayoutResource(LAYOUTS_N[i]);
+            }
         }
-        // Tint the homepage icons
-        final int tintColor = Utils.getHomepageIconColor(getContext());
-        final int count = screen.getPreferenceCount();
-        for (int i = 0; i < count; i++) {
-            final Preference preference = screen.getPreference(i);
-            if (preference == null) {
-                break;
+        for (int i = 0; i < CHANGE_LAYOUT_AND_ORDER_KEYS.length; i++) {
+            Preference preference = findPreference(CHANGE_LAYOUT_AND_ORDER_KEYS[i]);
+            if (preference != null){
+                preference.setLayoutResource(R.layout.rdnt_card_device);
+                preference.setOrder(12);
             }
-            final Drawable icon = preference.getIcon();
-            if (icon != null) {
-                icon.setTint(tintColor);
-            }
-
+            
    	 onSetPrefCard();
-
+   	 
         }
+
     }
 
 	private void onSetPrefCard() {
