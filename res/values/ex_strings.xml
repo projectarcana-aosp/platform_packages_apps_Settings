@@ -129,6 +129,8 @@
     <string name="maintainer19_description">Poco F1</string>
     <string name="maintainer_20">rxhul &#40;rk_134&#41;</string>
     <string name="maintainer20_description">Xiaomi Redmi Note 5/5 Plus</string>
+    <string name="maintainer_21">Lord Itachi &#40;manid_reddy&#41;</string>
+    <string name="maintainer21_description">Moto One Fusion +</string>
     <string name="maintainers">The wizards of the Arcanery.</string>
     <string name="maintainers_title">Official maintainers</string>
     <string name="maintainers_summary">Officially supported devices and their respective maintainers.</string>
