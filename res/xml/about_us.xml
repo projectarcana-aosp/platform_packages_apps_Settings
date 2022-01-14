@@ -294,6 +294,15 @@ xmlns:android="http://schemas.android.com/apk/res/android"
            android:data="http://github.com/rk134" />
      </Preference>
      
+     <Preference
+           android:title="@string/maintainer_21"
+           android:summary="@string/maintainer21_description"
+           android:icon="@drawable/ic_devs">
+     <intent
+           android:action="android.intent.action.VIEW"
+           android:data="https://github.com/Manidweep" />
+     </Preference>
+     
 </PreferenceCategory>
 
 </PreferenceScreen>
