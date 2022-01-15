@@ -83,8 +83,8 @@
     <color name="fallback_tintColor">#89000000</color>
 
     <!-- Dashboard/homepage icon background color -->
-    <color name="homepage_icon_bg">@*android:color/system_neutral2_50</color>
-    <color name="homepage_subicon_bg">@*android:color/system_neutral1_900</color>
+    <color name="homepage_icon_bg">#00000000</color>
+    <color name="homepage_subicon_bg">?android:attr/colorAccent</color>
 
     <color name="contextual_card_dismissal_background">@*android:color/background_device_default_light</color>
     <color name="contextual_card_background">@*android:color/background_device_default_light</color>
