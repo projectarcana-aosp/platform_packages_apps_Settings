@@ -78,7 +78,7 @@
         android:key="top_level_extensions"
         settings:layout="@layout/arc_card_top"
         android:title="@string/extensions_title"
-        android:icon="@drawable/ic_settings_extensions"
+        android:icon="@drawable/ic_tresdin"
         android:order="-130"
         android:fragment="org.aospextended.extensions.Extensions"
         settings:controller="org.aospextended.extensions.TopLevelExtensionsEntryPreferenceController" />

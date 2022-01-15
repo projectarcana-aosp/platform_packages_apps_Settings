@@ -3924,7 +3924,7 @@
         <!-- ProjectArcana additions -->
         <activity android:name=".Settings$ExtensionsSettingsActivity"
                   android:label="@string/extensions_title"
-                  android:icon="@drawable/ic_homepage_extensions"
+                  android:icon="@drawable/ic_tresdin"
                   android:exported="true"
                   android:parentActivityName="com.android.settings">
             <intent-filter>

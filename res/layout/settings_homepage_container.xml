@@ -87,7 +87,7 @@
                 android:layout_height="?android:attr/actionBarSize" />
         <LinearLayout
                 android:id="@+id/common_con"
-                android:background="@drawable/octavi_card"
+                android:background="@drawable/arcana_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:background="@drawable/rdnt_cw_mid_rpl"
+    android:background="@drawable/rdnt_cw_bot_rpl"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="@dimen/rdnt_cardview_padding"
