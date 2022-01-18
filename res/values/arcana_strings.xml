@@ -85,7 +85,7 @@
     
     <!-- Title for connected TWS device group [CHAR LIMIT=none]-->
     <string name="connected_tws_device_saved_title">Saved Earbuds</string>
-    
+
     <!-- Arcane Idle Manager -->
     <string name="arcane_idle_manager_title">Arcana Idle Manager</string>
     <string name="arcane_idle_manager_summary">Stop all non-essential background processes when the device is idle</string>
@@ -95,4 +95,10 @@
     
     <!-- Home -->
      <string name="wellbeing">Digital Wellbeing</string>
+     
+    <!-- arcanaOS versioning -->
+    <string name="arcana_version_title">Version</string>
+    <string name="arcana_device_title">Device</string>
+    <string name="arcana_release_type_title">Release type</string>
+    <string name="arcana_maintainer_title">Magus</string>
 </resources>

@@ -21,10 +21,12 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
-<PreferenceScreen
-    android:layout="@layout/arcana_logo"
-    android:key="arcana_logo" />
-
+    <!-- arcanaOS info -->
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="arcana_info"
+        android:layout="@layout/arcana_info"
+        android:selectable="false" />
+        
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
@@ -34,21 +36,6 @@
         settings:searchable="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
 
-    <!-- Arcana version -->
-    <Preference
-         android:key="arcana_version"
-         android:title="@string/arcana_version"
-         android:summary="@string/summary_placeholder"
-         settings:enableCopying="true"
-         settings:controller="com.android.settings.deviceinfo.firmwareversion.ArcanaVersionPreferenceController"/>
-
-    <!-- Arcana maintainer -->
-    <Preference
-        android:key="maintainer"
-        android:title="@string/maintainer"
-        android:summary="@string/summary_placeholder"
-        settings:enableCopying="true"
-        settings:controller="com.android.settings.deviceinfo.arcana.arcanaMaintainerPreferenceController"/>
 
     <!-- Security patch -->
     <Preference
