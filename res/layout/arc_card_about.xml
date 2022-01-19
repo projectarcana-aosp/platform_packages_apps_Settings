@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:background="@drawable/rdnt_cw_bot_rpl"
+    android:background="@drawable/rdnt_cw_about_rpl"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="@dimen/rdnt_cardview_padding"
-    android:layout_marginBottom="16dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -24,8 +23,8 @@
             <androidx.preference.internal.PreferenceImageView
                 android:id="@android:id/icon"
                 android:padding="1.5dip"
-                android:layout_width="@dimen/rdnt_top_icn"
-                android:layout_height="@dimen/rdnt_top_icn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 app:maxHeight="@dimen/rdnt_top_icn_max"
                 app:maxWidth="@dimen/rdnt_top_icn_max" />
 
@@ -36,42 +35,27 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/rdnt_cardview_margin_list"
             android:layout_marginBottom="@dimen/rdnt_cardview_margin_list"
-            android:layout_weight="1.0">
+            android:layout_weight="1.0"
+            android:layout_marginEnd="@dimen/rdnt_cardview_padding">
             <TextView
                 android:ellipsize="marquee"
                 android:id="@android:id/title"
                 android:fadingEdge="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toStartOf="@id/ick"
-
-                android:layout_alignParentStart="true"
                 android:singleLine="true"
                 style="@style/rdnt_cardview_text_primary" />
 
             <TextView
                 android:id="@android:id/summary"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:visibility="gone"
-                android:layout_marginTop="2.0dip"
-                android:maxLines="4"
-                android:layout_toStartOf="@id/ick"
-
-                android:layout_alignParentStart="true"
-                android:layout_below="@android:id/title"
-                android:layout_alignLeft="@android:id/title"
-                android:layout_alignStart="@android:id/title"  />
-
-            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="16dp"
-                android:layout_centerVertical="true"
-                android:id="@+id/ick"
-                android:layout_alignParentEnd="true"
-                android:src="@drawable/ic_bck_about" />
-
+                android:layout_marginTop="2.0dip"
+                android:maxLines="4"
+                android:layout_below="@android:id/title"
+                android:layout_alignLeft="@android:id/title"
+                android:layout_alignStart="@android:id/title"
+                style="@style/rdnt_cardview_text_secondary" />
         </RelativeLayout>
         <LinearLayout
             android:gravity="center_vertical"
