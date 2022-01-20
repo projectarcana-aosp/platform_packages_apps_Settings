@@ -17,7 +17,7 @@
 <resources>
 
     <!-- Cards -->
-    <dimen name="rdnt_cardview_padding">16dp</dimen>
+    <dimen name="rdnt_cardview_padding">0dp</dimen>
     <dimen name="rdnt_top_icn">42dp</dimen>
     <dimen name="rdnt_top_icn_max">52.5dp</dimen>
     <dimen name="rdnt_cardview_margin_list">16dip</dimen>
