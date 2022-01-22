@@ -131,6 +131,8 @@
     <string name="maintainer20_description">Xiaomi Redmi Note 5/5 Plus</string>
     <string name="maintainer_21">Lord Itachi &#40;manid_reddy&#41;</string>
     <string name="maintainer21_description">Moto One Fusion +</string>
+    <string name="maintainer_22">LaLeeroy &#40;leeroy&#41;</string>
+    <string name="maintainer22_description">Xiaomi Redmi Note 5A Prime/Lite</string>
     <string name="maintainers">The wizards of the Arcanery.</string>
     <string name="maintainers_title">Official maintainers</string>
     <string name="maintainers_summary">Officially supported devices and their respective maintainers.</string>
