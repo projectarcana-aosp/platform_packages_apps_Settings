@@ -723,7 +723,7 @@
     <!-- In the security screen, the header title for security statuses -->
     <string name="security_status_title">Security status</string>
     <!-- Summary for Security settings, explaining a few important settings under it [CHAR LIMIT=NONE] -->
-    <string name="security_dashboard_summary">Screen lock, Find My Device, app security</string>
+    <string name="security_dashboard_summary">Screen lock • Find My Device</string>
 
     <!-- Face enrollment and settings --><skip />
     <!-- Note: Update FaceEnrollParentalConsent.CONSENT_STRING_RESOURCES when any _consent_ strings are added or removed. -->
@@ -3205,7 +3205,7 @@
     <!-- Styles & Wallpapers settings title [CHAR LIMIT=30] -->
     <string name="style_and_wallpaper_settings_title">Wallpaper &amp; style</string>
     <!-- Summary for the top level wallpapers settings [CHAR LIMIT=NONE]-->
-    <string name="wallpaper_dashboard_summary">Home, lock screen</string>
+    <string name="wallpaper_dashboard_summary">Home • lock screen</string>
     <!-- Wallpaper settings summary when default wallpaper is used [CHAR LIMIT=NONE] -->
     <string name="wallpaper_settings_summary_default">Default</string>
     <!-- Wallpaper settings summary when wallpaper has been updated [CHAR LIMIT=NONE] -->
@@ -5234,7 +5234,7 @@
     <!-- Settings title for accessibility settings screen -->
     <string name="accessibility_settings_title">Accessibility settings</string>
     <!-- Summary for Accessibility settings, explaining a few important settings under it [CHAR LIMIT=NONE]-->
-    <string name="accessibility_settings_summary">Display, interaction, audio</string>
+    <string name="accessibility_settings_summary">Display • interaction • audio</string>
     <!-- Settings title for a brief version of Vision-Related Accessibility Settings. Displayed in Setup Wizard only. [CHAR LIMIT=35] -->
     <string name="vision_settings_title">Vision Settings</string>
     <!-- Settings description for a brief version of Vision-Related Accessibility Settings. Tells the user that they can adjust these settings now to help them through the remainder of the Setup Wizard and that they can later be changed in Settings. Displayed in Setup Wizard only. [CHAR LIMIT=none] -->
@@ -8166,14 +8166,14 @@
     <!-- Title for setting tile leading to network and Internet settings [CHAR LIMIT=40]-->
     <string name="network_dashboard_title">Network &amp; internet</string>
     <!-- Summary for Network and Internet settings, explaining it contains mobile, wifi setting and data usage settings [CHAR LIMIT=NONE]-->
-    <string name="network_dashboard_summary_mobile">Mobile, Wi\u2011Fi, hotspot</string>
+    <string name="network_dashboard_summary_mobile">Mobile • Wi\u2011Fi • hotspot</string>
     <!-- Summary for Network and Internet settings, explaining it contains wifi and data usage setting [CHAR LIMIT=NONE]-->
-    <string name="network_dashboard_summary_no_mobile">Wi\u2011Fi, hotspot</string>
+    <string name="network_dashboard_summary_no_mobile">Wi\u2011Fi • hotspot</string>
 
     <!-- Title for setting tile leading to Connected devices settings [CHAR LIMIT=40]-->
     <string name="connected_devices_dashboard_title">Connected devices</string>
     <!-- Summary for Connected devices settings, explaining default settings under it [CHAR LIMIT=NONE]-->
-    <string name="connected_devices_dashboard_default_summary">Bluetooth, pairing</string>
+    <string name="connected_devices_dashboard_default_summary">Bluetooth • pairing</string>
     <!-- Summary for Connected devices settings, explaning a few important settings under it [CHAR LIMIT=NONE]-->
     <string name="connected_devices_dashboard_summary">Bluetooth, driving mode, NFC</string>
     <!-- Summary for Connected devices settings, explaning a few important settings under it [CHAR LIMIT=NONE]-->
@@ -8197,18 +8197,18 @@
     <!-- Title for setting tile leading to Apps & Notification settings [CHAR LIMIT=40]-->
     <string name="app_and_notification_dashboard_title">Apps &amp; notifications</string>
     <!-- Summary for Apps & Notification settings, explaining a few important settings under it [CHAR LIMIT=NONE]-->
-    <string name="app_and_notification_dashboard_summary">Recent apps, default apps</string>
+    <string name="app_and_notification_dashboard_summary">Recent apps • default apps</string>
     <!-- Toast shown when an app in the work profile attempts to open notification settings. The apps in the work profile cannot access notification settings. [CHAR LIMIT=NONE] -->
     <string name="notification_settings_work_profile">Notification access is not available for apps in the work profile.</string>
     <!-- Title for setting tile leading to saved autofill passwords, autofill, and account settings [CHAR LIMIT=40]-->
     <string name="account_dashboard_title">Passwords &amp; accounts</string>
     <!-- Summary for setting tile leading to saved autofill passwords, autofill, and account settings [CHAR LIMIT=NONE]-->
-    <string name="account_dashboard_default_summary">Saved passwords, autofill, synced accounts</string>
+    <string name="account_dashboard_default_summary">Passwords • autofill • synced accounts</string>
     <!-- Title for setting tile leading to setting UI which allows user set default app to
     handle actions such as open web page, making phone calls, default SMS apps [CHAR  LIMIT=40]-->
     <string name="app_default_dashboard_title">Default apps</string>
     <!-- Summary text for system preference tile, showing important setting items under system setting [CHAR LIMIT=NONE]-->
-    <string name="system_dashboard_summary">Languages, gestures, time, backup</string>
+    <string name="system_dashboard_summary">Language • gestures • time</string>
 
     <!-- Search strings -->
     <!-- Text to describe the search results fragment title [CHAR LIMIT=16] -->
@@ -8398,7 +8398,7 @@
     <string name="sound_settings_summary">Ring &amp; notification volume at <xliff:g id="percentage" example="2%">%1$s</xliff:g></string>
 
     <!-- Summary for sound settings, explaining a few important settings under it [CHAR LIMIT=NONE]-->
-    <string name="sound_dashboard_summary">Volume, vibration, Do Not Disturb</string>
+    <string name="sound_dashboard_summary">Sound Mode • Ringtone</string>
 
     <!-- Sound: Dashboard summary indicating the volume of ringtone when at 0% with vibrate enabled. [CHAR LIMIT=100] -->
     <string name="sound_settings_summary_vibrate">Ringer set to vibrate</string>
@@ -8834,7 +8834,7 @@
     <string name="configure_notification_settings">Notifications</string>
 
     <!-- Summary for the top level Notifications Settings [CHAR LIMIT=NONE]-->
-    <string name="notification_dashboard_summary">Notification history, conversations</string>
+    <string name="notification_dashboard_summary">Status bar • Do not disturb</string>
 
     <!-- notification header - settings for conversation type notifications -->
     <string name="conversation_notifs_category">Conversation</string>
@@ -11011,7 +11011,7 @@
     <!-- Summary of display with screen sleep timeout [CHAR LIMIT=NONE] -->
     <string name="display_summary">Sleep after <xliff:g id="timeout_description" example="10 minutes">%1$s</xliff:g> of inactivity</string>
     <!-- Summary for Display settings, explaining a few important settings under it [CHAR LIMIT=NONE]-->
-    <string name="display_dashboard_summary">Dark theme, font size, brightness</string>
+    <string name="display_dashboard_summary">Dark theme • font size • brightness</string>
 
     <!-- Example summary of display used in Setup Wizard preview screen [CHAR LIMIT=NONE] -->
     <string name="display_summary_example">Sleep after 10 minutes of inactivity</string>
@@ -11721,7 +11721,7 @@
     <string name="emergency_settings_preference_title">Safety &amp; emergency</string>
 
     <!-- Summary for the top level Safety & emergency Settings [CHAR LIMIT=NONE]-->
-    <string name="emergency_dashboard_summary">Emergency SOS, medical info, alerts</string>
+    <string name="emergency_dashboard_summary">Emergency SOS • medical info</string>
 
     <!-- Title text for edge to edge navigation [CHAR LIMIT=60] -->
     <string name="edge_to_edge_navigation_title">Gesture navigation</string>
@@ -13051,7 +13051,7 @@
     <!-- Title for the top level Privacy Settings [CHAR LIMIT=30]-->
     <string name="privacy_dashboard_title">Privacy</string>
     <!-- Summary for the top level Privacy Settings [CHAR LIMIT=NONE]-->
-    <string name="privacy_dashboard_summary">Permissions, account activity, personal data</string>
+    <string name="privacy_dashboard_summary">Permissions • account activity</string>
 
     <!-- Label for button in contextual card for users to remove the card [CHAR LIMIT=30] -->
     <string name="contextual_card_dismiss_remove">Remove</string>
