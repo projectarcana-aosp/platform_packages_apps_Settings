@@ -133,6 +133,8 @@
     <string name="maintainer21_description">Moto One Fusion +</string>
     <string name="maintainer_22">LaLeeroy &#40;leeroy&#41;</string>
     <string name="maintainer22_description">Xiaomi Redmi Note 5A Prime/Lite</string>
+    <string name="maintainer_23">イタチ &#40;Eidoron1&#41;</string>
+    <string name="maintainer23_description">Xiaomi POCO F3/Redmi K40/Mi 11X</string>
     <string name="maintainers">The wizards of the Arcanery.</string>
     <string name="maintainers_title">Official maintainers</string>
     <string name="maintainers_summary">Officially supported devices and their respective maintainers.</string>
