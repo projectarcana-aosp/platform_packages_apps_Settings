@@ -135,6 +135,9 @@
     <string name="maintainer22_description">Xiaomi Redmi Note 5A Prime/Lite</string>
     <string name="maintainer_23">イタチ &#40;Eidoron1&#41;</string>
     <string name="maintainer23_description">Xiaomi POCO F3/Redmi K40/Mi 11X</string>
+    <string name="maintainer_24">Soumyo &#40;Loves Only Peachu&#41;</string>
+    <string name="maintainer24_description">Oneplus 8T/9R</string>   
+
     <string name="maintainers">The wizards of the Arcanery.</string>
     <string name="maintainers_title">Official maintainers</string>
     <string name="maintainers_summary">Officially supported devices and their respective maintainers.</string>
