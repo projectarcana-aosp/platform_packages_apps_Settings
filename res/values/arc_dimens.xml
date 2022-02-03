@@ -12,7 +12,6 @@
 -->
 
 <resources>
-
     <!-- Cards -->
     <dimen name="rdnt_cardview_padding">16dp</dimen>
     <dimen name="rdnt_top_icn">42dp</dimen>
@@ -31,4 +30,7 @@
      <dimen name="xd_toolbar_height">225dp</dimen>
      <dimen name="xd_toolbar_expanded_title_margin_start">21dp</dimen>
      <dimen name="xd_toolbar_expanded_title_margin_end">75dp</dimen>
+     
+    <!-- Fingerprint -->
+    <dimen name="fingerprint_find_sensor_padding_top">16dp</dimen>
 </resources>
