@@ -262,4 +262,7 @@
     <string name="about_us_info_category_title">About Us</string>
     <string name="arcana_revision">Project Arcana Revision</string>
 
+    <!-- Optimized charge -->
+    <string name="optimized_charge_title">Optimized charging</string>
+    <string name="optimized_charge_summary">Limit charging to 75%-80% to extend battery life</string>
 </resources>
