@@ -113,7 +113,7 @@
     <string name="arcana_version_title">Version</string>
     <string name="arcana_device_title">Device</string>
     <string name="arcana_release_type_title">Release type</string>
-    <string name="arcana_maintainer_title">Magus</string>
+    <string name="arcana_maintainer_title">Maintainer</string>
     
     <!-- Default getTimeSpentInApp string for Wellbeing to display. [CHAR LIMIT=NONE] --> 
     <string name="duration_less_than_one_minute">Less than 1 Minute</string> 
@@ -122,6 +122,8 @@
     <string name="screen_time_summary_usage_today">%1$s today</string>
     
     <string name="battery_temp">Battery temperature</string>
+    
+    <string name="wellbeing_title">Google Wellbeing</string>
     
     <string name="gesture_illustration_description">Control your device with ease.</string>
     <string name="connected_setting_description">Manage your device\'s connections.</string>
