@@ -60,17 +60,9 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="back_height_category"
+        android:key="navbar_gesture_custom_category"
         android:persistent="false"
-        android:title="@string/back_height_dialog_title">
-
-        <com.android.settings.widget.LabeledSeekBarPreference
-            android:key="gesture_navbar_length_preference"
-            android:title="@string/gesture_navbar_length_title"
-            android:max="2"
-            android:selectable="true"
-            settings:textStart="@string/short_label"
-            settings:textEnd="@string/long_label"/>
+        android:title="@string/navbar_gesture_custom">
 
     <org.aospextended.support.preference.SystemSettingSwitchPreference
         android:key="back_gesture_haptic"

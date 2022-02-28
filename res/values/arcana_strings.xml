@@ -137,4 +137,6 @@
     <string name="system_illustration_description">Configure system language, date, time, gestures and more.</string>
     <string name="apps_illustration_description">Manage applications installed, which are default apps, check apps with special access, enable or disable apps etc. </string>
   <string name="battery_illustration_description">Monitor battery health, usage and improve battery usage.</string>
+    
+    <string name="navbar_gesture_custom">Navigation Gestures Customizations</string>
 </resources>
