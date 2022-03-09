@@ -16,12 +16,18 @@
 
 package com.android.settings.deviceinfo.firmwareversion;
 
-import android.content.Context;
 import android.os.Build;
+import android.content.Context;
+import android.os.SystemProperties;
+import androidx.annotation.VisibleForTesting;
 
+import com.android.settings.R;
 import com.android.settings.core.BasePreferenceController;
 
 public class FirmwareVersionPreferenceController extends BasePreferenceController {
+
+    @VisibleForTesting
+    private static final String ARCANA_PLATFORM_RELEASE_CODENAME = "ro.arcana.platform_release_codename";
 
     public FirmwareVersionPreferenceController(Context context, String key) {
         super(context, key);
@@ -34,6 +40,7 @@ public class FirmwareVersionPreferenceController extends BasePreferenceControlle
 
     @Override
     public CharSequence getSummary() {
-        return Build.VERSION.RELEASE_OR_CODENAME;
+        return SystemProperties.get(ARCANA_PLATFORM_RELEASE_CODENAME, 
+            Build.VERSION.RELEASE_OR_CODENAME);
     }
 }
