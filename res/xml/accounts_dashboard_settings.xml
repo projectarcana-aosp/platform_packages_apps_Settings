@@ -20,7 +20,7 @@
     android:key="user_and_account_settings_screen"
     android:title="@string/account_dashboard_title"
     settings:keywords="@string/keywords_accounts">
-
+            
     <PreferenceCategory
         android:key="passwords_category"
         android:order="10"

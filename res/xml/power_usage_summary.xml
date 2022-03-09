@@ -17,10 +17,21 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="power_usage_summary_screen"
     android:title="@string/power_usage_summary_title"
     settings:keywords="@string/keywords_battery">
-
+            
+       <com.android.settingslib.widget.TopIntroPreference
+            android:key="battery_illustration_desc"
+            android:order="-999"
+            android:title="@string/battery_illustration_description"/>
+            
+        <com.android.settingslib.widget.IllustrationPreference
+            android:key="battery_illustration"
+            android:order="-998"
+            app:lottie_rawRes="@raw/battery"/>
+                   
     <com.android.settingslib.widget.UsageProgressBarPreference
         android:key="battery_header"
         android:title="@string/summary_placeholder"

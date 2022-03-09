@@ -18,9 +18,20 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="privacy_dashboard_page"
     android:title="@string/privacy_dashboard_title">
 
+        <com.android.settingslib.widget.TopIntroPreference
+            android:key="privacy_illustration_desc"
+            android:order="-999"
+            android:title="@string/privacy_illustration_description"/>
+            
+        <com.android.settingslib.widget.IllustrationPreference
+            android:key="privacy_illustration"
+            android:order="-998"
+            app:lottie_rawRes="@raw/privacy"/>
+                   
     <!-- Work Policy info -->
     <Preference
         android:key="work_policy_info"

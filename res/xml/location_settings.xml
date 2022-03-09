@@ -20,7 +20,7 @@
     android:key="location_settings"
     android:title="@string/location_settings_title"
     settings:keywords="@string/keywords_location">
-
+            
     <PreferenceCategory
         android:key="recent_location_access"
         android:title="@string/location_category_recent_location_access"

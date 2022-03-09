@@ -18,9 +18,20 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="security_dashboard_page"
     android:title="@string/security_settings_title">
 
+        <com.android.settingslib.widget.TopIntroPreference
+            android:key="sec_illustration_desc"
+             android:order="-999"
+            android:title="@string/sec_illustration_description"/>
+            
+        <com.android.settingslib.widget.IllustrationPreference
+            android:key="sec_illustration"
+             android:order="-998"
+            app:lottie_rawRes="@raw/security"/>
+ 
     <!-- security_settings_status.xml -->
     <PreferenceCategory
         android:order="-10"

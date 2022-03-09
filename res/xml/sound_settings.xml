@@ -17,10 +17,21 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/sound_settings"
     android:key="sound_settings"
     settings:keywords="@string/keywords_sounds">
 
+        <com.android.settingslib.widget.TopIntroPreference
+            android:key="sound_illustration_desc"
+            android:order="-999"
+            android:title="@string/sound_illustration_description"/>
+            
+        <com.android.settingslib.widget.IllustrationPreference
+            android:key="sound_illustration"
+            android:order="-998"
+            app:lottie_rawRes="@raw/sound"/>
+            
     <!-- Remote volume group -->
     <PreferenceCategory
         android:key="remote_media_group"
