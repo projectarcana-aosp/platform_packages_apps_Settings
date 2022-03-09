@@ -87,7 +87,16 @@
         android:title="@string/sound_settings"
         android:summary="@string/sound_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_sound"/>
-
+        
+    <com.android.settings.widget.HomepagePreference
+        android:fragment="com.arcana.grimoire.Dashboard"
+        android:icon="@drawable/op_ic_homepage_tresdin"
+        android:key="top_level_grimoire"
+        android:order="-86"
+        android:title="@string/grimoire_title"
+        android:summary="@string/grimoire_summary"
+        settings:controller="com.android.settings.grimoire.TopLevelArcanaSettingsPreferenceController"/>
+        
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.DisplaySettings"
         android:icon="@drawable/ic_settings_display_white"
