@@ -139,4 +139,5 @@
   <string name="battery_illustration_description">Monitor battery health, usage and improve battery usage.</string>
     
     <string name="navbar_gesture_custom">Navigation Gestures Customizations</string>
+    <string name="usercard_summary">Current active user, tap for more information</string>
 </resources>
