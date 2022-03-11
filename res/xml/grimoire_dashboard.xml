@@ -17,10 +17,29 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="grimoire" >
 
+        <!-- System Preferences -->
+        <Preference
+            android:key="system_category"
+            settings:layout="@layout/grimoire_dashboard_pref_card"
+            android:icon="@drawable/ic_system_category"
+            android:title="@string/system_title"
+            android:summary="@string/system_summary"
+            android:fragment="com.arcana.grimoire.fragments.SystemSettings" />
+            
+        <!-- Extras Preferences -->
+        <Preference
+            android:key="extras_category"
+            settings:layout="@layout/grimoire_dashboard_pref_card"
+            android:icon="@drawable/ic_misc_extensions"
+            android:title="@string/extras_title"
+            android:summary="@string/extras_summary"
+            android:fragment="com.arcana.grimoire.fragments.Extras" />
+            
         <!-- System Interfaces -->
         <Preference
             android:key="statusbar_category"
             settings:layout="@layout/grimoire_dashboard_pref_card"
+            android:icon="@drawable/ic_statusbar_category"
             android:title="@string/interfaces_title"
             android:summary="@string/interfaces_summary"
             android:fragment="com.arcana.grimoire.fragments.Interfaces" />

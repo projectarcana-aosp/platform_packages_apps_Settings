@@ -22,6 +22,8 @@
     <string name="misc_summary">misc features </string>
     <string name="interfaces_title">User interface</string>
     <string name="interfaces_summary">Customize device appearance</string>
+    <string name="system_title">System</string>
+    <string name="system_summary">Customize device appearance</string>
     <string name="interfaces_style_title">System</string>
     <string name="interfaces_statusbar_title">Statusbar</string>
     <string name="interfaces_battery_title">Battery</string>
@@ -31,5 +33,26 @@
     <string name="quicksettings_summary">Customize quicksettings</string>
     <string name="lockscreen_title">Lock Screen</string>
     <string name="lockscreen_summary">Customize lockscreen appearance</string>
+    <string name="extras_title">Extras</string>
+    <string name="extras_summary">You deserve an extra</string>
+    <string name="extras_tools">Utilities</string>
+
+    <!-- Double Tap Lockscreen to Sleep -->
+    <string name="double_tap_to_sleep_lockscreen_title">Double-tap on lockscreen to sleep</string>
+    <string name="double_tap_to_sleep_lockscreen_summary">Double tap on the top third or bottom shortcut area of the lock screen to put the device to sleep</string>
+    <string name="gestures_category">Gestures</string>
+    <!-- Double tap-to-sleep -->
+    <string name="double_tap_to_sleep_title">Status bar</string>
+    <string name="double_tap_to_sleep_summary">Double-tap status bar to put the device to sleep</string>
+    <!-- Torch Power button gestures -->
+    <string name="torch_power_button_gesture_title">Toggle torch when screen off</string>
+    <string name="torch_power_button_gesture_none">Disabled</string>
+    <string name="torch_power_button_gesture_dt">Double tap power button (slower single tap response), Disables double power tap for camera.</string>
+    <string name="torch_power_button_gesture_dt_toast">Jump to camera gesture is now disabled</string>
+    <string name="torch_power_button_gesture_lp">Long press power button</string>
+    
+    <!-- Gaming mode -->
+    <string name="gaming_mode_title">Game space</string>
+    <string name="gaming_mode_summary">Extra features for immersive gaming experience</string>
 
 </resources> 

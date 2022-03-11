@@ -12,7 +12,25 @@
 -->
 <PreferenceScreen
      xmlns:android="http://schemas.android.com/apk/res/android"
-     android:title="@string/interfaces_title"
+     android:title="@string/extras_title"
      xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
-    
+
+    <PreferenceCategory
+        android:key="extras_category"
+        android:title="@string/extras_tools">
+
+    <!-- Gaming mode -->
+    <Preference
+        android:key="gaming_mode"
+        android:title="@string/gaming_mode_title"
+        android:summary="@string/gaming_mode_summary">
+
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="org.exthmui.game"
+            android:targetClass="org.exthmui.game.ui.MainActivity" />
+    </Preference>
+        
+    </PreferenceCategory>
+            
 </PreferenceScreen> 
