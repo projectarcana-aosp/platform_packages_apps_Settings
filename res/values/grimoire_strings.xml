@@ -23,7 +23,7 @@
     <string name="interfaces_title">User interface</string>
     <string name="interfaces_summary">Customize device appearance</string>
     <string name="system_title">System</string>
-    <string name="system_summary">Customize device appearance</string>
+    <string name="system_summary">Control how your device works</string>
     <string name="interfaces_style_title">System</string>
     <string name="interfaces_statusbar_title">Statusbar</string>
     <string name="interfaces_battery_title">Battery</string>
