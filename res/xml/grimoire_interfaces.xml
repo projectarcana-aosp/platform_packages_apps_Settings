@@ -76,4 +76,16 @@
         android:fragment="com.arcana.grimoire.fragments.StatusbarBattery" />
       
           </PreferenceCategory>  
+          
+    <PreferenceCategory
+        android:key="lockscreen_category"
+        android:title="@string/lockscreen_category">
+        
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
+        android:key="lockscreen_battery_info"
+        android:title="@string/lockscreen_battery_info_title"
+        android:summary="@string/lockscreen_battery_info_summary"
+        android:defaultValue="true" />
+      
+          </PreferenceCategory>  
 </PreferenceScreen> 
