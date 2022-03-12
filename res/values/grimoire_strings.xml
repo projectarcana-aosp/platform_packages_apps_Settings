@@ -13,6 +13,14 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Status bar battery style-->
+    <string name="status_bar_battery_style_title">Battery style</string>
+    <string name="status_bar_battery_style_port">Portrait</string>
+    <string name="status_bar_battery_style_circle">Circle</string>
+    <string name="status_bar_battery_style_dotted_circle">Dotted сircle</string>
+    <string name="status_bar_battery_style_text">Text</string>
+    <string name="battery_style_category_title">Battery styles</string>
+
     <!-- Dashboard -->
     <string name="grimoire_summary">The Arcanery welcomes your presence.</string>
     <string name="grimoire_title">Grimoire</string>
@@ -38,6 +46,7 @@
     <string name="extras_tools">Utilities</string>
     <string name="network_category">Network traffic</string>
     <string name="notifications_category">Notifications</string>
+    <string name="battery_category">Battery styles</string>
 
     <!-- Double Tap Lockscreen to Sleep -->
     <string name="double_tap_to_sleep_lockscreen_title">Double-tap on lockscreen to sleep</string>
@@ -74,4 +83,10 @@
     <!-- Alert Slider Notifications (OnePlus devices) -->
     <string name="alert_slider_notifications_title">Alert slider notifications</string>
     <string name="alert_slider_notifications_summary">Display notification when changing alert slider position</string>
+    
+    <!-- Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Battery percentage</string>
+    <string name="status_bar_battery_percentage_default">Hidden</string>
+    <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
+    <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
 </resources> 

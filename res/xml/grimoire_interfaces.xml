@@ -65,4 +65,15 @@
 
     </PreferenceCategory>
     
+    <PreferenceCategory
+        android:key="battery_category"
+        android:title="@string/battery_category">
+        
+    <!-- Battery settings -->
+    <Preference
+        android:key="battery_settings"
+        android:title="@string/battery_style_category_title"
+        android:fragment="com.arcana.grimoire.fragments.StatusbarBattery" />
+      
+          </PreferenceCategory>  
 </PreferenceScreen> 
