@@ -44,5 +44,5 @@
         android:entryValues="@array/torch_power_button_gesture_values" />
         
     </PreferenceCategory>
-            
+                
 </PreferenceScreen> 
