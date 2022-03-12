@@ -16,6 +16,18 @@
      xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
     
     <PreferenceCategory
+        android:key="notifications_category"
+        android:title="@string/notifications_category">
+        
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
+        android:key="alert_slider_notifications"
+        android:title="@string/alert_slider_notifications_title"
+        android:summary="@string/alert_slider_notifications_summary"
+        android:defaultValue="true" />
+        
+    </PreferenceCategory>
+    
+    <PreferenceCategory
         android:key="network_category"
         android:title="@string/network_category">
         

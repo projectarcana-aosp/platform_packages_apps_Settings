@@ -37,6 +37,7 @@
     <string name="extras_summary">You deserve an extra</string>
     <string name="extras_tools">Utilities</string>
     <string name="network_category">Network traffic</string>
+    <string name="notifications_category">Notifications</string>
 
     <!-- Double Tap Lockscreen to Sleep -->
     <string name="double_tap_to_sleep_lockscreen_title">Double-tap on lockscreen to sleep</string>
@@ -69,4 +70,8 @@
     <string name="network_traffic_dynamic">Dynamic</string>
     <string name="network_traffic_download">Download</string>
     <string name="network_traffic_upload">Upload</string>
+    
+    <!-- Alert Slider Notifications (OnePlus devices) -->
+    <string name="alert_slider_notifications_title">Alert slider notifications</string>
+    <string name="alert_slider_notifications_summary">Display notification when changing alert slider position</string>
 </resources> 

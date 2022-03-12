@@ -61,10 +61,12 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
     private static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
     private static final String NETWORK_TRAFFIC_LOCATION = "network_traffic_location";
     private static final String NETWORK_TRAFFIC_REFRESH_INTERVAL = "network_traffic_refresh_interval";
+    private static final String ALERT_SLIDER_PREF = "alert_slider_notifications";
 
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSeekBarPreference mInterval;
     private ListPreference mNetTrafficLocation;
+    private Preference mAlertSlider;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -74,6 +76,8 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
 
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefSet = getPreferenceScreen();
+        final Context mContext = getActivity().getApplicationContext();
+        final Resources res = mContext.getResources();
 
         // Network traffic location
         mNetTrafficLocation = (ListPreference) findPreference(NETWORK_TRAFFIC_LOCATION);
@@ -103,6 +107,12 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
             updateTrafficLocation(0);
         }
         mNetTrafficLocation.setSummary(mNetTrafficLocation.getEntry());
+        
+        mAlertSlider = (Preference) findPreference(ALERT_SLIDER_PREF);
+        boolean mAlertSliderAvailable = res.getBoolean(
+                com.android.internal.R.bool.config_hasAlertSlider);
+        if (!mAlertSliderAvailable)
+            prefSet.removePreference(mAlertSlider);
     }
 
     @Override
