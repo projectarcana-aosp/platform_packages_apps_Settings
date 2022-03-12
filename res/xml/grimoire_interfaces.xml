@@ -31,6 +31,12 @@
         android:key="network_category"
         android:title="@string/network_category">
         
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
+       android:key="show_fourg_icon"
+       android:title="@string/show_fourg_icon_title"
+       android:summary="@string/show_fourg_icon_summary"
+       android:defaultValue="false"/>
+             
     <ListPreference
         android:key="network_traffic_location"
         android:title="@string/network_traffic_location_title"
