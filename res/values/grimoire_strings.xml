@@ -49,6 +49,7 @@
     <string name="battery_category">Battery styles</string>
     <string name="lockscreen_category">Lockscreen UI</string>
     <string name="navigation_category">Navigation bar</string>
+    <string name="grimoire_illustration_summary">Welcome to the secret shop!</string>
 
     <!-- Double Tap Lockscreen to Sleep -->
     <string name="double_tap_to_sleep_lockscreen_title">Double-tap on lockscreen to sleep</string>

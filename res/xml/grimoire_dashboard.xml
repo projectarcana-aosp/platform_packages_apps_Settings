@@ -15,8 +15,19 @@
 <PreferenceScreen 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="Grimoire" >
 
+       <com.android.settingslib.widget.TopIntroPreference
+            android:key="grimoire_illustration_desc"
+            android:order="-999"
+            android:title="@string/grimoire_illustration_summary"/>
+            
+        <com.android.settingslib.widget.IllustrationPreference
+            android:key="grimoire_illustration"
+            android:order="-998"
+            app:lottie_rawRes="@raw/grimoire"/>
+            
         <!-- System Preferences -->
         <Preference
             android:key="system_category"
