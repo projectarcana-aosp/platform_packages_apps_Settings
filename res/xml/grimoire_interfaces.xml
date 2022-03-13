@@ -16,77 +16,6 @@
      xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
     
     <PreferenceCategory
-        android:key="notifications_category"
-        android:title="@string/notifications_category">
-        
-    <org.aospextended.support.preference.SystemSettingSwitchPreference
-        android:key="alert_slider_notifications"
-        android:title="@string/alert_slider_notifications_title"
-        android:summary="@string/alert_slider_notifications_summary"
-        android:defaultValue="true" />
-        
-    </PreferenceCategory>
-    
-    <PreferenceCategory
-        android:key="network_category"
-        android:title="@string/network_category">
-        
-    <org.aospextended.support.preference.SystemSettingSwitchPreference
-       android:key="show_fourg_icon"
-       android:title="@string/show_fourg_icon_title"
-       android:summary="@string/show_fourg_icon_summary"
-       android:defaultValue="false"/>
-             
-
-    <org.aospextended.support.preference.SystemSettingListPreference
-       android:key="show_vowifi_icon"
-       android:title="@string/vowifi_icon_title"
-       android:entries="@array/vowifi_icon_entries"
-       android:entryValues="@array/vowifi_icon_values"
-       android:summary="%s"
-       android:defaultValue="2" />
-
-    <org.aospextended.support.preference.SystemSettingSwitchPreference
-       android:key="show_volte_icon"
-       android:title="@string/show_volte_title"
-       android:summary="@string/show_volte_summary"
-       android:defaultValue="true" />
-         
-    <ListPreference
-        android:key="network_traffic_location"
-        android:title="@string/network_traffic_location_title"
-        android:summary="%s"
-        android:entries="@array/network_traffic_location_entries"
-        android:entryValues="@array/network_traffic_location_values"
-        android:defaultValue="0"
-        android:persistent="false" />
-
-    <org.aospextended.support.preference.CustomSeekBarPreference
-        android:key="network_traffic_autohide_threshold"
-        android:title="@string/network_traffic_autohide_threshold_title"
-        android:max="10"
-        settings:min="0"
-        settings:units="KB/s"
-        android:defaultValue="0" />
-
-    <org.aospextended.support.preference.SystemSettingListPreference
-        android:key="network_traffic_mode"
-        android:title="@string/network_traffic_mode_title"
-        android:entries="@array/network_traffic_mode_entries"
-        android:entryValues="@array/network_traffic_mode_values"
-        android:defaultValue="0" />
-
-    <org.aospextended.support.preference.SystemSettingSeekBarPreference
-        android:key="network_traffic_refresh_interval"
-        android:title="@string/network_traffic_refresh_interval_title"
-        android:max="10"
-        settings:min="1"
-        settings:units="sec"
-        android:defaultValue="1" />
-
-    </PreferenceCategory>
-    
-    <PreferenceCategory
         android:key="battery_category"
         android:title="@string/battery_category">
         
@@ -120,5 +49,76 @@
             android:summary="@string/monet_engine_summary"
             android:fragment="com.arcana.grimoire.fragments.MonetEngine"/>
     </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="network_category"
+        android:title="@string/network_category">
+                 
+    <ListPreference
+        android:key="network_traffic_location"
+        android:title="@string/network_traffic_location_title"
+        android:summary="%s"
+        android:entries="@array/network_traffic_location_entries"
+        android:entryValues="@array/network_traffic_location_values"
+        android:defaultValue="0"
+        android:persistent="false" />
 
+    <org.aospextended.support.preference.CustomSeekBarPreference
+        android:key="network_traffic_autohide_threshold"
+        android:title="@string/network_traffic_autohide_threshold_title"
+        android:max="10"
+        settings:min="0"
+        settings:units="KB/s"
+        android:defaultValue="0" />
+
+    <org.aospextended.support.preference.SystemSettingListPreference
+        android:key="network_traffic_mode"
+        android:title="@string/network_traffic_mode_title"
+        android:entries="@array/network_traffic_mode_entries"
+        android:entryValues="@array/network_traffic_mode_values"
+        android:defaultValue="0" />
+
+    <org.aospextended.support.preference.SystemSettingSeekBarPreference
+        android:key="network_traffic_refresh_interval"
+        android:title="@string/network_traffic_refresh_interval_title"
+        android:max="10"
+        settings:min="1"
+        settings:units="sec"
+        android:defaultValue="1" />
+        
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
+       android:key="show_fourg_icon"
+       android:title="@string/show_fourg_icon_title"
+       android:summary="@string/show_fourg_icon_summary"
+       android:defaultValue="false"/>
+             
+
+    <org.aospextended.support.preference.SystemSettingListPreference
+       android:key="show_vowifi_icon"
+       android:title="@string/vowifi_icon_title"
+       android:entries="@array/vowifi_icon_entries"
+       android:entryValues="@array/vowifi_icon_values"
+       android:summary="%s"
+       android:defaultValue="2" />
+
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
+       android:key="show_volte_icon"
+       android:title="@string/show_volte_title"
+       android:summary="@string/show_volte_summary"
+       android:defaultValue="true" />
+
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="notifications_category"
+        android:title="@string/notifications_category">
+        
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
+        android:key="alert_slider_notifications"
+        android:title="@string/alert_slider_notifications_title"
+        android:summary="@string/alert_slider_notifications_summary"
+        android:defaultValue="true" />
+        
+    </PreferenceCategory>
+    
 </PreferenceScreen> 
