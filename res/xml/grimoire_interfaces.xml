@@ -37,7 +37,7 @@
         android:summary="@string/lockscreen_battery_info_summary"
         android:defaultValue="true" />
       
-          </PreferenceCategory>  
+    </PreferenceCategory>  
           
     <PreferenceCategory
         android:key="monet_category"
@@ -51,8 +51,8 @@
     </PreferenceCategory>
     
     <PreferenceCategory
-        android:key="network_category"
-        android:title="@string/network_category">
+        android:key="statusbar_icons_category"
+        android:title="@string/statusbar_icons_category">
                  
     <ListPreference
         android:key="network_traffic_location"
@@ -107,6 +107,15 @@
        android:summary="@string/show_volte_summary"
        android:defaultValue="true" />
 
+    <Preference
+        android:key="systemui_tuner_statusbar"
+        android:summary="@string/systemui_tuner_statusbar_summary"
+        android:title="@string/statusbar_tuner">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.systemui"
+            android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
+    </Preference>
+    
     </PreferenceCategory>
     
     <PreferenceCategory

@@ -137,4 +137,12 @@
     <string name="monet_engine_accurate_shades_title">Use accurate shades</string>
     <string name="monet_engine_chroma_factor_title">Chroma factor</string>
     <string name="monet_engine_linear_lightness_title">Use linear lightness</string>
+    
+    <!-- Lockscreen icons -->
+    <string name="lockscreen_tuner_title">Lockscreen Shortcuts</string>
+
+    <!-- Statusbar -->
+    <string name="statusbar_tuner">Statusbar tuner</string>
+    <string name="systemui_tuner_statusbar_summary">Configure status bar icons</string>
+    <string name="statusbar_icons_category">Statusbar Icons</string>
 </resources> 
