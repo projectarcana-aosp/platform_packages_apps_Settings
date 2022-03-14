@@ -129,7 +129,7 @@
     <!-- Monet Engine -->
     <string name="system_colors_category">Colors</string>
     <string name="monet_engine_title">Monet Engine</string>
-    <string name="monet_engine_summary">Customise monet parameters</string>
+    <string name="monet_engine_summary">Customize monet parameters</string>
     <string name="monet_engine_custom_color_title">Use custom color</string>
     <string name="monet_engine_custom_color_summary">Use custom color for monet engine instead of wallpaper colors</string>
     <string name="monet_engine_color_override_title">Custom color</string>
@@ -146,7 +146,9 @@
     <string name="systemui_tuner_statusbar_summary">Configure status bar icons</string>
     <string name="statusbar_icons_category">Statusbar Icons</string>
     
-    <!-- Black theme -->
-    <string name="system_black_theme_title">Use black theme</string>
-    <string name="system_black_theme_summary">Force black background colors</string>
+    <!-- Vivid theme -->
+    <string name="system_vivid_theme_title">Vivid Monet Colors</string>
+    <string name="system_vivid_theme_summary">Darker and more colorful monet implementation</string>
+    
+
 </resources> 
