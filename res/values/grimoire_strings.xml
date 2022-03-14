@@ -150,5 +150,13 @@
     <string name="system_vivid_theme_title">Vivid Monet Colors</string>
     <string name="system_vivid_theme_summary">Darker and more colorful monet implementation</string>
     
+    <!-- GMS switch -->
+    <string name="gms_category">GMS</string>
+    <string name="gms_enabled">Enable Google services</string>
+    <string name="gms_enabled_desc">Disable Google services may help extend the battery life, but third-party apps relying on GMS components will not work properly.</string>
+    <string name="gms_disable_alert_title">Notice</string>
+    <string name="gms_disable_alert_message">You are trying to disable Google services. Once you\'ve enabled these services, it\'s strongly not recommended to disable them again as this may lead to issues with your currently installed apps. Although this toggle doesn\'t touch any data, you\'ll still be automatically signed out of this device. Thus, make sure that "Find My Device" has been disabled before you proceed. And if necessary, disable 2-step verification on your Google account as well. Perform a factory reset yourself if you run into any issues. DO NOT SPAM FOR HELP.</string>
+    <string name="gms_disable_alert_positive_btn">OK, I agree</string>
+    <string name="gms_disable_alert_negative_btn">Cancel</string>
 
 </resources> 

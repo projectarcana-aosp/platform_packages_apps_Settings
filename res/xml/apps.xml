@@ -91,4 +91,15 @@
         android:order="20"
         settings:controller="com.android.settings.applications.SpecialAppAccessPreferenceController"/>
 
+    <PreferenceCategory
+        android:title="@string/gms_category"
+        android:order="25">
+
+        <SwitchPreference
+            android:key="gms_switch"
+            android:title="@string/gms_enabled"
+            android:summary="@string/gms_enabled_desc"
+            settings:controller="com.android.settings.applications.GmsSwitchPreferenceController"/>
+
+    </PreferenceCategory>
 </PreferenceScreen>
