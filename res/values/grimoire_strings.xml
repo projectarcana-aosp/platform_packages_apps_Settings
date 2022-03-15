@@ -159,4 +159,8 @@
     <string name="gms_disable_alert_positive_btn">OK, I agree</string>
     <string name="gms_disable_alert_negative_btn">Cancel</string>
 
+    <!-- Location Privacy Indicator -->
+    <string name="location_privacy_title"> Show Location Privacy Indicator</string>
+    <string name="location_privacy_summary">Enable - Disable location privacy indicator in qs and sb</string>
+
 </resources> 

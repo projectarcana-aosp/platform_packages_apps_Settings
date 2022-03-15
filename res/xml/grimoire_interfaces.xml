@@ -61,6 +61,12 @@
         android:key="statusbar_icons_category"
         android:title="@string/statusbar_icons_category">
                  
+   <org.aospextended.support.preference.SecureSettingSwitchPreference
+        android:key="enable_location_privacy_indicator"
+        android:title="@string/location_privacy_title"
+        android:summary="@string/location_privacy_summary"
+        android:defaultValue="true" />
+            
     <ListPreference
         android:key="network_traffic_location"
         android:title="@string/network_traffic_location_title"
