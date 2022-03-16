@@ -328,4 +328,14 @@
    <string name="combined_status_bar_signal_icons">Combined signal icons</string>
     <string name="combined_status_bar_signal_icons_summary">Enable combined signal icons in status bar.\nRequires a SystemUI restart</string>
 
+   <!-- Udfps animations -->
+    <string name="udfps_recog_animation">Udfps animation</string>
+    <string name="udfps_recog_animation_summary">Shows an animation while reading your finger</string>
+    <string name="udfps_recog_animation_effect_title">Udfps animation effect</string>
+    <string name="udfps_recog_animation_effect_summary">Choose animation effect</string>
+    <string name="udfps_category">Udfps</string>
+
+    <!-- Udfps icon picker -->
+    <string name="udfps_icon_picker_title">Udfps icon picker</string>
+    <string name="udfps_icon_picker_summary">Choose your favorite fingerprint icon</string>
 </resources> 

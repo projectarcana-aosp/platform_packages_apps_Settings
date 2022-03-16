@@ -41,6 +41,7 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+import com.android.internal.util.arcana.ArcanaUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
@@ -92,6 +93,13 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
 
         mSettingsDashBoardGms = (SystemSettingListPreference) findPreference(SETTINGS_DASHBOARD_GMS);
         mSettingsDashBoardGms.setOnPreferenceChangeListener(this);
+
+        boolean udfpsResPkgInstalled = ArcanaUtils.isPackageInstalled(getContext(),
+                "org.aospextended.udfps.resources");
+        PreferenceCategory udfps = (PreferenceCategory) prefSet.findPreference("udfps_category");
+        if (!udfpsResPkgInstalled) {
+            prefSet.removePreference(udfps);
+        }
         
         // Network traffic location
         mNetTrafficLocation = (ListPreference) findPreference(NETWORK_TRAFFIC_LOCATION);
