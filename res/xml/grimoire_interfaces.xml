@@ -46,6 +46,42 @@
     </PreferenceCategory>
     
     <PreferenceCategory
+        android:key="theme_customization_category"
+        android:title="@string/theme_customization_category">
+                
+        <Preference
+            android:key="android.theme.customization.fonts"
+            android:title="@string/theme_customization_font_title"
+            android:summary="@string/theme_customization_font_summary"
+            android:fragment="com.arcana.grimoire.fragments.FontsPicker"/>
+
+        <Preference
+            android:key="android.theme.customization.icon_pack"
+            android:title="@string/theme_customization_icon_pack_title"
+            android:summary="@string/theme_customization_icon_pack_summary"
+            android:fragment="com.arcana.grimoire.fragments.StatusbarIcons"/>
+
+        <Preference
+            android:key="android.theme.customization.signal_icon"
+            android:title="@string/theme_customization_signal_icon_title"
+            android:summary="@string/theme_customization_signal_icon_summary"
+            android:fragment="com.arcana.grimoire.fragments.SignalIcons"/>
+
+        <Preference
+            android:key="android.theme.customization.wifi_icon"
+            android:title="@string/theme_customization_wifi_icon_title"
+            android:summary="@string/theme_customization_wifi_icon_summary"
+            android:fragment="com.arcana.grimoire.fragments.WifiIcons"/>
+
+        <Preference
+            android:key="android.theme.customization.adaptive_icon_shape"
+            android:title="@string/theme_customization_icon_shape_title"
+            android:summary="@string/theme_customization_icon_shape_summary"
+            android:fragment="com.arcana.grimoire.fragments.IconShapes"/>
+            
+    </PreferenceCategory>
+    
+    <PreferenceCategory
         android:key="lockscreen_category"
         android:title="@string/lockscreen_category">
         
