@@ -197,4 +197,10 @@
     <!-- Wp zoom -->
     <string name="use_wp_zoom_title">Enable wallpaper Zoom</string>
     <string name="use_wp_zoom_summary">Reboot is required after enabling.</string>
+    
+    <!-- Custom settings dashboard style -->
+    <string name="settings_dashboard_style_title">Settings layout</string>
+    <string name="settings_dashboard_style_gms">Default</string>
+    <string name="settings_dashboard_style_aosp">Aosp</string>
+    <string name="settings_layout_category_title">Settings UI interface</string>
 </resources> 

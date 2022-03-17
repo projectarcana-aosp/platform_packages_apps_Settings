@@ -54,6 +54,8 @@ import java.util.regex.Pattern;
 import org.aospextended.support.preference.CustomSeekBarPreference;
 import org.aospextended.support.preference.SystemSettingSwitchPreference;
 import org.aospextended.support.preference.SystemSettingSeekBarPreference;
+import org.aospextended.support.preference.SystemSettingListPreference;
+import com.android.internal.util.arcana.ArcanaUtils;
 
 @SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class Interfaces extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
@@ -62,11 +64,13 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
     private static final String NETWORK_TRAFFIC_LOCATION = "network_traffic_location";
     private static final String NETWORK_TRAFFIC_REFRESH_INTERVAL = "network_traffic_refresh_interval";
     private static final String ALERT_SLIDER_PREF = "alert_slider_notifications";
+    private static final String SETTINGS_DASHBOARD_GMS = "settings_dashboard_gms";
 
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSeekBarPreference mInterval;
     private ListPreference mNetTrafficLocation;
     private Preference mAlertSlider;
+    private SystemSettingListPreference mSettingsDashBoardGms;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -79,6 +83,9 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
         final Context mContext = getActivity().getApplicationContext();
         final Resources res = mContext.getResources();
 
+        mSettingsDashBoardGms = (SystemSettingListPreference) findPreference(SETTINGS_DASHBOARD_GMS);
+        mSettingsDashBoardGms.setOnPreferenceChangeListener(this);
+        
         // Network traffic location
         mNetTrafficLocation = (ListPreference) findPreference(NETWORK_TRAFFIC_LOCATION);
         int location = Settings.System.getIntForUser(resolver,
@@ -156,6 +163,9 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
             Settings.System.putIntForUser(resolver,
                     Settings.System.NETWORK_TRAFFIC_REFRESH_INTERVAL, val,
                     UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mSettingsDashBoardGms) {
+            ArcanaUtils.showSettingsRestartDialog(getContext());
             return true;
         }
         return false;
