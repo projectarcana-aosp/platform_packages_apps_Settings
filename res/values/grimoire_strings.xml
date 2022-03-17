@@ -148,8 +148,8 @@
     <string name="statusbar_icons_category">Statusbar Icons</string>
     
     <!-- Vivid theme -->
-    <string name="system_vivid_theme_title">Vivid Monet Colors</string>
-    <string name="system_vivid_theme_summary">Darker and more colorful monet implementation</string>
+    <string name="system_vivid_theme_title">Vivid Colors</string>
+    <string name="system_vivid_theme_summary">A more vibrant color implementation of the usual monet.</string>
     
     <!-- GMS switch -->
     <string name="gms_category">GMS</string>

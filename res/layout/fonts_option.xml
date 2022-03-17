@@ -24,9 +24,12 @@
     <FrameLayout
         android:id="@+id/option_tile"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="60dp"
         android:gravity="center"
         android:layout_gravity="center"
+        android:layout_marginStart="@dimen/card_margin_start"
+        android:layout_marginEnd="@dimen/card_margin_end"
+        android:background="@drawable/option_border_custom"
         android:paddingHorizontal="10dp"
         android:paddingVertical="10dp">
 
