@@ -11,7 +11,7 @@
  * KIND, either express or implied. See the License for the specific language governing
  * permissions and limitations under the License.
  */
-package com.android.settings.applications;
+package com.arcana.grimoire.fragments;
 
 import android.content.Context;
 import android.provider.Settings;
@@ -74,6 +74,6 @@ public class GmsSwitchPreferenceController extends TogglePreferenceController {
     
     @Override
     public int getSliceHighlightMenuRes() {
-        return R.string.menu_key_apps;
+        return R.string.menu_key_grimoire;
     }
 }

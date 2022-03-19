@@ -69,13 +69,6 @@
         settings:controller="com.android.settings.fuelgauge.batterytip.BatteryManagerPreferenceController"
         settings:keywords="@string/keywords_battery_adaptive_preferences" />
 
-    <org.aospextended.support.preference.SystemSettingSwitchPreference
-        android:key="arcane_idle_manager"
-        android:title="@string/arcane_idle_manager_title"
-        settings:iconSpaceReserved="false"
-        android:summary="@string/arcane_idle_manager_summary"
-        android:defaultValue="false" />
-
     <com.android.settings.fuelgauge.PowerGaugePreference
         android:key="battery_temp"
         android:title="@string/battery_temp"

@@ -15,6 +15,26 @@
      android:title="@string/system_title"
      xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+
+    <PreferenceCategory
+        android:key="battery_life_category"
+        android:title="@string/battery_life_category">
+
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
+        android:key="arcane_idle_manager"
+        android:title="@string/arcane_idle_manager_title"
+        settings:iconSpaceReserved="false"
+        android:summary="@string/arcane_idle_manager_summary"
+        android:defaultValue="false" />
+        
+    <org.aospextended.support.preference.SecureSettingSwitchPreference
+        android:key="gms_enabled"
+        android:title="@string/gms_enabled"
+        android:summary="@string/gms_enabled_desc"
+        android:defaultValue="true"/>
+
+    </PreferenceCategory>
+    
     <PreferenceCategory
         android:key="gestures_category"
         android:title="@string/gestures_category">

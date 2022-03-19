@@ -123,7 +123,43 @@
         android:title="@string/location_privacy_title"
         android:summary="@string/location_privacy_summary"
         android:defaultValue="true" />
-            
+                    
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
+       android:key="show_fourg_icon"
+       android:title="@string/show_fourg_icon_title"
+       android:summary="@string/show_fourg_icon_summary"
+       android:defaultValue="false"/>
+             
+
+    <org.aospextended.support.preference.SystemSettingListPreference
+       android:key="show_vowifi_icon"
+       android:title="@string/vowifi_icon_title"
+       android:entries="@array/vowifi_icon_entries"
+       android:entryValues="@array/vowifi_icon_values"
+       android:summary="%s"
+       android:defaultValue="2" />
+
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
+       android:key="show_volte_icon"
+       android:title="@string/show_volte_title"
+       android:summary="@string/show_volte_summary"
+       android:defaultValue="true" />
+
+    <Preference
+        android:key="systemui_tuner_statusbar"
+        android:summary="@string/systemui_tuner_statusbar_summary"
+        android:title="@string/statusbar_tuner">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.systemui"
+            android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
+    </Preference>
+    
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="network_traffic_category"
+        android:title="@string/network_traffic_category_title">
+        
     <ListPreference
         android:key="network_traffic_location"
         android:title="@string/network_traffic_location_title"
@@ -156,36 +192,6 @@
         settings:units="sec"
         android:defaultValue="1" />
         
-    <org.aospextended.support.preference.SystemSettingSwitchPreference
-       android:key="show_fourg_icon"
-       android:title="@string/show_fourg_icon_title"
-       android:summary="@string/show_fourg_icon_summary"
-       android:defaultValue="false"/>
-             
-
-    <org.aospextended.support.preference.SystemSettingListPreference
-       android:key="show_vowifi_icon"
-       android:title="@string/vowifi_icon_title"
-       android:entries="@array/vowifi_icon_entries"
-       android:entryValues="@array/vowifi_icon_values"
-       android:summary="%s"
-       android:defaultValue="2" />
-
-    <org.aospextended.support.preference.SystemSettingSwitchPreference
-       android:key="show_volte_icon"
-       android:title="@string/show_volte_title"
-       android:summary="@string/show_volte_summary"
-       android:defaultValue="true" />
-
-    <Preference
-        android:key="systemui_tuner_statusbar"
-        android:summary="@string/systemui_tuner_statusbar_summary"
-        android:title="@string/statusbar_tuner">
-        <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.android.systemui"
-            android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
-    </Preference>
-    
     </PreferenceCategory>
     
     <PreferenceCategory

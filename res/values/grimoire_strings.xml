@@ -45,12 +45,13 @@
     <string name="extras_title">Extras</string>
     <string name="extras_summary">You deserve an extra</string>
     <string name="extras_tools">Utilities</string>
-    <string name="network_category">Network traffic</string>
+    <string name="network_traffic_category_title">Network traffic</string>
     <string name="notifications_category">Notifications</string>
     <string name="battery_category">Battery styles</string>
     <string name="lockscreen_category">Lockscreen UI</string>
     <string name="navigation_category">Navigation bar</string>
     <string name="grimoire_illustration_summary">Welcome to the secret shop!</string>
+    <string name="battery_life_category">Battery life</string>
 
     <!-- Double Tap Lockscreen to Sleep -->
     <string name="double_tap_to_sleep_lockscreen_title">Double-tap on lockscreen to sleep</string>
@@ -200,7 +201,7 @@
     
     <!-- Custom settings dashboard style -->
     <string name="settings_dashboard_style_title">Settings layout</string>
-    <string name="settings_dashboard_style_gms">Default</string>
-    <string name="settings_dashboard_style_aosp">Aosp</string>
+    <string name="settings_dashboard_style_gms">Google</string>
+    <string name="settings_dashboard_style_aosp">AOSP</string>
     <string name="settings_layout_category_title">Settings UI interface</string>
 </resources> 

@@ -86,10 +86,9 @@ public class ForcePeakRefreshRatePreferenceController extends TogglePreferenceCo
 
         return peakRefreshRate;
     }
-    
+
     @Override
     public int getSliceHighlightMenuRes() {
-        // not needed since it's not sliceable
-        return NO_RES;
+        return R.string.menu_key_display;
     }
 }
