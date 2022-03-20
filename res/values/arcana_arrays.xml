@@ -16,15 +16,6 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Fingerprint sensor locations.  Devices should configure their sensor location using
-         config_fingerprintSensorLocation -->
-    <string-array name="security_settings_fingerprint_sensor_locations" translatable="false">
-        <item>@string/security_settings_fingerprint_enroll_find_sensor_message</item>
-        <item>@string/security_settings_fingerprint_enroll_find_sensor_message_front</item>
-        <item>@string/security_settings_fingerprint_enroll_find_sensor_message_left</item>
-        <item>@string/security_settings_fingerprint_enroll_find_sensor_message_right</item>
-    </string-array>
-
     <!-- Face Unlock -->
     <string-array name="face_unlock_method_entries">
         <item>@string/face_unlock_method_default</item>
