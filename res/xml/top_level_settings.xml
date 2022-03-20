@@ -61,6 +61,7 @@
         android:order="-130"
         android:title="@string/grimoire_title"
         android:summary="@string/grimoire_summary"
+        settings:highlightableMenuKey="@string/menu_key_grimoire"
         settings:controller="com.android.settings.grimoire.TopLevelArcanaSettingsPreferenceController"/>
         
     <com.android.settings.widget.HomepagePreference
