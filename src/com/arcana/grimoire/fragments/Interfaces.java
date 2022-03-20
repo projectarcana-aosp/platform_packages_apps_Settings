@@ -65,12 +65,14 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
     private static final String NETWORK_TRAFFIC_REFRESH_INTERVAL = "network_traffic_refresh_interval";
     private static final String ALERT_SLIDER_PREF = "alert_slider_notifications";
     private static final String SETTINGS_DASHBOARD_GMS = "settings_dashboard_gms";
+    private static final String STATUS_BAR_CLOCK_STYLE = "status_bar_clock";
 
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSeekBarPreference mInterval;
     private ListPreference mNetTrafficLocation;
     private Preference mAlertSlider;
     private SystemSettingListPreference mSettingsDashBoardGms;
+    private SystemSettingListPreference mStatusBarClock;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -120,6 +122,15 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
                 com.android.internal.R.bool.config_hasAlertSlider);
         if (!mAlertSliderAvailable)
             prefSet.removePreference(mAlertSlider);
+            
+        mStatusBarClock =
+                (SystemSettingListPreference) findPreference(STATUS_BAR_CLOCK_STYLE);
+
+        // Adjust status bar preferences for RTL
+        if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
+            mStatusBarClock.setEntries(R.array.status_bar_clock_position_entries_rtl);
+            mStatusBarClock.setEntryValues(R.array.status_bar_clock_position_values_rtl);
+        }
     }
 
     @Override
