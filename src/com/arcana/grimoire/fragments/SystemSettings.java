@@ -25,6 +25,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -34,9 +35,12 @@ import java.util.Arrays;
 import java.util.List;
 import android.widget.Toast;
 
+import com.android.internal.util.arcana.ArcanaUtils;
+
 public class SystemSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String TORCH_POWER_BUTTON_GESTURE = "torch_power_button_gesture";
+    private static final String INCALL_VIB_OPTIONS = "incall_vib_options";
 
     private ListPreference mTorchPowerButton;
     
@@ -56,6 +60,11 @@ public class SystemSettings extends SettingsPreferenceFragment implements OnPref
         mTorchPowerButton.setValue(Integer.toString(mTorchPowerButtonValue));
         mTorchPowerButton.setSummary(mTorchPowerButton.getEntry());
         mTorchPowerButton.setOnPreferenceChangeListener(this);
+        
+        PreferenceCategory incallVibCategory = (PreferenceCategory) findPreference(INCALL_VIB_OPTIONS);
+        if (!ArcanaUtils.isVoiceCapable(getActivity())) {
+                prefSet.removePreference(incallVibCategory);
+        }
     }
 
     @Override
