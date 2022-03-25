@@ -228,6 +228,12 @@
         android:key="statusbar_icons_category"
         android:title="@string/statusbar_icons_category">
 
+         <org.aospextended.support.preference.SecureSettingSwitchPreference
+             android:key="combined_status_bar_signal_icons"
+             android:title="@string/combined_status_bar_signal_icons"
+             android:summary="@string/combined_status_bar_signal_icons_summary"
+             android:defaultValue="false"/>
+             
     <org.aospextended.support.preference.SystemSettingSwitchPreference
         android:key="data_disabled_icon"
         android:title="@string/data_disabled_icon_title"

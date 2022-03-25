@@ -55,6 +55,7 @@ import org.aospextended.support.preference.CustomSeekBarPreference;
 import org.aospextended.support.preference.SystemSettingSwitchPreference;
 import org.aospextended.support.preference.SystemSettingSeekBarPreference;
 import org.aospextended.support.preference.SystemSettingListPreference;
+import org.aospextended.support.preference.SecureSettingSwitchPreference;
 import com.android.internal.util.arcana.ArcanaUtils;
 
 @SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
@@ -66,6 +67,9 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
     private static final String ALERT_SLIDER_PREF = "alert_slider_notifications";
     private static final String SETTINGS_DASHBOARD_GMS = "settings_dashboard_gms";
     private static final String STATUS_BAR_CLOCK_STYLE = "status_bar_clock";
+    private static final String COMBINED_STATUSBAR_ICONS = "combined_status_bar_signal_icons";
+    private static final String CONFIG_RESOURCE_NAME = "flag_combined_status_bar_signal_icons";
+    private static final String SYSTEMUI_PACKAGE = "com.android.systemui";
 
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSeekBarPreference mInterval;
@@ -73,6 +77,7 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
     private Preference mAlertSlider;
     private SystemSettingListPreference mSettingsDashBoardGms;
     private SystemSettingListPreference mStatusBarClock;
+    SecureSettingSwitchPreference mCombinedIcons;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -131,6 +136,25 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
             mStatusBarClock.setEntries(R.array.status_bar_clock_position_entries_rtl);
             mStatusBarClock.setEntryValues(R.array.status_bar_clock_position_values_rtl);
         }
+        
+	mCombinedIcons = (SecureSettingSwitchPreference)
+                findPreference(COMBINED_STATUSBAR_ICONS);
+        Resources sysUIRes = null;
+        boolean def = false;
+        int resId = 0;
+        try {
+            sysUIRes = getActivity().getPackageManager()
+                    .getResourcesForApplication(SYSTEMUI_PACKAGE);
+        } catch (Exception ignored) {
+            // If you don't have system UI you have bigger issues
+        }
+        if (sysUIRes != null) {
+            resId = sysUIRes.getIdentifier(
+                    CONFIG_RESOURCE_NAME, "bool", SYSTEMUI_PACKAGE);
+            if (resId != 0) def = sysUIRes.getBoolean(resId);
+        }
+        mCombinedIcons.setChecked(Settings.Secure.getInt(getActivity().getContentResolver(), COMBINED_STATUSBAR_ICONS, def ? 1 : 0) == 1);
+        mCombinedIcons.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -177,6 +201,9 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
             return true;
         } else if (preference == mSettingsDashBoardGms) {
             ArcanaUtils.showSettingsRestartDialog(getContext());
+            return true;
+	} else if (preference == mCombinedIcons) {
+            Settings.Secure.putInt(getActivity().getContentResolver(), COMBINED_STATUSBAR_ICONS, (boolean) newValue ? 1 : 0);
             return true;
         }
         return false;
