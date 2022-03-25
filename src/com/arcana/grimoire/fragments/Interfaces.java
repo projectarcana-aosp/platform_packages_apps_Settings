@@ -21,6 +21,8 @@ package com.arcana.grimoire.fragments;
 import android.app.ActivityManagerNative;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.pm.PackageManager;
+import android.hardware.fingerprint.FingerprintManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -71,6 +73,7 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
     private static final String COMBINED_STATUSBAR_ICONS = "combined_status_bar_signal_icons";
     private static final String CONFIG_RESOURCE_NAME = "flag_combined_status_bar_signal_icons";
     private static final String SYSTEMUI_PACKAGE = "com.android.systemui";
+    private static final String KEY_RIPPLE_EFFECT = "enable_ripple_effect";
 
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSeekBarPreference mInterval;
@@ -78,6 +81,8 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
     private Preference mAlertSlider;
     private SystemSettingListPreference mSettingsDashBoardGms;
     private SystemSettingListPreference mStatusBarClock;
+    private SystemSettingSwitchPreference mRippleEffect;
+    private FingerprintManager mFingerprintManager;
     SecureSettingSwitchPreference mCombinedIcons;
 
     @Override
@@ -90,6 +95,21 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
         final PreferenceScreen prefSet = getPreferenceScreen();
         final Context mContext = getActivity().getApplicationContext();
         final Resources res = mContext.getResources();
+        final PackageManager mPm = getActivity().getPackageManager();
+        
+        mRippleEffect = findPreference(KEY_RIPPLE_EFFECT);
+        if (mPm.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT) &&
+                 mFingerprintManager != null) {
+            if (!mFingerprintManager.isHardwareDetected()){
+                prefSet.removePreference(mRippleEffect);
+            } else {
+                mRippleEffect.setChecked((Settings.System.getInt(getContentResolver(),
+                        Settings.System.ENABLE_RIPPLE_EFFECT, 1) == 1));
+                mRippleEffect.setOnPreferenceChangeListener(this);
+            }
+        } else {
+            prefSet.removePreference(mRippleEffect);
+        }
 
         mSettingsDashBoardGms = (SystemSettingListPreference) findPreference(SETTINGS_DASHBOARD_GMS);
         mSettingsDashBoardGms.setOnPreferenceChangeListener(this);
@@ -212,6 +232,11 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
             return true;
 	} else if (preference == mCombinedIcons) {
             Settings.Secure.putInt(getActivity().getContentResolver(), COMBINED_STATUSBAR_ICONS, (boolean) newValue ? 1 : 0);
+            return true;
+        } else if (preference == mRippleEffect) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.ENABLE_RIPPLE_EFFECT, value ? 1 : 0);
             return true;
         }
         return false;
