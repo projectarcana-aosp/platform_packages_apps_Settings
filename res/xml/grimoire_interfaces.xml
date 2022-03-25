@@ -234,6 +234,12 @@
         android:key="statusbar_icons_category"
         android:title="@string/statusbar_icons_category">
 
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
+            android:key="statusbar_colored_icons"
+            android:title="@string/statusbar_colored_icons_title"
+            android:summary="@string/statusbar_colored_icons_summary"
+            android:defaultValue="false" />
+            
          <org.aospextended.support.preference.SecureSettingSwitchPreference
              android:key="combined_status_bar_signal_icons"
              android:title="@string/combined_status_bar_signal_icons"
