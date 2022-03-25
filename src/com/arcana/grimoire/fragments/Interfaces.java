@@ -70,7 +70,7 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
     private static final String ALERT_SLIDER_PREF = "alert_slider_notifications";
     private static final String SETTINGS_DASHBOARD_GMS = "settings_dashboard_gms";
     private static final String STATUS_BAR_CLOCK_STYLE = "status_bar_clock";
-    private static final String COMBINED_STATUSBAR_ICONS = "combined_status_bar_signal_icons";
+    private static final String COMBINED_STATUSBAR_ICONS = "show_combined_status_bar_signal_icons";
     private static final String CONFIG_RESOURCE_NAME = "flag_combined_status_bar_signal_icons";
     private static final String SYSTEMUI_PACKAGE = "com.android.systemui";
     private static final String KEY_RIPPLE_EFFECT = "enable_ripple_effect";
@@ -181,7 +181,9 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
                     CONFIG_RESOURCE_NAME, "bool", SYSTEMUI_PACKAGE);
             if (resId != 0) def = sysUIRes.getBoolean(resId);
         }
-        mCombinedIcons.setChecked(Settings.Secure.getInt(getActivity().getContentResolver(), COMBINED_STATUSBAR_ICONS, def ? 1 : 0) == 1);
+        boolean enabled = Settings.Secure.getInt(resolver,
+                COMBINED_STATUSBAR_ICONS, def ? 1 : 0) == 1;
+        mCombinedIcons.setChecked(enabled);
         mCombinedIcons.setOnPreferenceChangeListener(this);
     }
 
@@ -231,7 +233,9 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
             ArcanaUtils.showSettingsRestartDialog(getContext());
             return true;
 	} else if (preference == mCombinedIcons) {
-            Settings.Secure.putInt(getActivity().getContentResolver(), COMBINED_STATUSBAR_ICONS, (boolean) newValue ? 1 : 0);
+            boolean enabled = (boolean) newValue;
+            Settings.Secure.putInt(resolver,
+                    COMBINED_STATUSBAR_ICONS, enabled ? 1 : 0);
             return true;
         } else if (preference == mRippleEffect) {
             boolean value = (Boolean) newValue;
