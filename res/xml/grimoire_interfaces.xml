@@ -131,6 +131,12 @@
         android:summary="%s"
         android:defaultValue="0" />
       
+        <Preference
+            android:key="pulse_settings"
+            android:title="@string/pulse_settings"
+            android:summary="@string/pulse_settings_summary"
+            android:fragment="com.arcana.grimoire.fragments.PulseSettings" />
+    
     </PreferenceCategory>  
           
     <PreferenceCategory
