@@ -163,8 +163,14 @@
     <string name="gms_disable_alert_negative_btn">Cancel</string>
 
     <!-- Location Privacy Indicator -->
-    <string name="location_privacy_title"> Show Location Privacy Indicator</string>
-    <string name="location_privacy_summary">Enable - Disable location privacy indicator in qs and sb</string>
+    <string name="location_privacy_indicator_title">Location access indicator</string>
+    <string name="location_privacy_indicator_summary_on">Show location in the privacy chip</string>
+    <string name="location_privacy_indicator_summary_off">Show location in status bar icons</string>
+    
+    <!-- Camera/Mic privacy indicator -->
+    <string name="camera_privacy_indicator_title">Camera/Mic access indicator</string>
+    <string name="camera_privacy_indicator_summary_on">Show camera/mic in the privacy chip</string>
+    <string name="camera_privacy_indicator_summary_off">Show camera/mic in status bar icons</string>
 
     <!-- Data disabled icon -->
     <string name="data_disabled_icon_title">Show data disabled icon</string>
