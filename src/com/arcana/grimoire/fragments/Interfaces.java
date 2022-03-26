@@ -74,6 +74,7 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
     private static final String CONFIG_RESOURCE_NAME = "flag_combined_status_bar_signal_icons";
     private static final String SYSTEMUI_PACKAGE = "com.android.systemui";
     private static final String KEY_RIPPLE_EFFECT = "enable_ripple_effect";
+    private static final String RETICKER_STATUS = "reticker_status";
 
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSeekBarPreference mInterval;
@@ -83,6 +84,7 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
     private SystemSettingListPreference mStatusBarClock;
     private SystemSettingSwitchPreference mRippleEffect;
     private FingerprintManager mFingerprintManager;
+    private SystemSettingSwitchPreference mRetickerStatus;
     SecureSettingSwitchPreference mCombinedIcons;
 
     @Override
@@ -155,6 +157,11 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
                 com.android.internal.R.bool.config_hasAlertSlider);
         if (!mAlertSliderAvailable)
             prefSet.removePreference(mAlertSlider);
+            
+        mRetickerStatus = findPreference(RETICKER_STATUS);
+        mRetickerStatus.setChecked((Settings.System.getInt(resolver,
+                Settings.System.RETICKER_STATUS, 0) == 1));
+        mRetickerStatus.setOnPreferenceChangeListener(this);
             
         mStatusBarClock =
                 (SystemSettingListPreference) findPreference(STATUS_BAR_CLOCK_STYLE);
@@ -236,6 +243,12 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
             boolean enabled = (boolean) newValue;
             Settings.Secure.putInt(resolver,
                     COMBINED_STATUSBAR_ICONS, enabled ? 1 : 0);
+            return true;
+        } else if (preference == mRetickerStatus) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.RETICKER_STATUS, value ? 1 : 0);
+            ArcanaUtils.showSystemUiRestartDialog(getContext());
             return true;
         } else if (preference == mRippleEffect) {
             boolean value = (Boolean) newValue;

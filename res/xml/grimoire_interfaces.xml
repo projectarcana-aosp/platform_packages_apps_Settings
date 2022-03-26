@@ -214,6 +214,19 @@
         android:summary="@string/alert_slider_notifications_summary"
         android:defaultValue="true" />
         
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
+        android:key="reticker_status"
+        android:title="@string/reticker_title"
+        android:summary="@string/reticker_summary"
+        android:defaultValue="false" />
+
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
+        android:dependency="reticker_status"
+        android:key="reticker_colored"
+        android:title="@string/reticker_colored_title"
+        android:summary="@string/reticker_colored_summary"
+        android:defaultValue="false" />
+        
     </PreferenceCategory>
     
     <PreferenceCategory
