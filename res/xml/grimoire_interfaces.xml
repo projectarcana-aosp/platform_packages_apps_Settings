@@ -394,6 +394,12 @@
         android:key="udfps_category"
         android:title="@string/udfps_category">
 
+   <org.aospextended.support.preference.SystemSettingSwitchPreference
+            android:key="udfps_haptic_feedback"
+            android:title="@string/udfps_haptic_feedback_title"
+            android:summary="@string/udfps_haptic_feedback_summary"
+            android:defaultValue="true" />
+            
         <Preference
             android:key="udfps_icon_picker"
             android:title="@string/udfps_icon_picker_title"

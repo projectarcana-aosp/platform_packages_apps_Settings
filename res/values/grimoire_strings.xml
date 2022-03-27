@@ -433,4 +433,8 @@
     <!-- QS tiles title visibility -->
     <string name="qs_tile_title_visibility_title">Hide tile titles</string>
     <string name="qs_tile_title_visibility_summary">Toggle to hide tile titles</string>
+
+    <!-- Udfps Haptic Feedback -->
+    <string name="udfps_haptic_feedback_title">FOD haptic feedback</string>
+    <string name="udfps_haptic_feedback_summary">Vibrate when touching FOD icon</string>
 </resources> 

@@ -44,6 +44,7 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.internal.util.arcana.ArcanaUtils;
+import com.android.internal.util.arcana.udfps.UdfpsUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
@@ -75,6 +76,7 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
     private static final String SYSTEMUI_PACKAGE = "com.android.systemui";
     private static final String KEY_RIPPLE_EFFECT = "enable_ripple_effect";
     private static final String RETICKER_STATUS = "reticker_status";
+    private static final String UDFPS_HAPTIC_FEEDBACK = "udfps_haptic_feedback";
 
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSeekBarPreference mInterval;
@@ -85,6 +87,8 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
     private SystemSettingSwitchPreference mRippleEffect;
     private FingerprintManager mFingerprintManager;
     private SystemSettingSwitchPreference mRetickerStatus;
+    private SystemSettingSwitchPreference mUdfpsHapticFeedback;
+    
     SecureSettingSwitchPreference mCombinedIcons;
 
     @Override
@@ -98,6 +102,11 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
         final Context mContext = getActivity().getApplicationContext();
         final Resources res = mContext.getResources();
         final PackageManager mPm = getActivity().getPackageManager();
+        
+        mUdfpsHapticFeedback = (SystemSettingSwitchPreference) findPreference(UDFPS_HAPTIC_FEEDBACK);
+        if (!UdfpsUtils.hasUdfpsSupport(getContext())) {
+            prefSet.removePreference(mUdfpsHapticFeedback);
+        }
         
         mRippleEffect = findPreference(KEY_RIPPLE_EFFECT);
         if (mPm.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT) &&
