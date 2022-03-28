@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="-4dp"
                 android:layout_gravity="start"
-                android:text="@string/search_menu"/>
+                android:text="@string/search_text_home"/>
         </Toolbar>
     </com.google.android.material.card.MaterialCardView>
 
