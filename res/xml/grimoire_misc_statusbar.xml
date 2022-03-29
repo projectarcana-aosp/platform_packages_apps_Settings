@@ -68,5 +68,12 @@
        android:entryValues="@array/vowifi_icon_values"
        android:summary="%s"
        android:defaultValue="2" />
+
+        <!-- Old mobile style -->
+    <org.arcana.support.preference.SystemSettingSwitchPreference
+       android:key="use_old_mobiletype"
+       android:title="@string/use_old_mobiletype_title"
+       android:summary="@string/use_old_mobiletype_summary"
+       android:defaultValue="false" />
     
 </PreferenceScreen> 
