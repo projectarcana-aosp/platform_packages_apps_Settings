@@ -46,10 +46,10 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 import com.arcana.grimoire.fragments.Clock;
-import org.aospextended.support.preference.SecureSettingSwitchPreference;
-import org.aospextended.support.preference.SystemSettingListPreference;
-import org.aospextended.support.preference.SystemSettingSeekBarPreference;
-import org.aospextended.support.preference.SystemSettingSwitchPreference;
+import org.arcana.support.preference.SecureSettingSwitchPreference;
+import org.arcana.support.preference.SystemSettingListPreference;
+import org.arcana.support.preference.SystemSettingSeekBarPreference;
+import org.arcana.support.preference.SystemSettingSwitchPreference;
 
 import java.util.Date;
 

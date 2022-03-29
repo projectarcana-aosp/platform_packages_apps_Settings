@@ -17,7 +17,7 @@
         android:defaultValue="0"
         android:persistent="false" />
 
-    <org.aospextended.support.preference.CustomSeekBarPreference
+    <org.arcana.support.preference.CustomSeekBarPreference
         android:key="network_traffic_autohide_threshold"
         android:title="@string/network_traffic_autohide_threshold_title"
         android:max="10"
@@ -25,14 +25,14 @@
         settings:units="KB/s"
         android:defaultValue="0" />
 
-    <org.aospextended.support.preference.SystemSettingListPreference
+    <org.arcana.support.preference.SystemSettingListPreference
         android:key="network_traffic_mode"
         android:title="@string/network_traffic_mode_title"
         android:entries="@array/network_traffic_mode_entries"
         android:entryValues="@array/network_traffic_mode_values"
         android:defaultValue="0" />
 
-    <org.aospextended.support.preference.SystemSettingSeekBarPreference
+    <org.arcana.support.preference.SystemSettingSeekBarPreference
         android:key="network_traffic_refresh_interval"
         android:title="@string/network_traffic_refresh_interval_title"
         android:max="10"
@@ -53,7 +53,7 @@
         android:summary="@string/battery_style_category_summary"
         android:fragment="com.arcana.grimoire.fragments.StatusbarBattery" />       
         
-   <org.aospextended.support.preference.SystemSettingListPreference
+   <org.arcana.support.preference.SystemSettingListPreference
         android:key="status_bar_clock"
         android:title="@string/status_bar_clock_position_title"
         android:summary="%s"
@@ -68,45 +68,45 @@
         android:summary="@string/status_bar_clock_summary"
         android:fragment="com.arcana.grimoire.fragments.Clock" />
 
-    <org.aospextended.support.preference.SystemSettingSwitchPreference
+    <org.arcana.support.preference.SystemSettingSwitchPreference
         android:key="statusbar_colored_icons"
         android:title="@string/statusbar_colored_icons_title"
         android:summary="@string/statusbar_colored_icons_summary"
         android:defaultValue="false" />
             
-    <org.aospextended.support.preference.SecureSettingSwitchPreference
+    <org.arcana.support.preference.SecureSettingSwitchPreference
         android:key="show_combined_status_bar_signal_icons"
         android:title="@string/combined_status_bar_signal_icons"
         android:summary="@string/combined_status_bar_signal_icons_summary"
         android:defaultValue="false"/>
             
-    <org.aospextended.support.preference.SystemSettingSwitchPreference
+    <org.arcana.support.preference.SystemSettingSwitchPreference
         android:key="data_disabled_icon"
         android:title="@string/data_disabled_icon_title"
         android:summary="@string/data_disabled_icon_summary"
         android:defaultValue="true"/>
             
-   <org.aospextended.support.preference.SecureSettingSwitchPreference
+   <org.arcana.support.preference.SecureSettingSwitchPreference
         android:key="enable_location_privacy_indicator"
         android:title="@string/location_privacy_indicator_title"
         android:summaryOn="@string/location_privacy_indicator_summary_on"
         android:summaryOff="@string/location_privacy_indicator_summary_off"
         android:defaultValue="true" />
 
-   <org.aospextended.support.preference.SecureSettingSwitchPreference
+   <org.arcana.support.preference.SecureSettingSwitchPreference
        android:key="enable_camera_privacy_indicator"
        android:title="@string/camera_privacy_indicator_title"
        android:summaryOn="@string/camera_privacy_indicator_summary_on"
        android:summaryOff="@string/camera_privacy_indicator_summary_off"
        android:defaultValue="true" />
                     
-    <org.aospextended.support.preference.SystemSettingSwitchPreference
+    <org.arcana.support.preference.SystemSettingSwitchPreference
        android:key="show_fourg_icon"
        android:title="@string/show_fourg_icon_title"
        android:summary="@string/show_fourg_icon_summary"
        android:defaultValue="false"/>
 
-    <org.aospextended.support.preference.SystemSettingListPreference
+    <org.arcana.support.preference.SystemSettingListPreference
        android:key="show_vowifi_icon"
        android:title="@string/vowifi_icon_title"
        android:entries="@array/vowifi_icon_entries"
@@ -114,7 +114,7 @@
        android:summary="%s"
        android:defaultValue="2" />
 
-    <org.aospextended.support.preference.SystemSettingSwitchPreference
+    <org.arcana.support.preference.SystemSettingSwitchPreference
        android:key="show_volte_icon"
        android:title="@string/show_volte_title"
        android:summary="@string/show_volte_summary"

@@ -16,19 +16,19 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/monet_engine_title">
 
-    <org.aospextended.support.preference.SecureSettingSwitchPreference
+    <org.arcana.support.preference.SecureSettingSwitchPreference
         android:key="monet_engine_custom_color"
         android:title="@string/monet_engine_custom_color_title"
         android:summary="@string/monet_engine_custom_color_summary"
         android:defaultValue="false" />
 
-    <org.aospextended.support.colorpicker.ColorPickerPreference
+    <org.arcana.support.colorpicker.ColorPickerPreference
         android:key="monet_engine_color_override"
         android:title="@string/monet_engine_color_override_title"
         android:dependency="monet_engine_custom_color"
         android:defaultValue="0xffffff" />
 
-    <org.aospextended.support.preference.SecureSettingSeekBarPreference
+    <org.arcana.support.preference.SecureSettingSeekBarPreference
         android:key="monet_engine_white_luminance_user"
         android:title="@string/monet_engine_white_luminance_user_title"
         android:defaultValue="425"
@@ -36,12 +36,12 @@
         settings:min="200"
         settings:interval="100"/>
 
-    <org.aospextended.support.preference.SecureSettingSwitchPreference
+    <org.arcana.support.preference.SecureSettingSwitchPreference
         android:key="monet_engine_accurate_shades"
         android:title="@string/monet_engine_accurate_shades_title"
         android:defaultValue="true" />
 
-    <org.aospextended.support.preference.SecureSettingSeekBarPreference
+    <org.arcana.support.preference.SecureSettingSeekBarPreference
         android:key="monet_engine_chroma_factor"
         android:title="@string/monet_engine_chroma_factor_title"
         android:defaultValue="100"
@@ -49,7 +49,7 @@
         settings:min="50"
         settings:interval="50"/>
 
-    <org.aospextended.support.preference.SecureSettingSwitchPreference
+    <org.arcana.support.preference.SecureSettingSwitchPreference
         android:key="monet_engine_linear_lightness"
         android:title="@string/monet_engine_linear_lightness_title"
         android:defaultValue="false" />

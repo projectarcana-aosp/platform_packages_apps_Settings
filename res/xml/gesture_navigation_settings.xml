@@ -71,13 +71,13 @@
         android:persistent="false"
         android:title="@string/navbar_gesture_custom">
 
-    <org.aospextended.support.preference.SystemSettingSwitchPreference
+    <org.arcana.support.preference.SystemSettingSwitchPreference
         android:key="back_gesture_haptic"
         android:title="@string/back_gesture_haptic_title"
         android:summary="@string/back_gesture_haptic_summary"
         android:defaultValue="false" />
         
-   <org.aospextended.support.preference.SystemSettingSwitchPreference
+   <org.arcana.support.preference.SystemSettingSwitchPreference
         android:key="fullscreen_gestures"
         android:title="@string/fullscreen_gestures_title"
         android:summary="@string/fullscreen_gestures_summary"

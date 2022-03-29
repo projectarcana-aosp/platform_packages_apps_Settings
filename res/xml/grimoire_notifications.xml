@@ -19,7 +19,7 @@
         android:key="alert_slider_category"
         android:title="@string/alert_slider_category">
         
-     <org.aospextended.support.preference.SystemSettingSwitchPreference
+     <org.arcana.support.preference.SystemSettingSwitchPreference
         android:key="alert_slider_notifications"
         android:title="@string/alert_slider_notifications_title"
         android:summary="@string/alert_slider_notifications_summary"
@@ -31,13 +31,13 @@
         android:key="general_notifications_category"
         android:title="@string/general_notifications_category">
         
-    <org.aospextended.support.preference.SystemSettingSwitchPreference
+    <org.arcana.support.preference.SystemSettingSwitchPreference
         android:key="reticker_status"
         android:title="@string/reticker_title"
         android:summary="@string/reticker_summary"
         android:defaultValue="false" />
 
-    <org.aospextended.support.preference.SystemSettingSwitchPreference
+    <org.arcana.support.preference.SystemSettingSwitchPreference
         android:dependency="reticker_status"
         android:key="reticker_colored"
         android:title="@string/reticker_colored_title"
@@ -50,19 +50,19 @@
         android:key="media_category"
         android:title="@string/media_category">
         
-        <org.aospextended.support.preference.SystemSettingSwitchPreference
+        <org.arcana.support.preference.SystemSettingSwitchPreference
             android:key="artwork_media_background"
             android:title="@string/artwork_media_background_title"
             android:summary="@string/artwork_media_background_summary"
             android:defaultValue="false" />
 
-        <org.aospextended.support.preference.SystemSettingSwitchPreference
+        <org.arcana.support.preference.SystemSettingSwitchPreference
             android:key="artwork_media_background_enable_blur"
             android:title="@string/artwork_media_background_enable_blur_title"
             android:dependency="artwork_media_background"
             android:defaultValue="false" />
 
-        <org.aospextended.support.preference.SystemSettingSeekBarPreference
+        <org.arcana.support.preference.SystemSettingSeekBarPreference
             android:key="artwork_media_background_blur_radius"
             android:title="@string/artwork_media_background_blur_radius_title"
             android:dependency="artwork_media_background_enable_blur"
@@ -70,7 +70,7 @@
             android:max="25"
             settings:min="1" />
 
-        <org.aospextended.support.preference.SystemSettingSeekBarPreference
+        <org.arcana.support.preference.SystemSettingSeekBarPreference
             android:key="artwork_media_background_alpha"
             android:title="@string/artwork_media_background_alpha_title"
             android:dependency="artwork_media_background"

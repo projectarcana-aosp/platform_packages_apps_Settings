@@ -58,7 +58,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.Utils;
 
-import org.aospextended.support.colorpicker.ColorPickerPreference;
+import org.arcana.support.colorpicker.ColorPickerPreference;
 
 import java.util.ArrayList;
 import java.util.Comparator;

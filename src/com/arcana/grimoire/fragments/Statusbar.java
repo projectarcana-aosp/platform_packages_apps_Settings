@@ -31,11 +31,11 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.internal.logging.nano.MetricsProto;
 
-import org.aospextended.support.preference.CustomSeekBarPreference;
-import org.aospextended.support.preference.SystemSettingSwitchPreference;
-import org.aospextended.support.preference.SystemSettingSeekBarPreference;
-import org.aospextended.support.preference.SystemSettingListPreference;
-import org.aospextended.support.preference.SecureSettingSwitchPreference;
+import org.arcana.support.preference.CustomSeekBarPreference;
+import org.arcana.support.preference.SystemSettingSwitchPreference;
+import org.arcana.support.preference.SystemSettingSeekBarPreference;
+import org.arcana.support.preference.SystemSettingListPreference;
+import org.arcana.support.preference.SecureSettingSwitchPreference;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;

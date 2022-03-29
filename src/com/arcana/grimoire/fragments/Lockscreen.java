@@ -37,7 +37,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.aospextended.support.preference.SystemSettingSwitchPreference;
+import org.arcana.support.preference.SystemSettingSwitchPreference;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;

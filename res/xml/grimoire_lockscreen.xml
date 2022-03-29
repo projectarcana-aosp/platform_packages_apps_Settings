@@ -19,7 +19,7 @@
         android:key="lockscreen_category"
         android:title="@string/lockscreen_category">
         
-    <org.aospextended.support.preference.SystemSettingSwitchPreference
+    <org.arcana.support.preference.SystemSettingSwitchPreference
         android:key="lockscreen_battery_info"
         android:title="@string/lockscreen_battery_info_title"
         android:summary="@string/lockscreen_battery_info_summary"
@@ -31,7 +31,7 @@
         android:summary="@string/pulse_settings_summary"
         android:fragment="com.arcana.grimoire.fragments.PulseSettings" />
                 
-   <org.aospextended.support.preference.SystemSettingListPreference
+   <org.arcana.support.preference.SystemSettingListPreference
         android:key="screen_off_animation"
         android:title="@string/screen_off_animation_title"
         android:entries="@array/screen_off_animation_entries"
@@ -41,13 +41,13 @@
 
     </PreferenceCategory>
     
-    <org.aospextended.support.preference.SystemSettingSwitchPreference
+    <org.arcana.support.preference.SystemSettingSwitchPreference
         android:key="enable_ripple_effect"
         android:title="@string/enable_fingerprint_ripple_effect_title"
         android:summary="@string/enable_fingerprint_ripple_effect_summary"
         android:defaultValue="true" />
         
-   <org.aospextended.support.preference.SystemSettingSwitchPreference
+   <org.arcana.support.preference.SystemSettingSwitchPreference
         android:key="udfps_haptic_feedback"
         android:title="@string/udfps_haptic_feedback_title"
         android:summary="@string/udfps_haptic_feedback_summary"

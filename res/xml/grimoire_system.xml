@@ -20,14 +20,14 @@
         android:key="battery_life_category"
         android:title="@string/battery_life_category">
 
-    <org.aospextended.support.preference.SystemSettingSwitchPreference
+    <org.arcana.support.preference.SystemSettingSwitchPreference
         android:key="arcane_idle_manager"
         android:title="@string/arcane_idle_manager_title"
         settings:iconSpaceReserved="false"
         android:summary="@string/arcane_idle_manager_summary"
         android:defaultValue="false" />
         
-    <org.aospextended.support.preference.SecureSettingSwitchPreference
+    <org.arcana.support.preference.SecureSettingSwitchPreference
         android:key="gms_enabled"
         android:title="@string/gms_enabled"
         android:summary="@string/gms_enabled_desc"
@@ -39,13 +39,13 @@
         android:key="gestures_category"
         android:title="@string/gestures_category">
 
-    <org.aospextended.support.preference.SystemSettingSwitchPreference
+    <org.arcana.support.preference.SystemSettingSwitchPreference
         android:key="double_tap_sleep_lockscreen"
         android:title="@string/double_tap_to_sleep_lockscreen_title"
         android:summary="@string/double_tap_to_sleep_lockscreen_summary"
         android:defaultValue="true" />
 
-     <org.aospextended.support.preference.SystemSettingSwitchPreference
+     <org.arcana.support.preference.SystemSettingSwitchPreference
         android:key="double_tap_sleep_gesture"
         android:title="@string/double_tap_to_sleep_title"
         android:summary="@string/double_tap_to_sleep_summary"
@@ -69,17 +69,17 @@
         android:key="incall_vib_options"
         android:title="@string/incall_vibration_category" >
 
-         <org.aospextended.support.preference.SystemSettingSwitchPreference
+         <org.arcana.support.preference.SystemSettingSwitchPreference
             android:key="vibrate_on_connect"
             android:title="@string/incall_vibrate_connect_title"
             android:defaultValue="false" />
 
-         <org.aospextended.support.preference.SystemSettingSwitchPreference
+         <org.arcana.support.preference.SystemSettingSwitchPreference
             android:key="vibrate_on_callwaiting"
             android:title="@string/incall_vibrate_call_wait_title"
             android:defaultValue="false" />
 
-         <org.aospextended.support.preference.SystemSettingSwitchPreference
+         <org.arcana.support.preference.SystemSettingSwitchPreference
             android:key="vibrate_on_disconnect"
             android:title="@string/incall_vibrate_disconnect_title"
             android:defaultValue="false" />
@@ -90,7 +90,7 @@
         android:key="navigation_category"
         android:title="@string/navigation_category">
         
-    <org.aospextended.support.preference.SecureSettingSwitchPreference
+    <org.arcana.support.preference.SecureSettingSwitchPreference
             android:key="sysui_nav_bar_inverse"
             android:title="@string/navbar_invert_layout_title"
             android:defaultValue="true" />

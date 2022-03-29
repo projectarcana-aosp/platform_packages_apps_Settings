@@ -32,7 +32,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.aospextended.support.preference.SystemSettingListPreference;
+import org.arcana.support.preference.SystemSettingListPreference;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;

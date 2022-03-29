@@ -20,7 +20,7 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.provider.Settings;
 
-import org.aospextended.support.preference.SystemSettingsStore;
+import org.arcana.support.preference.SystemSettingsStore;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
