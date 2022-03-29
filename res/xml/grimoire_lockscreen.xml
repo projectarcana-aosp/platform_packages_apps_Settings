@@ -14,6 +14,26 @@
      xmlns:android="http://schemas.android.com/apk/res/android"
      android:title="@string/lockscreen_settings_title"
      xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <PreferenceCategory
+        android:key="pulse_settings_category"
+        android:title="@string/pulse_settings_category">
+        
+    <Preference
+        android:key="pulse_settings"
+        android:title="@string/pulse_settings"
+        android:summary="@string/pulse_settings_summary"
+        android:fragment="com.arcana.grimoire.fragments.PulseSettings" />
+
+    <!-- Pulse notifications lighting -->
+    <org.arcana.support.preference.SystemSettingMasterSwitchPreference
+        android:key="pulse_ambient_light"
+        android:title="@string/pulse_ambient_light_title"
+        android:summary="@string/pulse_ambient_light_summary"
+        android:fragment="com.arcana.grimoire.fragments.EdgeLighting"
+        android:defaultValue="false" />
+        
+    </PreferenceCategory>
         
     <PreferenceCategory
         android:key="lockscreen_category"
@@ -24,12 +44,6 @@
         android:title="@string/lockscreen_battery_info_title"
         android:summary="@string/lockscreen_battery_info_summary"
         android:defaultValue="true" />
-        
-    <Preference
-        android:key="pulse_settings"
-        android:title="@string/pulse_settings"
-        android:summary="@string/pulse_settings_summary"
-        android:fragment="com.arcana.grimoire.fragments.PulseSettings" />
                 
    <org.arcana.support.preference.SystemSettingListPreference
         android:key="screen_off_animation"
