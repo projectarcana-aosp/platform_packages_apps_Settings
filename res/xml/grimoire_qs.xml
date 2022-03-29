@@ -20,17 +20,17 @@
         android:title="@string/qs_brightness_slider_category">
         
         <org.arcana.support.preference.SecureSettingSwitchPreference
-            android:key="qs_show_brightness"
-            android:title="@string/qs_brightness_slider_title"
-            android:summary="@string/qs_brightness_slider_summary"
-            android:defaultValue="true"/>
-
-        <org.arcana.support.preference.SecureSettingSwitchPreference
             android:key="qs_show_auto_brightness_button"
             android:title="@string/brightness_icon_title"
             android:summary="@string/brightness_icon_summary"
             android:defaultValue="true"
             android:dependency="qs_show_brightness"/>
+            
+        <org.arcana.support.preference.SecureSettingSwitchPreference
+            android:key="qs_show_brightness"
+            android:title="@string/qs_brightness_slider_title"
+            android:summary="@string/qs_brightness_slider_summary"
+            android:defaultValue="true"/>
 
         <org.arcana.support.preference.SecureSettingSwitchPreference
             android:key="qs_brightness_position_bottom"

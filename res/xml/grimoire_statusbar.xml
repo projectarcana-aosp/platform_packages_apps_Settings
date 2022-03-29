@@ -4,6 +4,41 @@
      android:title="@string/statusbar_settings_title"
      xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
         
+        
+    <PreferenceCategory
+        android:key="battery_style_category"
+        android:title="@string/battery_style_category_title">
+        
+    <!-- Battery settings -->
+    <Preference
+        android:key="battery_settings"
+        android:title="@string/battery_style_category_title"
+        android:summary="@string/battery_style_category_summary"
+        android:fragment="com.arcana.grimoire.fragments.StatusbarBattery" /> 
+        
+    </PreferenceCategory> 
+    
+    <PreferenceCategory
+        android:key="clock_style_category"
+        android:title="@string/status_bar_clock_category">
+        
+   <org.arcana.support.preference.SystemSettingListPreference
+        android:key="status_bar_clock"
+        android:title="@string/status_bar_clock_position_title"
+        android:summary="%s"
+        android:dialogTitle="@string/status_bar_clock_position_title"
+        android:entries="@array/status_bar_clock_position_entries"
+        android:entryValues="@array/status_bar_clock_position_values"
+        android:defaultValue="2" />
+
+    <Preference
+        android:key="clock"
+        android:title="@string/status_bar_clock_title"
+        android:summary="@string/status_bar_clock_summary"
+        android:fragment="com.arcana.grimoire.fragments.Clock" />
+
+    </PreferenceCategory> 
+
     <PreferenceCategory
         android:key="network_traffic_category"
         android:title="@string/network_traffic_category_title">
@@ -43,98 +78,34 @@
     </PreferenceCategory> 
 
     <PreferenceCategory
-        android:key="statusbar_icons_category"
-        android:title="@string/statusbar_icons_category">
+        android:key="privacy_indicators_category"
+        android:title="@string/privacy_indicators_category">
         
-    <!-- Battery settings -->
-    <Preference
-        android:key="battery_settings"
-        android:title="@string/battery_style_category_title"
-        android:summary="@string/battery_style_category_summary"
-        android:fragment="com.arcana.grimoire.fragments.StatusbarBattery" />       
-        
-   <org.arcana.support.preference.SystemSettingListPreference
-        android:key="status_bar_clock"
-        android:title="@string/status_bar_clock_position_title"
-        android:summary="%s"
-        android:dialogTitle="@string/status_bar_clock_position_title"
-        android:entries="@array/status_bar_clock_position_entries"
-        android:entryValues="@array/status_bar_clock_position_values"
-        android:defaultValue="2" />
-
-    <Preference
-        android:key="clock"
-        android:title="@string/status_bar_clock_title"
-        android:summary="@string/status_bar_clock_summary"
-        android:fragment="com.arcana.grimoire.fragments.Clock" />
-
-    <org.arcana.support.preference.SystemSettingSwitchPreference
-        android:key="statusbar_colored_icons"
-        android:title="@string/statusbar_colored_icons_title"
-        android:summary="@string/statusbar_colored_icons_summary"
-        android:defaultValue="false" />
-            
-    <org.arcana.support.preference.SecureSettingSwitchPreference
-        android:key="show_combined_status_bar_signal_icons"
-        android:title="@string/combined_status_bar_signal_icons"
-        android:summary="@string/combined_status_bar_signal_icons_summary"
-        android:defaultValue="false"/>
-            
-    <org.arcana.support.preference.SystemSettingSwitchPreference
-        android:key="data_disabled_icon"
-        android:title="@string/data_disabled_icon_title"
-        android:summary="@string/data_disabled_icon_summary"
-        android:defaultValue="true"/>
-            
-   <org.arcana.support.preference.SecureSettingSwitchPreference
-        android:key="enable_location_privacy_indicator"
-        android:title="@string/location_privacy_indicator_title"
-        android:summaryOn="@string/location_privacy_indicator_summary_on"
-        android:summaryOff="@string/location_privacy_indicator_summary_off"
-        android:defaultValue="true" />
-
    <org.arcana.support.preference.SecureSettingSwitchPreference
        android:key="enable_camera_privacy_indicator"
        android:title="@string/camera_privacy_indicator_title"
        android:summaryOn="@string/camera_privacy_indicator_summary_on"
        android:summaryOff="@string/camera_privacy_indicator_summary_off"
        android:defaultValue="true" />
-                    
-    <org.arcana.support.preference.SystemSettingSwitchPreference
-       android:key="show_fourg_icon"
-       android:title="@string/show_fourg_icon_title"
-       android:summary="@string/show_fourg_icon_summary"
-       android:defaultValue="false"/>
-
-    <org.arcana.support.preference.SystemSettingListPreference
-       android:key="show_vowifi_icon"
-       android:title="@string/vowifi_icon_title"
-       android:entries="@array/vowifi_icon_entries"
-       android:entryValues="@array/vowifi_icon_values"
-       android:summary="%s"
-       android:defaultValue="2" />
-
-    <org.arcana.support.preference.SystemSettingSwitchPreference
-       android:key="show_volte_icon"
-       android:title="@string/show_volte_title"
-       android:summary="@string/show_volte_summary"
-       android:defaultValue="true" />
-
-    <!-- Show logo on Statusbar -->
-    <Preference
-        android:key="status_bar_logo"
-        android:title="@string/status_bar_logo_title"
-        android:summary="@string/status_bar_logo_summary"
-        android:fragment="com.arcana.grimoire.fragments.StatusBarLogo" />
+       
+   <org.arcana.support.preference.SecureSettingSwitchPreference
+        android:key="enable_location_privacy_indicator"
+        android:title="@string/location_privacy_indicator_title"
+        android:summaryOn="@string/location_privacy_indicator_summary_on"
+        android:summaryOff="@string/location_privacy_indicator_summary_off"
+        android:defaultValue="true" />
         
+    </PreferenceCategory> 
+    
+    <PreferenceCategory
+        android:key="misc_statusbar_category"
+        android:title="@string/misc_statusbar_category">   
+
     <Preference
-        android:key="systemui_tuner_statusbar"
-        android:summary="@string/systemui_tuner_statusbar_summary"
-        android:title="@string/statusbar_tuner">
-        <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.android.systemui"
-            android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
-    </Preference>
+        android:key="statusbar_icons"
+        android:title="@string/statusbar_icons_title"
+        android:summary="@string/statusbar_icons_summary"
+        android:fragment="com.arcana.grimoire.fragments.MiscStatusbar" />
     
     </PreferenceCategory> 
     

@@ -28,6 +28,15 @@
             android:order="-998"
             app:lottie_rawRes="@raw/grimoire"/>
             
+        <!-- theming -->
+        <Preference
+            android:key="theme_category"
+            settings:layout="@layout/grimoire_dashboard_pref_card"
+            android:icon="@drawable/op_ic_grimoire_themes_settings"
+            android:title="@string/theme_settings_title"
+            android:summary="@string/theme_settings_summary"
+            android:fragment="com.arcana.grimoire.fragments.Themes" />
+
         <!-- Extras Preferences -->
         <Preference
             android:key="extras_category"
@@ -81,14 +90,5 @@
             android:title="@string/system_title"
             android:summary="@string/system_summary"
             android:fragment="com.arcana.grimoire.fragments.SystemSettings" />
-            
-        <!-- theming -->
-        <Preference
-            android:key="theme_category"
-            settings:layout="@layout/grimoire_dashboard_pref_card"
-            android:icon="@drawable/op_ic_grimoire_themes_settings"
-            android:title="@string/theme_settings_title"
-            android:summary="@string/theme_settings_summary"
-            android:fragment="com.arcana.grimoire.fragments.Themes" />
 
 </PreferenceScreen> 

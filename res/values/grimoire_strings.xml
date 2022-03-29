@@ -71,8 +71,11 @@
     <string name="aod_settings_title">Always On &amp; Ambient Display</string>
     <string name="aod_categpry">Always On Display</string>
     <string name="ambient_categpry">Ambient Display</string>
-    <string name="ambient_settings_title">Always On &amp; Ambient Display</string>
-    <string name="ambient_settings_summary">The cryptkeeper\'s clock shines in the dark</string>
+    <string name="privacy_indicators_category">Privacy Indicators</string>
+    <string name="status_bar_clock_category">Clock Customizations</string>
+    <string name="misc_statusbar_category">Misc Statusbar options</string>
+    <string name="statusbar_icons_title">Statusbar Icons</string>
+    <string name="statusbar_icons_summary">Configure how statusbar icons appear</string>
 
     <!-- Double Tap Lockscreen to Sleep -->
     <string name="double_tap_to_sleep_lockscreen_title">Double-tap on lockscreen to sleep</string>

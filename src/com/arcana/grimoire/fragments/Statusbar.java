@@ -32,10 +32,8 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 import com.android.internal.logging.nano.MetricsProto;
 
 import org.arcana.support.preference.CustomSeekBarPreference;
-import org.arcana.support.preference.SystemSettingSwitchPreference;
 import org.arcana.support.preference.SystemSettingSeekBarPreference;
 import org.arcana.support.preference.SystemSettingListPreference;
-import org.arcana.support.preference.SecureSettingSwitchPreference;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -53,16 +51,11 @@ public class Statusbar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String NETWORK_TRAFFIC_LOCATION = "network_traffic_location";
     private static final String NETWORK_TRAFFIC_REFRESH_INTERVAL = "network_traffic_refresh_interval";
     private static final String STATUS_BAR_CLOCK_STYLE = "status_bar_clock";
-    private static final String COMBINED_STATUSBAR_ICONS = "show_combined_status_bar_signal_icons";
-    private static final String CONFIG_RESOURCE_NAME = "flag_combined_status_bar_signal_icons";
-    private static final String SYSTEMUI_PACKAGE = "com.android.systemui";
     
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSeekBarPreference mInterval;
     private ListPreference mNetTrafficLocation;
     private SystemSettingListPreference mStatusBarClock;
-    
-    SecureSettingSwitchPreference mCombinedIcons;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -113,31 +106,7 @@ public class Statusbar extends SettingsPreferenceFragment implements OnPreferenc
             mStatusBarClock.setEntries(R.array.status_bar_clock_position_entries_rtl);
             mStatusBarClock.setEntryValues(R.array.status_bar_clock_position_values_rtl);
         }
-        // statusbar clock
-        
-        // combined signal icons
-	mCombinedIcons = (SecureSettingSwitchPreference)
-                findPreference(COMBINED_STATUSBAR_ICONS);
-        Resources sysUIRes = null;
-        boolean def = false;
-        int resId = 0;
-        try {
-            sysUIRes = getActivity().getPackageManager()
-                    .getResourcesForApplication(SYSTEMUI_PACKAGE);
-        } catch (Exception ignored) {
-            // If you don't have system UI you have bigger issues
-        }
-        if (sysUIRes != null) {
-            resId = sysUIRes.getIdentifier(
-                    CONFIG_RESOURCE_NAME, "bool", SYSTEMUI_PACKAGE);
-            if (resId != 0) def = sysUIRes.getBoolean(resId);
-        }
-        boolean enabled = Settings.Secure.getInt(resolver,
-                COMBINED_STATUSBAR_ICONS, def ? 1 : 0) == 1;
-        mCombinedIcons.setChecked(enabled);
-        mCombinedIcons.setOnPreferenceChangeListener(this);
-        // combined signal icons
-        
+        // statusbar clock        
     }
 
     @Override
@@ -177,11 +146,6 @@ public class Statusbar extends SettingsPreferenceFragment implements OnPreferenc
             Settings.System.putIntForUser(resolver,
                     Settings.System.NETWORK_TRAFFIC_REFRESH_INTERVAL, val,
                     UserHandle.USER_CURRENT);
-            return true;
-	} else if (preference == mCombinedIcons) {
-            boolean enabled = (boolean) objValue;
-            Settings.Secure.putInt(resolver,
-                    COMBINED_STATUSBAR_ICONS, enabled ? 1 : 0);
             return true;
         }
         return false;
