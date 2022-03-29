@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:title="@string/statusbar_settings_title"
+     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+        
+    <PreferenceCategory
+        android:key="network_traffic_category"
+        android:title="@string/network_traffic_category_title">
+        
+    <ListPreference
+        android:key="network_traffic_location"
+        android:title="@string/network_traffic_location_title"
+        android:summary="%s"
+        android:entries="@array/network_traffic_location_entries"
+        android:entryValues="@array/network_traffic_location_values"
+        android:defaultValue="0"
+        android:persistent="false" />
+
+    <org.aospextended.support.preference.CustomSeekBarPreference
+        android:key="network_traffic_autohide_threshold"
+        android:title="@string/network_traffic_autohide_threshold_title"
+        android:max="10"
+        settings:min="0"
+        settings:units="KB/s"
+        android:defaultValue="0" />
+
+    <org.aospextended.support.preference.SystemSettingListPreference
+        android:key="network_traffic_mode"
+        android:title="@string/network_traffic_mode_title"
+        android:entries="@array/network_traffic_mode_entries"
+        android:entryValues="@array/network_traffic_mode_values"
+        android:defaultValue="0" />
+
+    <org.aospextended.support.preference.SystemSettingSeekBarPreference
+        android:key="network_traffic_refresh_interval"
+        android:title="@string/network_traffic_refresh_interval_title"
+        android:max="10"
+        settings:min="1"
+        settings:units="sec"
+        android:defaultValue="1" />
+        
+    </PreferenceCategory> 
+
+    <PreferenceCategory
+        android:key="statusbar_icons_category"
+        android:title="@string/statusbar_icons_category">
+        
+    <!-- Battery settings -->
+    <Preference
+        android:key="battery_settings"
+        android:title="@string/battery_style_category_title"
+        android:summary="@string/battery_style_category_summary"
+        android:fragment="com.arcana.grimoire.fragments.StatusbarBattery" />       
+        
+   <org.aospextended.support.preference.SystemSettingListPreference
+        android:key="status_bar_clock"
+        android:title="@string/status_bar_clock_position_title"
+        android:summary="%s"
+        android:dialogTitle="@string/status_bar_clock_position_title"
+        android:entries="@array/status_bar_clock_position_entries"
+        android:entryValues="@array/status_bar_clock_position_values"
+        android:defaultValue="2" />
+
+    <Preference
+        android:key="clock"
+        android:title="@string/status_bar_clock_title"
+        android:summary="@string/status_bar_clock_summary"
+        android:fragment="com.arcana.grimoire.fragments.Clock" />
+
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
+        android:key="statusbar_colored_icons"
+        android:title="@string/statusbar_colored_icons_title"
+        android:summary="@string/statusbar_colored_icons_summary"
+        android:defaultValue="false" />
+            
+    <org.aospextended.support.preference.SecureSettingSwitchPreference
+        android:key="show_combined_status_bar_signal_icons"
+        android:title="@string/combined_status_bar_signal_icons"
+        android:summary="@string/combined_status_bar_signal_icons_summary"
+        android:defaultValue="false"/>
+            
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
+        android:key="data_disabled_icon"
+        android:title="@string/data_disabled_icon_title"
+        android:summary="@string/data_disabled_icon_summary"
+        android:defaultValue="true"/>
+            
+   <org.aospextended.support.preference.SecureSettingSwitchPreference
+        android:key="enable_location_privacy_indicator"
+        android:title="@string/location_privacy_indicator_title"
+        android:summaryOn="@string/location_privacy_indicator_summary_on"
+        android:summaryOff="@string/location_privacy_indicator_summary_off"
+        android:defaultValue="true" />
+
+   <org.aospextended.support.preference.SecureSettingSwitchPreference
+       android:key="enable_camera_privacy_indicator"
+       android:title="@string/camera_privacy_indicator_title"
+       android:summaryOn="@string/camera_privacy_indicator_summary_on"
+       android:summaryOff="@string/camera_privacy_indicator_summary_off"
+       android:defaultValue="true" />
+                    
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
+       android:key="show_fourg_icon"
+       android:title="@string/show_fourg_icon_title"
+       android:summary="@string/show_fourg_icon_summary"
+       android:defaultValue="false"/>
+
+    <org.aospextended.support.preference.SystemSettingListPreference
+       android:key="show_vowifi_icon"
+       android:title="@string/vowifi_icon_title"
+       android:entries="@array/vowifi_icon_entries"
+       android:entryValues="@array/vowifi_icon_values"
+       android:summary="%s"
+       android:defaultValue="2" />
+
+    <org.aospextended.support.preference.SystemSettingSwitchPreference
+       android:key="show_volte_icon"
+       android:title="@string/show_volte_title"
+       android:summary="@string/show_volte_summary"
+       android:defaultValue="true" />
+
+    <!-- Show logo on Statusbar -->
+    <Preference
+        android:key="status_bar_logo"
+        android:title="@string/status_bar_logo_title"
+        android:summary="@string/status_bar_logo_summary"
+        android:fragment="com.arcana.grimoire.fragments.StatusBarLogo" />
+        
+    <Preference
+        android:key="systemui_tuner_statusbar"
+        android:summary="@string/systemui_tuner_statusbar_summary"
+        android:title="@string/statusbar_tuner">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.systemui"
+            android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
+    </Preference>
+    
+    </PreferenceCategory> 
+    
+</PreferenceScreen> 

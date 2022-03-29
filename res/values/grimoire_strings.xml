@@ -21,6 +21,7 @@
     <string name="status_bar_battery_style_full_circle">Full Circle</string>
     <string name="status_bar_battery_style_text">Text</string>
     <string name="battery_style_category_title">Battery styles</string>
+    <string name="battery_style_category_summary">Change statusbar battery icon style</string>
 
     <!-- Dashboard -->
     <string name="grimoire_summary">The Arcanery welcomes your presence.</string>
@@ -32,7 +33,7 @@
     <string name="interfaces_title">User interface</string>
     <string name="interfaces_summary">Customize device appearance</string>
     <string name="system_title">System</string>
-    <string name="system_summary">Control how your device works</string>
+    <string name="system_summary">Control how this machinery works</string>
     <string name="interfaces_style_title">System</string>
     <string name="interfaces_statusbar_title">Statusbar</string>
     <string name="interfaces_battery_title">Battery</string>
@@ -43,16 +44,35 @@
     <string name="lockscreen_title">Lock Screen</string>
     <string name="lockscreen_summary">Customize lockscreen appearance</string>
     <string name="extras_title">Extras</string>
-    <string name="extras_summary">You deserve an extra</string>
+    <string name="extras_summary">Additional Sorceries from the Arcanery</string>
     <string name="extras_tools">Utilities</string>
     <string name="network_traffic_category_title">Network traffic</string>
     <string name="notifications_category">Notifications</string>
     <string name="battery_category">Battery styles</string>
-    <string name="lockscreen_category">Lockscreen UI</string>
+    <string name="lockscreen_category">Lockscreen Interface</string>
     <string name="navigation_category">Navigation bar</string>
     <string name="grimoire_illustration_summary">Welcome to the secret shop!</string>
     <string name="battery_life_category">Battery life</string>
     <string name="statusbar_clock_category_title">Status Bar Clock</string>
+    <string name="statusbar_settings_title">Status Bar</string>
+    <string name="statusbar_settings_summary">Manuever those glyphs from above!</string>
+    <string name="lockscreen_settings_title">Lockscreen</string>
+    <string name="lockscreen_settings_summary">The cryptkeeper\'s lair needs a little grooming</string>
+    <string name="theme_settings_title">Device Theming</string>
+    <string name="theme_settings_summary">Art is one\'s existence</string>
+    <string name="qs_settings_title">QuickSettings</string>
+    <string name="qs_settings_summary">Devise how the machinery blocks appears upon to you</string>
+    <string name="notifications_settings_title">Notifications</string>
+    <string name="notifications_settings_summary">Oversee how information arrive unto you</string>
+    <string name="general_notifications_category">General notifications</string>
+    <string name="alert_slider_category">Alert Slider</string>
+    <string name="wallpaper_zoom">Wallpaper Zoom</string>
+    <string name="interface_category">User interface</string>
+    <string name="aod_settings_title">Always On &amp; Ambient Display</string>
+    <string name="aod_categpry">Always On Display</string>
+    <string name="ambient_categpry">Ambient Display</string>
+    <string name="ambient_settings_title">Always On &amp; Ambient Display</string>
+    <string name="ambient_settings_summary">The cryptkeeper\'s clock shines in the dark</string>
 
     <!-- Double Tap Lockscreen to Sleep -->
     <string name="double_tap_to_sleep_lockscreen_title">Double-tap on lockscreen to sleep</string>
@@ -204,7 +224,7 @@
     
     <!-- Wp zoom -->
     <string name="use_wp_zoom_title">Enable wallpaper Zoom</string>
-    <string name="use_wp_zoom_summary">Reboot is required after enabling.</string>
+    <string name="use_wp_zoom_summary">Reboot is required after enabling. (Only works on vanilla builds)</string>
     
     <!-- Custom settings dashboard style -->
     <string name="settings_dashboard_style_title">Settings layout</string>
@@ -342,7 +362,8 @@
     <string name="udfps_recog_animation_summary">Shows an animation while reading your finger</string>
     <string name="udfps_recog_animation_effect_title">Udfps animation effect</string>
     <string name="udfps_recog_animation_effect_summary">Choose animation effect</string>
-    <string name="udfps_category">Udfps</string>
+    <string name="udfps_category">Udfps Customizations</string>
+    <string name="udfps_general">Udfps General settings</string>
 
     <!-- Udfps icon picker -->
     <string name="udfps_icon_picker_title">Udfps icon picker</string>
@@ -376,7 +397,7 @@
     <string name="status_bar_logo_position_right_quick">Right with QS Panel</string>
     <string name="status_bar_logo_position_left_quick">Left with QS Panel</string>
     <string name="status_bar_logo_style_title">Style</string>
-    <string name="status_bar_logo_style_evolution">Evolution X</string>
+    <string name="status_bar_logo_style_evolution">Project Arcana</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_apple">Apple</string>
     <string name="status_bar_logo_style_ios">iOS</string>
@@ -431,10 +452,11 @@
     <string name="qs_columns_landscape_title">Tile columns on landscape</string>
 
     <!-- QS tiles title visibility -->
-    <string name="qs_tile_title_visibility_title">Hide tile titles</string>
-    <string name="qs_tile_title_visibility_summary">Toggle to hide tile titles</string>
+    <string name="qs_tile_title_visibility_title">Hide tile labels</string>
+    <string name="qs_tile_title_visibility_summary">Toggle to hide tile labels</string>
 
     <!-- Udfps Haptic Feedback -->
-    <string name="udfps_haptic_feedback_title">FOD haptic feedback</string>
-    <string name="udfps_haptic_feedback_summary">Vibrate when touching FOD icon</string>
+    <string name="udfps_haptic_feedback_title">UDFPS haptic feedback</string>
+    <string name="udfps_haptic_feedback_summary"></string>
+    
 </resources> 

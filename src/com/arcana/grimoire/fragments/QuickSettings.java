@@ -32,13 +32,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
-public class StatusBarLogo extends SettingsPreferenceFragment {
+public class QuickSettings extends SettingsPreferenceFragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.arcana_settings_status_bar_logo);
+        addPreferencesFromResource(R.xml.grimoire_qs);
+        
     }
 
     @Override
@@ -50,5 +51,5 @@ public class StatusBarLogo extends SettingsPreferenceFragment {
      * For Search.
      */
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.arcana_settings_status_bar_logo);
+            new BaseSearchIndexProvider(R.xml.grimoire_qs);
 } 

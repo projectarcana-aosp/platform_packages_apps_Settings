@@ -28,15 +28,6 @@
             android:order="-998"
             app:lottie_rawRes="@raw/grimoire"/>
             
-        <!-- System Preferences -->
-        <Preference
-            android:key="system_category"
-            settings:layout="@layout/grimoire_dashboard_pref_card"
-            android:icon="@drawable/op_ic_grimoire_system_settings"
-            android:title="@string/system_title"
-            android:summary="@string/system_summary"
-            android:fragment="com.arcana.grimoire.fragments.SystemSettings" />
-            
         <!-- Extras Preferences -->
         <Preference
             android:key="extras_category"
@@ -46,13 +37,58 @@
             android:summary="@string/extras_summary"
             android:fragment="com.arcana.grimoire.fragments.Extras" />
             
-        <!-- System Interfaces -->
+        <!-- lockscreen -->
+        <Preference
+            android:key="lockscreen_category"
+            settings:layout="@layout/grimoire_dashboard_pref_card"
+            android:icon="@drawable/op_ic_grimoire_lockscreen_settings"
+            android:title="@string/lockscreen_settings_title"
+            android:summary="@string/lockscreen_settings_summary"
+            android:fragment="com.arcana.grimoire.fragments.Lockscreen" />
+            
+        <!-- notifications settings -->
+        <Preference
+            android:key="notification_category"
+            settings:layout="@layout/grimoire_dashboard_pref_card"
+            android:icon="@drawable/op_ic_grimoire_notifications_settings"
+            android:title="@string/notifications_settings_title"
+            android:summary="@string/notifications_settings_summary"
+            android:fragment="com.arcana.grimoire.fragments.Notifications" />
+            
+        <!-- quick settings -->
+        <Preference
+            android:key="qs_category"
+            settings:layout="@layout/grimoire_dashboard_pref_card"
+            android:icon="@drawable/op_ic_grimoire_qs_settings"
+            android:title="@string/qs_settings_title"
+            android:summary="@string/qs_settings_summary"
+            android:fragment="com.arcana.grimoire.fragments.QuickSettings" />
+            
+        <!-- Statusbar -->
         <Preference
             android:key="statusbar_category"
             settings:layout="@layout/grimoire_dashboard_pref_card"
-            android:icon="@drawable/op_ic_grimoire_interfaces_settings"
-            android:title="@string/interfaces_title"
-            android:summary="@string/interfaces_summary"
-            android:fragment="com.arcana.grimoire.fragments.Interfaces" />
+            android:icon="@drawable/op_ic_grimoire_statusbar_settings"
+            android:title="@string/statusbar_settings_title"
+            android:summary="@string/statusbar_settings_summary"
+            android:fragment="com.arcana.grimoire.fragments.Statusbar" />
+            
+        <!-- System Preferences -->
+        <Preference
+            android:key="system_category"
+            settings:layout="@layout/grimoire_dashboard_pref_card"
+            android:icon="@drawable/op_ic_grimoire_system_settings"
+            android:title="@string/system_title"
+            android:summary="@string/system_summary"
+            android:fragment="com.arcana.grimoire.fragments.SystemSettings" />
+            
+        <!-- theming -->
+        <Preference
+            android:key="theme_category"
+            settings:layout="@layout/grimoire_dashboard_pref_card"
+            android:icon="@drawable/op_ic_grimoire_themes_settings"
+            android:title="@string/theme_settings_title"
+            android:summary="@string/theme_settings_summary"
+            android:fragment="com.arcana.grimoire.fragments.Themes" />
 
 </PreferenceScreen> 

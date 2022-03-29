@@ -27,10 +27,14 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.internal.logging.nano.MetricsProto;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.SearchIndexable;
 
+import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+@SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class Extras extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String KEY_PHOTOS_SPOOF = "use_photos_spoof";
@@ -87,4 +91,11 @@ public class Extras extends SettingsPreferenceFragment implements OnPreferenceCh
         }
         return false;
     }
+
+    /**
+     * For Search.
+     */
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.grimoire_extras);
+
 } 
