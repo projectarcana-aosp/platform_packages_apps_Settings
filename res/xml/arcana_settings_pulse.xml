@@ -31,12 +31,6 @@
         android:title="@string/show_ambient_pulse_title"
         android:summary="@string/show_ambient_pulse_summary"/>
 
-    <org.arcana.support.preference.SecureSettingSwitchPreference
-        android:key="qs_pulse_enabled"
-        android:title="@string/show_qs_pulse_title"
-        android:summary="@string/show_qs_pulse_summary"
-        android:defaultValue="false" />
-
     <org.arcana.support.preference.SecureSettingListPreference
         android:key="pulse_render_style"
         android:title="@string/pulse_render_mode_title"
