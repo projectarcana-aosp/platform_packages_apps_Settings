@@ -66,7 +66,7 @@
         android:entryValues="@array/ambient_notification_color_mode_values"
         android:defaultValue="0" />
 
-    <net.margaritov.preference.colorpicker.ColorPickerPreference
+    <org.arcana.support.colorpicker.ColorPickerPreference
         android:key="ambient_notification_light_color"
         android:title="@string/ambient_notification_light_color_title" />
 

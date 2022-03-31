@@ -38,7 +38,7 @@ import org.arcana.support.preference.CustomSeekBarPreference;
 import org.arcana.support.preference.SystemSettingListPreference;
 import org.arcana.support.preference.SystemSettingSwitchPreference;
 
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
+import org.arcana.support.colorpicker.ColorPickerPreference;
 
 @SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class EdgeLighting extends SettingsPreferenceFragment implements
