@@ -55,9 +55,8 @@ public class Lockscreen extends SettingsPreferenceFragment implements OnPreferen
     private static final String UDFPS_HAPTIC_FEEDBACK = "udfps_haptic_feedback";
     private static final String UDFPS_CATEGORY = "udfps_category";
     
-    private SystemSettingSwitchPreference mRippleEffect;
-    private SystemSettingSwitchPreference mUdfpsHapticFeedback;
-    private FingerprintManager mFingerprintManager;
+    private Preference mRippleEffect;
+    private Preference mUdfpsHapticFeedback;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -69,27 +68,20 @@ public class Lockscreen extends SettingsPreferenceFragment implements OnPreferen
         final PreferenceScreen prefSet = getPreferenceScreen();
         final Context mContext = getActivity().getApplicationContext();
         final Resources res = mContext.getResources();
-        final PackageManager mPm = getActivity().getPackageManager();
         
-        mUdfpsHapticFeedback = (SystemSettingSwitchPreference) findPreference(UDFPS_HAPTIC_FEEDBACK);
+        FingerprintManager mFingerprintManager = (FingerprintManager)
+                getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+        mRippleEffect = (Preference) findPreference(KEY_RIPPLE_EFFECT);
+        mUdfpsHapticFeedback = (Preference) findPreference(UDFPS_HAPTIC_FEEDBACK);
+                
+        if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()) {
+            prefSet.removePreference(mRippleEffect);
+        }
+
         if (!UdfpsUtils.hasUdfpsSupport(getContext())) {
             prefSet.removePreference(mUdfpsHapticFeedback);
         }
         
-        mRippleEffect = findPreference(KEY_RIPPLE_EFFECT);
-        if (mPm.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT) &&
-                 mFingerprintManager != null) {
-            if (!mFingerprintManager.isHardwareDetected()){
-                prefSet.removePreference(mRippleEffect);
-            } else {
-                mRippleEffect.setChecked((Settings.System.getInt(getContentResolver(),
-                        Settings.System.ENABLE_RIPPLE_EFFECT, 1) == 1));
-                mRippleEffect.setOnPreferenceChangeListener(this);
-            }
-        } else {
-            prefSet.removePreference(mRippleEffect);
-        }
-
         boolean udfpsResPkgInstalled = ArcanaUtils.isPackageInstalled(getContext(),
                 "org.aospextended.udfps.resources");
         PreferenceCategory udfps = (PreferenceCategory) prefSet.findPreference(UDFPS_CATEGORY);
