@@ -60,7 +60,7 @@
     <string name="lockscreen_settings_summary">The cryptkeeper\'s lair needs a little grooming</string>
     <string name="theme_settings_title">Device Theming</string>
     <string name="theme_settings_summary">Art is one\'s existence</string>
-    <string name="qs_settings_title">QuickSettings</string>
+    <string name="qs_settings_title">Quick Settings</string>
     <string name="qs_settings_summary">Devise how the machinery blocks appears upon to you</string>
     <string name="notifications_settings_title">Notifications</string>
     <string name="notifications_settings_summary">Oversee how information arrive unto you</string>
@@ -238,20 +238,21 @@
     <string name="settings_dashboard_style_oos12_microg">OOS12 MicroG</string>
     <string name="settings_layout_category_title">Settings UI interface</string>
 
+
     <!-- Quick Settings brightness slider -->
     <string name="qs_brightness_slider_category">Brightness slider</string>
-    <string name="qs_brightness_slider_title">Show brightness slider</string>
-    <string name="qs_brightness_slider_summary">Show a brightness slider in the quick settings panel</string>
-    <string name="qs_brightness_position_bottom_title">Show brightness slider on bottom</string>
-    <string name="qs_brightness_position_bottom_summary">Show a brightness slider on bottom quick settings</string>
+    <string name="qs_show_brightness_slider_title">Brightness slider</string>
+    <string name="qs_show_brightness_slider_never">Never show</string>
+    <string name="qs_show_brightness_slider_expanded">Show when expanded</string>
+    <string name="qs_show_brightness_slider_always">Show always</string>
+    <string name="qs_show_brightness_slider_not_expanded">Show when not expanded</string>
+    <string name="qs_brightness_slider_position_title">Position</string>
+    <string name="qs_brightness_slider_position_top">Top</string>
+    <string name="qs_brightness_slider_position_bottom">Bottom</string>
 
     <!-- Quick Settings brightness icon -->
-    <string name="brightness_icon_title">Adaptive brightness button</string>
-    <string name="brightness_icon_summary">Show adaptive brightness button</string>
-
-    <!-- Quick QS Panel brightness slider -->
-    <string name="quick_qs_brightness_slider_title">Show brightness slider in Quick QS Panel</string>
-    <string name="quick_qs_brightness_slider_summary">Show a brightness slider in the quick qs panel</string>
+    <string name="qs_show_auto_brightness_title">Auto brightness icon</string>
+    <string name="qs_show_auto_brightness_summary">Show toggle for adaptive brightness near the slider</string>
     
     <!-- Incall vibrate options -->
     <string name="incall_vibration_category">In-call vibration options</string>
