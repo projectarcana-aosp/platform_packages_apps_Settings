@@ -104,6 +104,11 @@ public class Lockscreen extends SettingsPreferenceFragment implements OnPreferen
             Settings.System.putInt(resolver,
                     Settings.System.ENABLE_RIPPLE_EFFECT, value ? 1 : 0);
             return true;
+       } else if (preference == mUdfpsHapticFeedback) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.UDFPS_HAPTIC_FEEDBACK, value ? 1 : 0);
+            return true;
         }
         return false;
     }
