@@ -522,4 +522,8 @@
 
     <!-- Volume title -->
     <string name="audio_category">Audio</string>
+
+    <!-- Notification count -->
+    <string name="statusbar_notif_count_title">Show notification count</string>
+    <string name="statusbar_notif_count_summary">Display the number of pending notifications</string>
 </resources> 
