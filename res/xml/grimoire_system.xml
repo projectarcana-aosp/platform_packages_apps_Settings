@@ -15,6 +15,19 @@
      android:title="@string/system_title"
      xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    
+   <PreferenceCategory
+        android:key="volume_category"
+        android:title="@string/audio_category">
+
+        <Preference
+        android:key="vol_steps"
+        android:title="@string/volume_steps_fragment_title"
+        android:summary="@string/volume_steps_summary"
+        android:fragment="com.arcana.grimoire.fragments.VolumeStepsFragment" />
+    
+    </PreferenceCategory>
+    
 
     <PreferenceCategory
         android:key="battery_life_category"
@@ -96,5 +109,5 @@
             android:defaultValue="true" />
         
     </PreferenceCategory>
-    
+
 </PreferenceScreen> 
