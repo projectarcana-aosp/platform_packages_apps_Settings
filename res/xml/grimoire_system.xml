@@ -44,7 +44,7 @@
         android:key="gms_enabled"
         android:title="@string/gms_enabled"
         android:summary="@string/gms_enabled_desc"
-        android:defaultValue="true"/>
+        android:defaultValue="false"/>
 
     </PreferenceCategory>
     
