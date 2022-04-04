@@ -290,7 +290,7 @@ public class TopLevelSettings extends DashboardFragment implements
                 preference.setLayoutResource(R.layout.top_level_preference_top);
             }
             if (key.equals("top_level_about_device")){
-                preference.setLayoutResource(R.layout.top_level_preference_bottom);
+                preference.setLayoutResource(R.layout.top_level_preference_middle);
             }
             if (key.equals("dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity")){
                 preference.setLayoutResource(R.layout.top_level_preference_wellbeing);
@@ -309,6 +309,9 @@ public class TopLevelSettings extends DashboardFragment implements
             }
             if (key.equals("top_level_accounts")){
                 preference.setLayoutResource(R.layout.top_level_preference_middle);
+            }
+            if (key.equals("top_level_support")){
+                preference.setLayoutResource(R.layout.top_level_preference_bottom);
             }
             
             } else if (mDashBoardStyle == 2) {
@@ -423,7 +426,7 @@ public class TopLevelSettings extends DashboardFragment implements
                 preference.setLayoutResource(R.layout.top_level_preference_top_oos12);
             }
             if (key.equals("top_level_about_device")){
-                preference.setLayoutResource(R.layout.top_level_preference_bottom_oos12);
+                preference.setLayoutResource(R.layout.top_level_preference_middle_oos12);
             }
             if (key.equals("dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity")){
                 preference.setLayoutResource(R.layout.top_level_preference_wellbeing_oos12);
@@ -439,6 +442,9 @@ public class TopLevelSettings extends DashboardFragment implements
             }
 	    if (key.equals("top_level_wellbeing")){
                 preference.setLayoutResource(R.layout.top_level_preference_wellbeing_oos12);
+            }
+            if (key.equals("top_level_support")){
+                preference.setLayoutResource(R.layout.top_level_preference_bottom_oos12);
             }
             if (key.equals("top_level_accounts")){
                 preference.setLayoutResource(R.layout.top_level_preference_middle_oos12);
