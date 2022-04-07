@@ -30,9 +30,17 @@
             android:targetPackage="org.exthmui.game"
             android:targetClass="org.exthmui.game.ui.MainActivity" />
     </Preference>
-        
+                
     </PreferenceCategory>
             
+    <!-- Hidden apps -->
+    <Preference
+        android:key="hidden_apps"
+        android:title="@string/hidden_apps_title"
+        android:summary="@string/hidden_apps_summary"
+        android:persistent="false"
+        android:fragment="com.arcana.grimoire.fragments.HiddenAppSettingsFragment" />
+        
     <PreferenceCategory
         android:key="spoof_category"
         android:title="@string/spoof_title">
