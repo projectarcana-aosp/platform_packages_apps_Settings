@@ -53,10 +53,12 @@ public class Lockscreen extends SettingsPreferenceFragment implements OnPreferen
 
     private static final String KEY_RIPPLE_EFFECT = "enable_ripple_effect";
     private static final String UDFPS_HAPTIC_FEEDBACK = "udfps_haptic_feedback";
+    private static final String SCREEN_OFF_FOD = "screen_off_fod";
     private static final String UDFPS_CATEGORY = "udfps_category";
     
     private Preference mRippleEffect;
     private Preference mUdfpsHapticFeedback;
+    private Preference mScreenOffFOD;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -73,13 +75,15 @@ public class Lockscreen extends SettingsPreferenceFragment implements OnPreferen
                 getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mRippleEffect = (Preference) findPreference(KEY_RIPPLE_EFFECT);
         mUdfpsHapticFeedback = (Preference) findPreference(UDFPS_HAPTIC_FEEDBACK);
-                
+        mScreenOffFOD = (Preference) findPreference(SCREEN_OFF_FOD);
+        
         if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()) {
             prefSet.removePreference(mRippleEffect);
         }
 
         if (!UdfpsUtils.hasUdfpsSupport(getContext())) {
             prefSet.removePreference(mUdfpsHapticFeedback);
+            prefSet.removePreference(mScreenOffFOD);
         }
         
         boolean udfpsResPkgInstalled = ArcanaUtils.isPackageInstalled(getContext(),
