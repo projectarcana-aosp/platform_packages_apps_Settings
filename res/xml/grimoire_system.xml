@@ -39,12 +39,6 @@
         settings:iconSpaceReserved="false"
         android:summary="@string/arcane_idle_manager_summary"
         android:defaultValue="false" />
-        
-    <org.arcana.support.preference.SecureSettingSwitchPreference
-        android:key="gms_enabled"
-        android:title="@string/gms_enabled"
-        android:summary="@string/gms_enabled_desc"
-        android:defaultValue="false"/>
 
     </PreferenceCategory>
     
