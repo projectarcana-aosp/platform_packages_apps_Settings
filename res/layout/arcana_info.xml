@@ -23,9 +23,10 @@
         android:id="@id/phone_image"
         android:layout_width="100dp"
         android:layout_height="205dp"
-        android:layout_marginTop="30.0dip"
-        android:layout_marginBottom="36.0dip"
-        android:layout_marginStart="75.0dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="42dp"
+        android:layout_marginStart="36dp"
+        android:layout_centerVertical="true"
         app:cardElevation="0dp"
         app:cardCornerRadius="18dp"
         app:strokeColor="?android:attr/textColorPrimary"
@@ -53,68 +54,68 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="30dp"
-        android:layout_marginStart="42dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="42dp"
+        android:layout_marginStart="36dp"
         android:layout_marginEnd="26dp"
         android:layout_centerVertical="true"
         android:layout_toEndOf="@+id/phone_image">
 
         <TextView
-            android:id="@+id/version_title"
+            android:id="@+id/chipset"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:text="@string/arcana_version_title"
+            android:layout_marginBottom="3dp"
+            android:text="@string/chipset"
             style="@style/TextAppearance.arcanaInfoTitle" />
 
         <TextView
-            android:id="@+id/version_message"
+            android:id="@+id/chipset_summary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="14dp"
+            android:layout_marginBottom="13dp"
             style="@style/TextAppearance.arcanaInfoSummary" />
 
         <TextView
-            android:id="@+id/device_title"
+            android:id="@+id/storage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:text="@string/arcana_device_title"
+            android:layout_marginBottom="3dp"
+            android:text="@string/storage"
             style="@style/TextAppearance.arcanaInfoTitle" />
 
         <TextView
-            android:id="@+id/device_message"
+            android:id="@+id/cust_storage_summary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="14dp"
-            style="@style/TextAppearance.arcanaInfoSummary" />
+            android:layout_marginBottom="13dp"
+            style="@style/TextAppearance.arcanaInfoReleaseSummary" />
 
         <TextView
-            android:id="@+id/release_type_title"
+            android:id="@+id/battery"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:text="@string/arcana_release_type_title"
+            android:layout_marginBottom="3dp"
+            android:text="@string/battery"
             style="@style/TextAppearance.arcanaInfoTitle" />
 
         <TextView
-            android:id="@+id/release_type_message"
+            android:id="@+id/cust_battery_summary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="14dp"
-            style="@style/TextAppearance.arcanaInfoSummary" />
-
+            android:layout_marginBottom="13dp"
+            style="@style/TextAppearance.arcanaInfoReleaseSummary" />
+            
         <TextView
-            android:id="@+id/maintainer_title"
+            android:id="@+id/display"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:text="@string/arcana_maintainer_title"
+            android:layout_marginBottom="3dp"
+            android:text="@string/display"
             style="@style/TextAppearance.arcanaInfoTitle" />
 
         <TextView
-            android:id="@+id/maintainer_message"
+            android:id="@+id/cust_display_summary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/TextAppearance.arcanaInfoSummary" />

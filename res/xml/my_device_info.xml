@@ -19,14 +19,6 @@
     android:key="my_device_info_pref_screen"
     android:title="@string/about_settings">
 
-    <!-- About us -->
-    <Preference
-        android:key="arcana_about_info"
-        android:order="1"
-        android:title="@string/arcana_about_info"
-        android:summary="@string/arcana_about_summary"
-        android:fragment="com.android.settings.AboutUs" />
-
     <com.android.settingslib.widget.LayoutPreference
         android:key="my_device_info_header"
         android:order="-500"
@@ -35,6 +27,19 @@
         settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
         settings:isPreferenceVisible="true"/>
 
+    <PreferenceCategory
+        android:title="@string/about_us_info_category_title">
+
+    <!-- About us -->
+    <Preference
+        android:key="arcana_about_info"
+        android:order="-400"
+        android:title="@string/arcana_about_info"
+        android:summary="@string/arcana_about_summary"
+        android:fragment="com.android.settings.AboutUs" />
+
+    </PreferenceCategory>
+    
     <PreferenceCategory
         android:key="basic_info_category"
         android:selectable="false"
@@ -58,32 +63,6 @@
             android:selectable="false"
             settings:controller="com.android.settings.deviceinfo.PhoneNumberPreferenceController"
             settings:enableCopying="true"/>
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:title="@string/my_device_info_legal_category_title">
-
-        <!-- Legal information -->
-<!--
-        <Preference
-            android:key="legal_container"
-            android:order="15"
-            android:title="@string/legal_information"
-            android:fragment="com.android.settings.LegalSettings"/>
--->
-        <!-- Regulatory labels -->
-        <Preference
-            android:key="regulatory_info"
-            android:order="16"
-            android:title="@string/regulatory_labels">
-            <intent android:action="android.settings.SHOW_REGULATORY_INFO"/>
-        </Preference>
-
-        <!-- Safety & regulatory manual -->
-        <Preference
-            android:key="safety_info"
-            android:order="17"
-            android:title="@string/safety_and_regulatory_info"/>
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -186,13 +165,6 @@
             android:title="@string/manual">
             <intent android:action="android.settings.SHOW_MANUAL"/>
         </Preference>
-
-        <!-- Feedback on the device -->
-        <Preference
-            android:key="device_feedback"
-            android:order="51"
-            android:title="@string/device_feedback"
-            settings:keywords="@string/keywords_device_feedback"/>
 
         <!-- Device FCC equipment id -->
         <Preference

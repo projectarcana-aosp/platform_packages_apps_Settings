@@ -470,7 +470,7 @@
     <dimen name="card_margin_end">16.0dp</dimen>
     <dimen name="card_padding_end">70.0dp</dimen>
     <dimen name="card_height">75.0dp</dimen>
-    <dimen name="card_radius">8.0dp</dimen>
+    <dimen name="card_radius">12dp</dimen>
     <dimen name="dashboard_icon_size">40dp</dimen>
     
     <!-- Card Layout OOS 12-->

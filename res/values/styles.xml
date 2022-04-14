@@ -924,33 +924,4 @@
            parent="@*android:style/TextAppearance.DeviceDefault">
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
-    
-    <style name="op_control_text_style_base">
-        <item name="android:breakStrategy">simple</item>
-    </style>
-
-    <style name="op_control_text_style_body1" parent="@style/op_control_text_style_base">
-        <item name="android:textSize">13.0sp</item>
-        <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
-    </style>
-    
-    <style name="op_control_text_style_h6" parent="@style/op_control_text_style_base">
-        <item name="android:textSize">16.0sp</item>
-        <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
-    </style>
-
-   <style name="OptionTitleTextAppearance" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title">
-        <item name="android:textAlignment">center</item>
-        <item name="android:textSize">15sp</item>
-        <item name="android:lineHeight">15sp</item>
-        <item name="android:textColor">?android:attr/textColorSecondary</item>
-    </style>
-
-    <style name="TextAppearance.HomepagePreferenceTitle" parent="@android:style/TextAppearance.DeviceDefault">
-        <item name="android:textSize">20sp</item>
-    </style>
-
-    <style name="ExpandedAppBar" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textSize">48sp</item>
-    </style>
 </resources>

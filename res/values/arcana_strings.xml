@@ -95,7 +95,7 @@
     <string name="arcane_idle_manager_summary">Stop all non-essential background processes when the device is idle</string>
 
     <!-- arcanaOS versioning -->
-    <string name="arcana_version_title">Version</string>
+    <string name="arcana_version_title">Project Arcana Version</string>
     <string name="arcana_device_title">Device</string>
     <string name="arcana_release_type_title">Release type</string>
     <string name="arcana_maintainer_title">Maintainer</string>
@@ -250,14 +250,16 @@
     <string name="battery">Battery</string>
     <string name="display">Display</string>
     <string name="storage">Storage</string>
-    <string name="chipset">Chipset</string>
+    <string name="chipset">Processor</string>
 
     <!-- About phone cards -->
     <string name="about_device_nearby">The device name can and will be seen by the nearby devices.</string>
-    <string name="about_device_version_type_gapps">Pixel</string>
-    <string name="about_device_version_type_vanilla">Vanilla</string>
+    <string name="about_device_version_type_gapps">PIXEL</string>
+    <string name="about_device_version_type_vanilla">VANILLA</string>
     <string name="version">Version</string>
     <string name="edit">Edit</string>
     <string name="device_name">Device name</string>
+    <string name="about_us_info_category_title">About Us</string>
+    <string name="arcana_revision">Project Arcana Revision</string>
 
 </resources>

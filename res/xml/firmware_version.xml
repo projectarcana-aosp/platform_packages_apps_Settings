@@ -26,42 +26,51 @@
         android:key="arcana_info"
         android:layout="@layout/arcana_info"
         android:selectable="false" />
+
+    <!-- device_title -->
+    <Preference
+        android:key="arcana_device"
+        settings:layout="@layout/arc_card_about"
+        android:title="@string/arcana_device_title"
+        android:icon="@drawable/ic_build_number"
+        settings:enableCopying="true"
+        android:selectable="true"/>
         
-    <!-- Android version -->
+    <!-- Arcana Codename -->
     <Preference
         android:key="os_firmware_version"
         android:title="@string/firmware_version"
         android:summary="@string/summary_placeholder"
-        android:icon="@drawable/ic_dot_apps"
+        android:icon="@drawable/ic_android_version"
         settings:layout="@layout/arc_card_about"
         settings:enableCopying="true"
         settings:searchable="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
 
-    <!-- Battery -->
+    <!-- version_title -->
     <Preference
-        android:key="battery"
+        android:key="arcana_version"
         settings:layout="@layout/arc_card_about"
-        android:title="@string/battery"
-        android:icon="@drawable/batteryab"
+        android:title="@string/arcana_version_title"
+        android:icon="@drawable/ic_core_member"
         settings:enableCopying="true"
         android:selectable="true"/>
-        
-    <!-- Chipset -->
+
+    <!-- arcana_release_type_title -->
     <Preference
-        android:key="chipset"
+        android:key="arcana_releasetype"
         settings:layout="@layout/arc_card_about"
-        android:title="@string/chipset"
-        android:icon="@drawable/chipsetab"
+        android:title="@string/arcana_release_type_title"
+        android:icon="@drawable/ic_legal"
         settings:enableCopying="true"
         android:selectable="true"/>
-        
-    <!-- Display -->
+
+    <!-- maintainer_title -->
     <Preference
-        android:key="display"
+        android:key="arcana_maintainer"
         settings:layout="@layout/arc_card_about"
-        android:title="@string/display"
-        android:icon="@drawable/displayab"
+        android:title="@string/arcana_maintainer_title"
+        android:icon="@drawable/ic_about_team"
         settings:enableCopying="true"
         android:selectable="true"/>
         
@@ -83,14 +92,5 @@
         settings:layout="@layout/arc_card_about"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.KernelVersionPreferenceController"/>
-
-    <!-- Storage -->
-    <Preference
-        android:key="storage"
-        settings:layout="@layout/arc_card_about"
-        android:title="@string/storage"
-        android:icon="@drawable/storageab"
-        settings:enableCopying="true"
-        android:selectable="true"/>
 
 </PreferenceScreen>

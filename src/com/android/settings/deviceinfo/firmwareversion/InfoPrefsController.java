@@ -16,6 +16,7 @@ package com.android.settings.deviceinfo.firmwareversion;
 
 import android.content.Context;
 import android.os.SystemProperties;
+import android.widget.TextView;
 import android.text.TextUtils;
 import com.arcana.utils.SpecUtils;
 
@@ -25,10 +26,12 @@ import androidx.preference.PreferenceScreen;
 import com.android.settings.R;
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.core.AbstractPreferenceController;
+import com.android.settingslib.widget.LayoutPreference;
 
 public class InfoPrefsController extends AbstractPreferenceController implements
         PreferenceControllerMixin {
 
+    private static final String KEY_ARCANA_INFO = "arcana_info";
     private static final String KEY_STORAGE = "storage";
     private static final String KEY_CHIPSET = "chipset";
     private static final String KEY_BATTERY = "battery";
@@ -46,15 +49,16 @@ public class InfoPrefsController extends AbstractPreferenceController implements
     @Override
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);
-        final Preference stPref = screen.findPreference(KEY_STORAGE);
-        final Preference chipPref = screen.findPreference(KEY_CHIPSET);
-        final Preference batPref = screen.findPreference(KEY_BATTERY);
-        final Preference disPref = screen.findPreference(KEY_DISPLAY);
+        final LayoutPreference arcanaInfoPreference = screen.findPreference(KEY_ARCANA_INFO);
+        final TextView chipText = (TextView) arcanaInfoPreference.findViewById(R.id.chipset_summary);
+        final TextView storText = (TextView) arcanaInfoPreference.findViewById(R.id.cust_storage_summary);
+        final TextView battText = (TextView) arcanaInfoPreference.findViewById(R.id.cust_battery_summary);
+        final TextView dispText = (TextView) arcanaInfoPreference.findViewById(R.id.cust_display_summary);
 
-        stPref.setSummary(String.valueOf(SpecUtils.getTotalInternalMemorySize()) + "GB ROM + " + String.valueOf(SpecUtils.getTotalRAM()) + "GB RAM");
-        chipPref.setSummary(SpecUtils.getProcessorModel());
-        batPref.setSummary(SpecUtils.getBatteryCapacity(mContext) + " mAh");
-        disPref.setSummary(SpecUtils.getScreenRes(mContext)); 
+        chipText.setText(SpecUtils.getProcessorModel());
+        storText.setText(String.valueOf(SpecUtils.getTotalInternalMemorySize()) + "GB ROM + " + String.valueOf(SpecUtils.getTotalRAM()) + "GB RAM");
+        battText.setText(SpecUtils.getBatteryCapacity(mContext) + " mAh");
+        dispText.setText(SpecUtils.getScreenRes(mContext)); 
     }
 
     @Override

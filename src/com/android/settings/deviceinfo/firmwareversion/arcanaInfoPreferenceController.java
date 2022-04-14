@@ -21,7 +21,9 @@ import android.content.Context;
 import android.os.Build;
 import android.os.SystemProperties;
 import android.widget.TextView;
+import android.text.TextUtils;
 
+import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.settings.R;
@@ -31,12 +33,17 @@ import com.android.settingslib.widget.LayoutPreference;
 public class arcanaInfoPreferenceController extends AbstractPreferenceController {
 
     private static final String KEY_ARCANA_INFO = "arcana_info";
+    private static final String KEY_ARCANA_MAINTAINER = "arcana_maintainer";
+    private static final String KEY_ARCANA_RELEASE = "arcana_releasetype";
+    private static final String KEY_ARCANA_DEVICE = "arcana_device";
+    private static final String KEY_ARCANA_VERSION = "arcana_version";
 
     private static final String PROP_ARCANA_VERSION = "ro.arcana.version";
     private static final String PROP_ARCANA_VERSION_CODE = "ro.arcana.code";
     private static final String PROP_ARCANA_RELEASETYPE = "ro.arcana.releasetype";
     private static final String PROP_ARCANA_MAINTAINER = "ro.arcana.maintainer";
     private static final String PROP_ARCANA_DEVICE = "ro.arcana.device";
+    private static final String PROP_ARCANA_BUILD_TYPE = "ro.arcana.packagetype";
 
     public arcanaInfoPreferenceController(Context context) {
         super(context);
@@ -55,8 +62,10 @@ public class arcanaInfoPreferenceController extends AbstractPreferenceController
                 this.mContext.getString(R.string.device_info_default));
         final String versionCode = SystemProperties.get(PROP_ARCANA_VERSION_CODE,
                 this.mContext.getString(R.string.device_info_default));
+        final String buildType = SystemProperties.get(PROP_ARCANA_BUILD_TYPE,
+                this.mContext.getString(R.string.device_info_default));
 
-        return version + " | " + versionCode;
+        return version + " | " + versionCode + " | " + buildType;
     }
 
     private String getarcanaReleaseType() {
@@ -70,20 +79,19 @@ public class arcanaInfoPreferenceController extends AbstractPreferenceController
     @Override
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);
-        final LayoutPreference arcanaInfoPreference = screen.findPreference(KEY_ARCANA_INFO);
-        final TextView version = (TextView) arcanaInfoPreference.findViewById(R.id.version_message);
-        final TextView device = (TextView) arcanaInfoPreference.findViewById(R.id.device_message);
-        final TextView releaseType = (TextView) arcanaInfoPreference.findViewById(R.id.release_type_message);
-        final TextView maintainer = (TextView) arcanaInfoPreference.findViewById(R.id.maintainer_message);
+        final Preference arcVerPref = screen.findPreference(KEY_ARCANA_VERSION);
+        final Preference arcMainPref = screen.findPreference(KEY_ARCANA_MAINTAINER);
+        final Preference arcRelPref = screen.findPreference(KEY_ARCANA_RELEASE);
+        final Preference arcDevPref = screen.findPreference(KEY_ARCANA_DEVICE);
         final String arcanaVersion = getarcanaVersion();
         final String arcanaDevice = getDeviceName();
         final String arcanaReleaseType = getarcanaReleaseType();
         final String arcanaMaintainer = SystemProperties.get(PROP_ARCANA_MAINTAINER,
                 this.mContext.getString(R.string.device_info_default));
-        version.setText(arcanaVersion);
-        device.setText(arcanaDevice);
-        releaseType.setText(arcanaReleaseType);
-        maintainer.setText(arcanaMaintainer);
+        arcVerPref.setSummary(arcanaVersion);
+        arcDevPref.setSummary(arcanaDevice);
+        arcRelPref.setSummary(arcanaReleaseType);
+        arcMainPref.setSummary(arcanaMaintainer);
     }
 
     @Override
