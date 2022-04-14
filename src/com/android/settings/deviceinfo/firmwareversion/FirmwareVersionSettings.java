@@ -24,6 +24,8 @@ import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.search.SearchIndexable;
+import com.android.settings.deviceinfo.firmwareversion.arcanaInfoPreferenceController;
+import com.android.settings.deviceinfo.firmwareversion.InfoPrefsController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +52,7 @@ public class FirmwareVersionSettings extends DashboardFragment {
     protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
         controllers.add(new arcanaInfoPreferenceController(context));
+        controllers.add(new InfoPrefsController(context));
         return controllers;
     }
 
