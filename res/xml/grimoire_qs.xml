@@ -41,6 +41,17 @@
             
     </PreferenceCategory>
     
+    <PreferenceCategory
+        android:key="general_category"
+        android:title="@string/general_category_title">
+    
+        <org.arcana.support.preference.SecureSettingSwitchPreference
+            android:key="secure_lockscreen_qs_disabled"
+            android:title="@string/disable_qs_title"
+            android:summary="@string/disable_qs_summary"
+            android:defaultValue="false" />
+            
+    </PreferenceCategory>
 
      <PreferenceCategory
         android:title="@string/notification_material_dismiss_button_title">

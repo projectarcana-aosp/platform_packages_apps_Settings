@@ -55,8 +55,13 @@ public class Lockscreen extends SettingsPreferenceFragment implements OnPreferen
     private static final String UDFPS_HAPTIC_FEEDBACK = "udfps_haptic_feedback";
     private static final String SCREEN_OFF_FOD = "screen_off_fod";
     private static final String UDFPS_CATEGORY = "udfps_category";
+    private static final String KEY_FP_SUCCESS_VIBRATE = "fp_success_vibrate";
+    private static final String KEY_FP_ERROR_VIBRATE = "fp_error_vibrate";
+    private static final String LOCKSCREEN_EFFECTS_CATEGORY = "lockscreen_effects_category";
     
     private Preference mRippleEffect;
+    private Preference mFingerprintVib;
+    private Preference mFingerprintVibErr;
     private Preference mUdfpsHapticFeedback;
     private Preference mScreenOffFOD;
 
@@ -66,6 +71,8 @@ public class Lockscreen extends SettingsPreferenceFragment implements OnPreferen
 
         addPreferencesFromResource(R.xml.grimoire_lockscreen);
 
+        PreferenceCategory gestCategory = (PreferenceCategory) findPreference(LOCKSCREEN_EFFECTS_CATEGORY);
+        
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefSet = getPreferenceScreen();
         final Context mContext = getActivity().getApplicationContext();
@@ -74,11 +81,15 @@ public class Lockscreen extends SettingsPreferenceFragment implements OnPreferen
         FingerprintManager mFingerprintManager = (FingerprintManager)
                 getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mRippleEffect = (Preference) findPreference(KEY_RIPPLE_EFFECT);
+        mFingerprintVib = (Preference) findPreference(KEY_FP_SUCCESS_VIBRATE);
+        mFingerprintVibErr = (Preference) findPreference(KEY_FP_ERROR_VIBRATE);
         mUdfpsHapticFeedback = (Preference) findPreference(UDFPS_HAPTIC_FEEDBACK);
         mScreenOffFOD = (Preference) findPreference(SCREEN_OFF_FOD);
         
         if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()) {
-            prefSet.removePreference(mRippleEffect);
+            gestCategory.removePreference(mRippleEffect);
+            gestCategory.removePreference(mFingerprintVib);
+            gestCategory.removePreference(mFingerprintVibErr);
         }
 
         if (!UdfpsUtils.hasUdfpsSupport(getContext())) {
@@ -107,6 +118,16 @@ public class Lockscreen extends SettingsPreferenceFragment implements OnPreferen
             boolean value = (Boolean) objValue;
             Settings.System.putInt(resolver,
                     Settings.System.ENABLE_RIPPLE_EFFECT, value ? 1 : 0);
+            return true;
+       } else if (preference == mFingerprintVib) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.FP_SUCCESS_VIBRATE, value ? 1 : 0);
+            return true;
+       } else if (preference == mFingerprintVibErr) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.FP_ERROR_VIBRATE, value ? 1 : 0);
             return true;
        } else if (preference == mUdfpsHapticFeedback) {
             boolean value = (Boolean) objValue;
